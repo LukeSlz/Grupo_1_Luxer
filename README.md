@@ -24,7 +24,9 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
   Integer accumsan viverra quam, nec fringilla eros rhoncus sed. Proin eget venenatis neque. Curabitur maximus purus a libero semper tempus.Cras nec nibh sit amet ipsum aliquam facilisis. Proin a lacus quis nibh ultrices gravida. Proin eu dolor id dui rhoncus laoreet. 
   
 - ### Carolina Mattaldi
-  Phasellus vehicula lacus ut mauris maximus consectetur. Sed a efficitur ipsum. Ut feugiat eu eros vel tempor. Nulla malesuada viverra eros eu luctus. Aliquam egestas libero vitae hendrerit rhoncus. Suspendisse potenti. Curabitur feugiat nisl ac massa feugiat, at consequat lectus vestibulum.
+  Hello! Mi nombre es Caro. Me considero apasionada por el marketing y todo lo que tenga que ver con tecnología. Me encanta aprovechar el tiempo en incorporar nuevas habilidades y conocimientos que enriquezcan mi perfil personal y profesional. 
+
+Trabajo en publicidad, concretamente como especialista en la plataforma Google Ads, y me motiva muchísimo saber que el día de mañana puedo relacionar mi conocimiento en el área con el Desarrollo Web. FullStack Developer in process :)
   
 - ### Nicolás López
    Nunc laoreet nec justo nec tincidunt. Mauris sit amet aliquet massa. Donec auctor elit eu neque ullamcorper, vitae pellentesque eros tincidunt. Nullam vitae sem nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam eu felis at odio mollis molestie id et dui.
