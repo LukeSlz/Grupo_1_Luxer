@@ -2,11 +2,11 @@
 Proyecto de elementos decorativos de lujo
 
 ## ¿Qué es Luxer? 
-Somos una plataforma de e-commerce digital que ofrece un amplio catálogo de elementos decorativos de lujo para el hogar, que cumplan las funciones básicas de sus correspondientes categorías, mientras que aportan una elegante visibilidad y un confort superior.
-Nuestra prioridad es tener siempre elementos que deslumbren en los hogares de nuestros clientes y hagan realidad sus requerimientos de rodearse de un ambiente deluxe y fuera de lo ordinario.
+Somos una plataforma de e-commerce digital que ofrece un amplio catálogo de piezas decorativas de lujo para el hogar, que cumplan las funciones básicas de sus correspondientes categorías, mientras que aportan una elegante visibilidad y un confort superior.
+Nuestra prioridad es tener siempre articulos que deslumbren en los hogares de nuestros clientes y hagan realidad sus requerimientos de rodearse de un ambiente deluxe y fuera de lo ordinario.
 
 ## ¿Quién será nuestra audiencia objetivo?
-El público objetivo de nuestro e-commerce son aquellos individuos con una preferencia por los elementos refinados y elegantes; que prefieran mantener una estética elevada y una relación superior y precisa en los elementos que suplen tanto las funcionalidades básicas como las adiciones premium en sus hogares.
+El público objetivo de nuestro e-commerce son aquellos individuos con una preferencia por los ambientes y entornos refinados y elegantes; que prefieran mantener una estética elevada y una relación superior y precisa en los elementos que suplen tanto las funcionalidades básicas como las adiciones premium en sus hogares.
 
 ## ¿Cómo ajustaremos nuestra oferta a ese público?
 Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado que abordaremos. Nuestra prioridad será satisfacer las necesidades premium de las personas que tienen un gusto elevado por la elegancia, facilidad y la personalización, llevando a su alcance diversas opciones que permitan que sus hogares reflejen sus personalidades.
