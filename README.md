@@ -29,4 +29,6 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
   Trabajo en publicidad, concretamente como especialista en la plataforma Google Ads, y me motiva muchísimo saber que el día de mañana puedo relacionar mi conocimiento en el área con el Desarrollo Web. FullStack Developer in process :)
   
 - ### Nicolás López
-   Nunc laoreet nec justo nec tincidunt. Mauris sit amet aliquet massa. Donec auctor elit eu neque ullamcorper, vitae pellentesque eros tincidunt. Nullam vitae sem nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam eu felis at odio mollis molestie id et dui.
+   Por ultimo, peor no menos importante yo soy Nico. soy una persona super analitica y me gusta mucho los datos y el codeo, y por ello busco estar constantemente aprendiendo nuevas cosas para poder tener una vision mas integral de mi ambito profesional y personal.
+
+   Soy Data Analyst, y estoy aqui para dar lo mejor de mi en cada dia que va lleganodo!
