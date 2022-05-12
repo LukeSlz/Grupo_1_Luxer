@@ -18,7 +18,7 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
   Soy administrador de negocios, con enfasis en Finanzas. Soy especialista en Marketing. Me encanta aprender y mejor aún si puedo poner en práctica lo que aprendo en la vida real. FullStack Developer in process.
 
 - ### Cristian Correa
-  holaaa, mucho gusto soy Cristian Correa, tengo 22 años de edad y llevo en el mundo de la programacion alrededor de casi 1 año, voy a empezar a estudiar ingenieria de Sistemas  en la universidad de la costa en barranquilla/colombia. me gusta mucho crear, innovar y mejorar lo que ya existe y por esa razon me gusta el mundo de desarrollo de software
+  Holaaa, mucho gusto soy Cristian Correa, tengo 22 años de edad y llevo en el mundo de la programacion alrededor de casi 1 año, voy a empezar a estudiar ingenieria de Sistemas  en la universidad de la costa en barranquilla/colombia. me gusta mucho crear, innovar y mejorar lo que ya existe y por esa razon me gusta el mundo de desarrollo de software
 - ### Francisco Juárez
   Integer accumsan viverra quam, nec fringilla eros rhoncus sed. Proin eget venenatis neque. Curabitur maximus purus a libero semper tempus.Cras nec nibh sit amet ipsum aliquam facilisis. Proin a lacus quis nibh ultrices gravida. Proin eu dolor id dui rhoncus laoreet. 
   
@@ -28,6 +28,13 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
   Trabajo en publicidad, concretamente como especialista en la plataforma Google Ads, y me motiva muchísimo saber que el día de mañana puedo relacionar mi conocimiento en el área con el Desarrollo Web. FullStack Developer in process :)
   
 - ### Nicolás López
-   Por ultimo, peor no menos importante yo soy Nico. soy una persona super analitica y me gusta mucho los datos y el codeo, y por ello busco estar constantemente aprendiendo nuevas cosas para poder tener una vision mas integral de mi ambito profesional y personal.
+   Por último, pero no menos importante yo soy Nico. Soy una persona super analitica y me gusta mucho los datos y el codeo, y por ello busco estar constantemente aprendiendo nuevas cosas para poder tener una vision mas integral de mi ambito profesional y personal.
 
    Soy Data Analyst, y estoy aqui para dar lo mejor de mi en cada dia que va lleganodo!
+   
+## Webs de referencia
+- https://deluxedecorco.com/  -> El estilo minimalista y la tranquilidad que emana desde su landing page, hasta cada uno de sus apartados, es llamativo al ojo premium.
+- https://www.zarahome.com/inditex-sel  -> Un clásico reconocido. Su pagina es intuitiva y muestra ejemplos del objetivo deseable de sus consumidores.
+- https://woodmarket.com.ar/  -> La navegación intuitiva y la personalización son un factor premium que queremos incluir.
+- https://www.amara.com/shop/home-accessories -> Los productos que se pueden ver desde el inicio son un claro ejemplo de la exclusividad que deseamos para nuestros consumidores.
+- https://www.harrods.com/en-us/shopping/home-furniture-home-accessories  -> El sistema minimalista y las categorias de clasificación son el enfoque que queremos dar.
