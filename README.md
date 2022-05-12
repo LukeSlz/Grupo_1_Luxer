@@ -18,8 +18,7 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
   Soy administrador de negocios, con enfasis en Finanzas. Soy especialista en Marketing. Me encanta aprender y mejor aún si puedo poner en práctica lo que aprendo en la vida real. FullStack Developer in process.
 
 - ### Cristian Correa
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum sit amet metus justo. Nulla facilisi. Nulla placerat iaculis varius. Suspendisse euismod lectus urna, sit amet interdum purus suscipit id. Integer a neque interdum, consectetur justo et, mollis sapien.
-  
+  holaaa, mucho gusto soy Cristian Correa, tengo 22 años de edad y llevo en el mundo de la programacion alrededor de casi 1 año, voy a empezar a estudiar ingenieria de Sistemas  en la universidad de la costa en barranquilla/colombia. me gusta mucho crear, innovar y mejorar lo que ya existe y por esa razon me gusta el mundo de desarrollo de software
 - ### Francisco Juárez
   Integer accumsan viverra quam, nec fringilla eros rhoncus sed. Proin eget venenatis neque. Curabitur maximus purus a libero semper tempus.Cras nec nibh sit amet ipsum aliquam facilisis. Proin a lacus quis nibh ultrices gravida. Proin eu dolor id dui rhoncus laoreet. 
   
