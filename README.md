@@ -20,7 +20,7 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
 - ### Cristian Correa
   Holaaa, mucho gusto soy Cristian Correa, tengo 22 años de edad y llevo en el mundo de la programacion alrededor de casi 1 año, voy a empezar a estudiar ingenieria de Sistemas  en la universidad de la costa en barranquilla/colombia. me gusta mucho crear, innovar y mejorar lo que ya existe y por esa razon me gusta el mundo de desarrollo de software
 - ### Francisco Juárez
-  Integer accumsan viverra quam, nec fringilla eros rhoncus sed. Proin eget venenatis neque. Curabitur maximus purus a libero semper tempus.Cras nec nibh sit amet ipsum aliquam facilisis. Proin a lacus quis nibh ultrices gravida. Proin eu dolor id dui rhoncus laoreet. 
+   ¡Francisco reportándose! Realizar un autodiagnóstico evaluativo no resulta una tarea sencilla, pero de tener que atreverme a brindar una breve descripción de mi persona, diría que me considero un apasionado del conocimiento y de la investigación; motivos estos por los que decidí emprender este nuevo desafío vinculado al mundo de la programación. Sin dudas este tipo de aprendizajes son aquellos que enriquecen tanto el espíritu como la capacitación profesional, por lo que no cabe la menor duda de que siempre dispondré de la mayor de mis determinaciones en superarme constantemente para poder así ofrecer el mejor desempeño posible en los proyectos que presentemos junto a mis compañeros.
   
 - ### Carolina Mattaldi
   Hello! Mi nombre es Caro. Me considero apasionada por el marketing y todo lo que tenga que ver con tecnología. Me encanta aprovechar el tiempo en incorporar nuevas habilidades y conocimientos que enriquezcan mi perfil personal y profesional. 
