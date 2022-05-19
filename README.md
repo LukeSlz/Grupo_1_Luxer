@@ -31,4 +31,4 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
 - ### Nicolás López
    Por ultimo, peor no menos importante yo soy Nico. soy una persona super analitica y me gusta mucho los datos y el codeo, y por ello busco estar constantemente aprendiendo nuevas cosas para poder tener una vision mas integral de mi ambito profesional y personal.
 
-   Soy Data Analyst, y estoy aqui para dar lo mejor de mi en cada dia que va lleganodo!
+   Soy Data Analyst, y estoy aqui para dar lo mejor de mi en cada dia que va llegando!
