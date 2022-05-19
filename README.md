@@ -13,9 +13,9 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
 
 ## Los miembros del equipo que harán realidad este proyecto:
 - ### Lucas Salazar
-  Hey! Aquí Luke...  Amo resolver problemas, puzzles, acertijos y situaciones complejas. Me encanta todo lo relacionado con la cultura Tech y amo hacer de esto parte de mi vida. Me motiva muchísimo la programación por dichas razones.
+  Hey! Aquí Luke...  25 años. Soy de Medellin, Colombia.  Amo resolver problemas, puzzles, acertijos y situaciones complejas. Me encanta todo lo relacionado con la cultura Tech y amo hacer de esto parte de mi vida. Me motiva muchísimo la programación por dichas razones.
   
-  Soy administrador de negocios, con enfasis en Finanzas. Soy especialista en Marketing. Me encanta aprender y mejor aún si puedo poner en práctica lo que aprendo en la vida real. FullStack Developer in process.
+  Me encanta aprender y mejor aún si puedo poner en práctica lo que aprendo en la vida real. FullStack Developer in process.
 
 - ### Cristian Correa
   Holaaa, mucho gusto soy Cristian Correa, tengo 22 años de edad y llevo en el mundo de la programacion alrededor de casi 1 año, voy a empezar a estudiar ingenieria de Sistemas  en la universidad de la costa en barranquilla/colombia. me gusta mucho crear, innovar y mejorar lo que ya existe y por esa razon me gusta el mundo de desarrollo de software
