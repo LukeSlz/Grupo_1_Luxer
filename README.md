@@ -39,3 +39,6 @@ Enfocaremos nuestros esfuerzos en conocer las prioridades del nicho de mercado q
 - https://www.amara.com/shop/home-accessories -> Los productos que se pueden ver desde el inicio son un claro ejemplo de la exclusividad que deseamos para nuestros consumidores.
 - https://www.harrods.com/en-us/shopping/home-furniture-home-accessories  -> El sistema minimalista y las categorias de clasificación son el enfoque que queremos dar.
 >>>>>>> 85a4ae4a138e4d2f288431bd0a94fa667c671282
+
+## Link hacia el tablero de trabajo
+- https://sharing.clickup.com/25736420/b/h/7-25736420-2/b75e24318699bd0
