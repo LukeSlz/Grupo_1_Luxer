@@ -1,7 +1,11 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
 /*
-#D9D9D9 
-#B8B4B4 
-#A89B95 
+#D9D9D9
+#B8B4B4
+#A89B95
 #A68474
 */
 #color1{
@@ -23,30 +27,34 @@
 /*Color palette to be used*/
 
 .emergent-info{
-    background-color: #A68474;
-    color: #000;
+    background-color: #000000;
+    color: #FFFFFF;
     text-align: center;
 }
 .emergent-info h4{
     padding: 3px 0;
+    margin: 0;
 }
 .dropdown-menu-container{
     border: #B8B4B4 5px solid;
     padding: 20px;
-    width: 50%;
-    height: 50vh;
+    width: 70%;
+    height: 425px;
+    color: #A68474;
 }
 .upper-dropdown-options{
+
     display: flex;
     justify-content: space-between;
-    font-size: 2rem;
-    color: #A68474;
+    font-size: 2em;
+    width: auto;
 }
 .categories-list{
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    margin: 10px 0 0 0;
 }
 .categories-list li{
     list-style: none;
@@ -59,6 +67,7 @@
     text-decoration: none;
     margin: auto;
     width: 80%;
+    color: rgba(0, 0, 0, 0.8);
 }
 .categories-list hr{
     border: #A89B95 solid 1px;
@@ -88,9 +97,52 @@
     margin: 5px 0;
 }
 /* End of elements of the header */
+
 main{
     text-align: center;
 }
-.main-instructions-container h2, .main-instructions-container p{
-    margin: 20px 0;
+.main-instructions-container{
+    margin-top: 30px;
+    padding-top: 10px;
+}
+main{
+    background-color: #D9D9D9;
+}
+.main-register-form{
+    padding: 30px;
+}
+
+.main-register-form input{
+    margin: 7px;
+    width: 100%;
+}
+.t-and-c-container, .newsletter-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.toggles-container input{
+    width: 20px;
+}
+.footer-categories-container a{
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: auto;
+    width: 80%;
+    color: rgba(0, 0, 0, 0.8);
+}
+.footer-categories-container h3{
+    margin: 0;
+}
+.footer-categories-container hr{
+    width: 90%;
+    color: #A68474;
+}
+.copyright-container{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    color: #A89B95;
 }

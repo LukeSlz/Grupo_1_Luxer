@@ -5,20 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/044c3f9b87.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/register.css">
     <title>Document</title>
 </head>
 <body>
     <div class="temporal-colors">
-        <p id="color1">color1</p>
-        <p id="color2">color2</p>
-        <p id="color3">color3</p>
-        <p id="color4">color4</p>
+        <p id="color1">color1 #D9D9D9</p>
+        <p id="color2">color2 #B8B4B4</p>
+        <p id="color3">color3 #A89B95</p>
+        <p id="color4">color4 #A68474</p>
     </div>
     <header>
+        <!-- [START OF DEPLOYABLE MENU]-->
         <div class="emergent-info">
             <h4>Informacion o promocion emergente</h4>
+            <!--Aqui irian promociones de temporada o mensajes variables emergentes-->
         </div>
         <div class="dropdown-menu-container">
             <div class="upper-dropdown-options">
@@ -44,9 +49,13 @@
                 </ul>
             </div>
             <div class="navigation">
-                <input type="text" class="nav-bar"> <button type="button" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <form action="/register">
+                    <input type="text" class="nav-bar"> <button type="reset" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <!--Temporarily, the button will reset the search-->
+                </form>
             </div>
         </div>
+        <!--[END OF DEPLOYABLE MENU]-->
         <div class="simplified-header-container">
             <i class="concealed-bars fa-solid fa-bars"></i>
             <h1 class="main-title">LUXER</h1>
@@ -58,7 +67,7 @@
             <h2 class="register">Registro</h2>
             <p>Por favor complete la siguiente informacion</p>
         </div>
-        <form action="/register" method="GET">
+        <form class="main-register-form" action="/register" method="GET">
             <div class="main-inputs-container">
                 <div class="name-input">
                     <label for="name"></label>
@@ -82,34 +91,43 @@
                 </div>
             </div>
             <div class="toggles-container">
+                <hr>
                 <div class="t-and-c-container">
                     <input type="checkbox" name="t-and-c" id="t-and-c">
                     <label for="t-and-c">He leído y accepto los <a href="#">T&C</a></label>
                 </div>
+                <hr>
                 <div class="newsletter-container">
                     <input type="checkbox" name="newsletter" id="newsletter">
                     <label for="newsletter">Inscribirme al Newsletter de LUXER</label>
                 </div>
+                <hr>
             </div>
             <div class="create-account-button-container">
-                <button type="submit">CREAR CUENTA</button>
+                <button type="reset">CREAR CUENTA</button>
+                <!--Temporarily, the button will only reset the form-->
             </div>
         </form>
     </main>
     <footer>
         <div class="footer-categories-container">
+            <hr>
             <div class="footer-cat-1-container">
                 <h3 class="footer-cat-1"><a href="#"> Footer Category 1<i class="fa-solid fa-angle-right"></i></a></h3>
             </div>
+            <hr>
             <div class="footer-cat-2-container">
                 <h3 class="footer-cat-2"><a href="#"> Footer Category 2<i class="fa-solid fa-angle-right"></i></a></h3>
             </div>
+            <hr>
             <div class="footer-cat-3-container">
                 <h3 class="footer-cat-3"><a href="#"> Footer Category 3<i class="fa-solid fa-angle-right"></i></a></h3>
             </div>
+            <hr>
             <div class="footer-cat-4-container">
                 <h3 class="footer-cat-4"><a href="#"> Footer Category 4<i class="fa-solid fa-angle-right"></i></a></h3>
             </div>
+            <hr>
         </div>
         <div class="copyright-container">
             <h5><i class="fa-regular fa-copyright"></i>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
