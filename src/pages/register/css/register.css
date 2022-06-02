@@ -4,4 +4,93 @@
 #A89B95 
 #A68474
 */
+#color1{
+    background-color: #D9D9D9;
+    font-size: 20px;
+}
+#color2{
+    background-color: #B8B4B4;
+    font-size: 20px;
+}
+#color3{
+    background-color: #A89B95;
+    font-size: 20px;
+}
+#color4{
+    background-color: #A68474;
+    font-size: 20px;
+}
+/*Color palette to be used*/
 
+.emergent-info{
+    background-color: #A68474;
+    color: #000;
+    text-align: center;
+}
+.emergent-info h4{
+    padding: 3px 0;
+}
+.dropdown-menu-container{
+    border: #B8B4B4 5px solid;
+    padding: 20px;
+    width: 50%;
+    height: 50vh;
+}
+.upper-dropdown-options{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: #A68474;
+}
+.categories-list{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.categories-list li{
+    list-style: none;
+    width: 100%;
+}
+.categories-list a{
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: auto;
+    width: 80%;
+}
+.categories-list hr{
+    border: #A89B95 solid 1px;
+    width: 100%;
+}
+.navigation{
+    display: flex;
+}
+.nav-bar{
+    width: 80%;
+}
+/* Here finishes the option menu that is concealed behind the bars menu */
+.simplified-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0;
+    padding: 0 5%;
+    background-color: #D9D9D9;
+    border: #B8B4B4 solid 1px;
+}
+.simplified-header-container i{
+    font-size: 2rem;
+    color: #A68474;
+}
+.main-title{
+    margin: 5px 0;
+}
+/* End of elements of the header */
+main{
+    text-align: center;
+}
+.main-instructions-container h2, .main-instructions-container p{
+    margin: 20px 0;
+}

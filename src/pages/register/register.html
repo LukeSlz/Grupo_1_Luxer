@@ -4,29 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/pages/register/css/normalize.css">
-    <link rel="stylesheet" href="/src/pages/register/css/register.css">
+    <script src="https://kit.fontawesome.com/044c3f9b87.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/register.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="temporal-colors">
+        <p id="color1">color1</p>
+        <p id="color2">color2</p>
+        <p id="color3">color3</p>
+        <p id="color4">color4</p>
+    </div>
     <header>
         <div class="emergent-info">
             <h4>Informacion o promocion emergente</h4>
         </div>
-        <div class="categories-nav">
-            <ul class="categories-list">
-                <li><a href="/register">HOME</a></li>
-                <li><a href="/register">CAT_1</a></li>
-                <li><a href="/register">CAT_2</a></li>
-                <li><a href="/register">CAT_3</a></li>
-            </ul>
+        <div class="dropdown-menu-container">
+            <div class="upper-dropdown-options">
+                <i class="displayed-bars fa-solid fa-bars"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="header-categories-container">
+                <ul class="categories-list">
+                    <li><a href="#">HOME <i class="fa-solid fa-angle-right"></i></a></li>
+                    <hr>
+                    <li><a href="#">CAT_1 <i class="fa-solid fa-angle-right"></i></a></li>
+                    <hr>
+                    <li><a href="#">CAT_2 <i class="fa-solid fa-angle-right"></i></a></li>
+                    <hr>
+                    <li><a href="#">CAT_3 <i class="fa-solid fa-angle-right"></i></a></li>
+                    <hr>
+                    <li><a href="#">CAT_4 <i class="fa-solid fa-angle-right"></i></a></li>
+                    <hr>
+                    <li><a href="#">CAT_5 <i class="fa-solid fa-angle-right"></i></a></li>
+                    <hr>
+                    <li><a href="#">CAT_6 <i class="fa-solid fa-angle-right"></i></a></li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="navigation">
+                <input type="text" class="nav-bar"> <button type="button" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <div class="simplified-header-container">
+            <i class="concealed-bars fa-solid fa-bars"></i>
+            <h1 class="main-title">LUXER</h1>
+            <i class="fa-solid fa-cart-shopping"></i>
         </div>
     </header>
     <main>
-
+        <div class="main-instructions-container">
+            <h2 class="register">Registro</h2>
+            <p>Por favor complete la siguiente informacion</p>
+        </div>
+        <form action="/register" method="GET">
+            <div class="main-inputs-container">
+                <div class="name-input">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Nombre">
+                </div>
+                <div class="surname-input">
+                    <label for="surname"></label>
+                    <input type="text" name="surname" id="surname" placeholder="Apellido">
+                </div>
+                <div class="email-input">    
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="e-mail">
+                </div>
+                <div class="password-input">
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                </div>
+                <div class="repassword-input">
+                    <label for="repassword"></label>
+                    <input type="password" name="repassword" id="repassword" placeholder="Verificar contraseña">
+                </div>
+            </div>
+            <div class="toggles-container">
+                <div class="t-and-c-container">
+                    <input type="checkbox" name="t-and-c" id="t-and-c">
+                    <label for="t-and-c">He leído y accepto los <a href="#">T&C</a></label>
+                </div>
+                <div class="newsletter-container">
+                    <input type="checkbox" name="newsletter" id="newsletter">
+                    <label for="newsletter">Inscribirme al Newsletter de LUXER</label>
+                </div>
+            </div>
+            <div class="create-account-button-container">
+                <button type="submit">CREAR CUENTA</button>
+            </div>
+        </form>
     </main>
     <footer>
-
+        <div class="footer-categories-container">
+            <div class="footer-cat-1-container">
+                <h3 class="footer-cat-1"><a href="#"> Footer Category 1<i class="fa-solid fa-angle-right"></i></a></h3>
+            </div>
+            <div class="footer-cat-2-container">
+                <h3 class="footer-cat-2"><a href="#"> Footer Category 2<i class="fa-solid fa-angle-right"></i></a></h3>
+            </div>
+            <div class="footer-cat-3-container">
+                <h3 class="footer-cat-3"><a href="#"> Footer Category 3<i class="fa-solid fa-angle-right"></i></a></h3>
+            </div>
+            <div class="footer-cat-4-container">
+                <h3 class="footer-cat-4"><a href="#"> Footer Category 4<i class="fa-solid fa-angle-right"></i></a></h3>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <h5><i class="fa-regular fa-copyright"></i>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
+        </div>
     </footer>
 </body>
 </html>
