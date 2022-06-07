@@ -106,12 +106,17 @@ main{
 }
 main{
     background-color: #D9D9D9;
+    margin: 10%;
+    border-radius: 5%;
+    
 }
 .main-login-form{
     padding: 30px;
 }
 
-
+.contenedor_login{
+    margin: 10%;
+}
 
 .main-login-form button{
     padding: 5px;
