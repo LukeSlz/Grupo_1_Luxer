@@ -1,0 +1,239 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.emergent-info{
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+.emergent-info h4{
+    padding: 3px 0;
+    margin: 0;
+}
+.dropdown-menu-container{
+    border: #B8B4B4 5px solid;
+    padding: 20px;
+    width: 70%;
+    height: 425px;
+    color: #A68474;
+}
+.upper-dropdown-options{
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    width: auto;
+}
+.categories-list{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+.categories-list li{
+    list-style: none;
+    width: 100%;
+}
+.categories-list a{
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: auto;
+    width: 80%;
+    color: rgba(0, 0, 0, 0.8);
+}
+.categories-list hr{
+    border: #A89B95 solid 1px;
+    width: 100%;
+}
+.navigation-form{
+    width: 80%;
+    margin: auto;
+}
+.navigation{
+    display: flex;
+    width: 100%;
+}
+.nav-bar{
+    width: 100%;
+}
+/* Here finishes the option menu that is concealed behind the bars menu */
+.simplified-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0;
+    padding: 0 5%;
+    background-color: #D9D9D9;
+    border: #B8B4B4 solid 1px;
+}
+.simplified-header-container i{
+    font-size: 2rem;
+    color: #A68474;
+}
+.main-title{
+    margin: 5px 0;
+}
+/* */
+
+h2{
+    flex-direction: row;
+    margin-left: 10%;
+    justify-content: space-between;
+}
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a{
+    color: rgb(96, 86, 87);
+}
+
+main{
+    background: #D9D9D9;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2vw;
+    padding: 2vw;
+}
+
+.primerArticulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.segundoArticulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.clase, .precio{
+    display: flex;
+    justify-content: space-between;
+}
+
+p{
+    font-size: 20px;
+}
+
+.quantity, .colour{
+    display: flex;
+    justify-content: space-between;
+}
+
+article img{
+    width: 50%;
+    height: auto;
+    margin-right: 5%;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    transition: all 0.2s;
+    padding: auto;
+}
+
+select, input{
+    background-color: rgba(1,1,1,031.5rem);
+    color: black;
+    height: auto;
+    width: 10vw;
+    padding: 10px 10px;
+    border: 2px;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+    justify-content: center;
+}
+
+.silla:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    opacity: 0.9;
+}
+
+
+.sillon:hover{
+    opacity: 0.9;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+hr{
+    background-color: black;
+    font-weight: 200px;
+    color: black;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.realizar-compra{
+    margin-right: 30%;
+    margin-left: 30%;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+}
+
+.cuenta-subtotal, .cuenta-delivery, .cuenta-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton-comprar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button{
+    background-color: #1c1b1b;
+    color: white;
+    height: auto;
+    width: auto;
+    padding: 10px 10px;
+    border: 2px;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+@media (max-width: 480px){
+    article img{
+        margin: 14%;
+    }
+}
+
+@media (max-width: 768px){
+    .quantity, .colour{
+        display: none;
+}
+}
+
+@media (min-width: 769px){
+    
+}
+
+@media (max-width: 1270px){
+    
+}

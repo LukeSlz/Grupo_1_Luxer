@@ -1,14 +1,249 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/src/pages/shoppingCart/css/shoppingCart.css">
-    <title>shoppingCart</title>
-</head>
-<body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
 
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    
+    <script src="https://kit.fontawesome.com/0e8cf18810.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+    <!-- [START OF DEPLOYABLE MENU]-->
+    <div class="emergent-info">
+       
+        <!--Aqui irian promociones de temporada o mensajes variables emergentes-->
+    </div>
+
+    <div class="dropdown-menu-container">
+        <div class="upper-dropdown-options">
+            <i class="displayed-bars fa-solid fa-bars"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="header-categories-container">
+            <ul class="categories-list">
+                <li><a href="#">HOME <i class="fa-solid fa-angle-right"></i></a></li>
+                <hr>
+                <li><a href="#">CAT_1 <i class="fa-solid fa-angle-right"></i></a></li>
+                <hr>
+                <li><a href="#">CAT_2 <i class="fa-solid fa-angle-right"></i></a></li>
+                <hr>
+                <li><a href="#">CAT_3 <i class="fa-solid fa-angle-right"></i></a></li>
+                <hr>
+                <li><a href="#">CAT_4 <i class="fa-solid fa-angle-right"></i></a></li>
+                <hr>
+                <li><a href="#">CAT_5 <i class="fa-solid fa-angle-right"></i></a></li>
+                <hr>
+                <li><a href="#">CAT_6 <i class="fa-solid fa-angle-right"></i></a></li>
+                <hr>
+            </ul>
+        </div>
+        <form class="navigation-form" action="/register">
+            <div class="navigation">
+                <input type="text" class="nav-bar"> <button type="reset" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!--Temporarily, the button will reset the search-->
+            </div>
+        </form>
+    </div>
+    <!--[END OF DEPLOYABLE MENU]-->
+    <div class="simplified-header-container">
+        <i class="concealed-bars fa-solid fa-bars"></i>
+        <div class="horizontal-categories-nav-container">
+            <ul class="horizontal-categories-nav">
+                <li><a href="#" class="estilo-nav">HOME</a></li>
+                <li><a href="#" class="estilo-nav">New In</a></li>
+                <li><a href="#" class="estilo-nav">Bedroom</a></li>
+                <li><a href="#" class="estilo-nav">Living Room</a></li>
+                <li><a href="#" class="estilo-nav">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-title-container"> 
+        <img class="imagen-logo" src="/Grupo_1_Luxer\src\pages\productsDetails\images\logos png\luxerstudiochiquito.png">
+        </div>
+
+        <form class="busqueda">
+          <input type="text" placeholder="">
+          <button class="magnifier" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+        <div class="shopping-cart-container">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+    </header>
+        
+        <br>
+    
+    <main>
+        <br>
+        
+        <section> 
+            <h2>Carrito de compras</h2>
+        <br>
+            <hr>
+            
+            <br>
+            <article>
+                <div class="primerArticulo">   
+                    <img class="silla" src="images/Silla.webp" alt="Imagen de silla">
+                    <div class="flex1">
+                        <h4> <em> Bestseller</em> </h4> 
+                        <br>
+                        <div class="clase">
+                            <h3 class="clase">SILLA TERCIOPELO</h3>
+                            <h3 class="precio">$61.00</h3>
+                        </div>
+                        <br>
+                        <div class="descripcion">
+                             <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit</em></p>
+                        </div>
+                        <br>
+                        <div class="colour"> 
+                            <h4>Color </h4>
+                            <select name="colores" id="">
+                                <option value="1">Brown</option>
+                                <option value="2">Black</option>
+                                <option value="3">Green</option>
+                                <option value="4">Red</option>
+                                <option value="5">Blue</option>
+                            </select> 
+                        </div>
+                        <br>
+                        <div class="quantity">
+                            <h4>Cantidad</h4>
+                            <input id="Cantidad" type="number" name="Cantidad" value="1">
+                        </div>
+                        <br>
+                        <div class="edit">
+                            <a href=""><i class="fa-solid fa-pen"></i>Editar</a>
+                        </div>
+                        <br>
+                        <div class="wishlist">
+                            <a href=""><i class="fa-regular fa-heart"></i>Mis compras</a>
+                        </div>
+                        <br>
+                        <div class="remove">
+                            <a href=""><i class="fa-regular fa-trash-can"></i>Eliminar</a>
+                        </div>
+                </div>
+            </article>
+                 
+        <br>
+            
+        <hr>
+
+        <br>
+        <article>
+            <div class="segundoArticulo">   
+                <img class="sillon" src="images/sillon.jpg" alt="Imagen de sillon">
+                <div class="flex2">
+                    <div class="clase">
+                        <h3 class="clase">SILLON HIERRO</h3>
+                        <h3 class="precio">$319.50</h3>
+                   </div>
+                    <br>
+                    <div class="descripcion">
+                         <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit</em></p>
+                    </div>
+                    <br>
+                    <div class="colour"> 
+                        <h4>Color </h4>
+                        <select name="colores" id="">
+                            <option value="1">Black / Grey</option>
+                            <option value="2">Black / Blue</option>
+                        </select> 
+                    </div>
+                    <br>
+                    <div class="quantity">
+                        <h4>Cantidad</h4>
+                        <input id="Cantidad" type="number" name="Cantidad" value="1">
+                    </div>
+                    <br>
+                    <div class="edit">
+                        <a href=""><i class="fa-solid fa-pen"></i>Editar</a>
+                    </div>
+                    <br>
+                    <div class="wishlist">
+                        <a href=""><i class="fa-regular fa-heart"></i>Mis compras</a>
+                    </div>
+                    <br>
+                    <div class="remove">
+                        <a href=""><i class="fa-regular fa-trash-can"></i>Eliminar</a>
+                    </div>
+            </div>
+        </article>
+        
+        </section>
+        <br>
+        
+        <hr>
+        
+        <br>
+        
+        <section>
+            <div class="realizar-compra">    
+                <div class="cuenta-subtotal">
+                   <h4>Subtotal </h4>
+                   <h4>$380.50</h4>
+                </div>
+                <br>
+                <div class="cuenta-delivery">
+                    <h4>Delivery</h4>
+                    <h4>$35</h4>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div class="cuenta-total">
+                    <h3>Total</h3>
+                    <h3>$415.50</h3>
+                </div>
+                </div>
+                <br>
+                <hr>
+            </div> 
+            <br>
+            <div class="boton-comprar">
+                <button type="submit">Continuar compra</button>
+            </div> 
+            <br>
+        </section>
+    </main>
+
+        <br>    
+
+    <footer>
+        <div class="div-footer">
+            <div class="bloque-footer">
+                
+                <h4>Luxer Studio</h4>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+
+            </div>
+            <div class="bloque-footer">
+            
+                <h4>Envío gratis desde $ 2.500</h4>
+                <br>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+            </div>
+            <div class="bloque-footer">
+                
+                <h4>Seguridad, de principio a fin</h4>
+                <br>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+            </div>
+        </div>
+        <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+    </footer>
 </body>
 </html>
