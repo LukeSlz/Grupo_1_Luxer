@@ -10,8 +10,8 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'pages/login/login.html'))
 })
-app.get('/productDetails', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'pages/productDetails/productDetails.html'))
+app.get('/productsDetails', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'pages/productsDetails/productsDetails.html'))
 })
 app.get('/register', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'pages/register/register.html'))
