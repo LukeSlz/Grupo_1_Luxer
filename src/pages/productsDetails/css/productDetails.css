@@ -318,6 +318,26 @@ border-radius: 3px;
 }
 
 
+/* Footer */
+
+.div-footer{
+    font-size: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.estilo-input {
+    display: inline-block;
+    background-color:#B8B4B4;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    border-color: transparent;
+}
+
+
+
 
 @media (min-width: 769px){
     .dropdown-menu-container{
