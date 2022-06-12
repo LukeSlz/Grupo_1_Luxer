@@ -13,18 +13,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="temporal-colors">
-        <p id="color1">color1 #D9D9D9</p>
-        <p id="color2">color2 #B8B4B4</p>
-        <p id="color3">color3 #A89B95</p>
-        <p id="color4">color4 #A68474</p>
-    </div>
+    
     <header>
         <!-- [START OF DEPLOYABLE MENU]-->
         <div class="emergent-info">
-            <h4>Informacion o promocion emergente</h4>
+           
             <!--Aqui irian promociones de temporada o mensajes variables emergentes-->
         </div>
+    
         <div class="dropdown-menu-container">
             <div class="upper-dropdown-options">
                 <i class="displayed-bars fa-solid fa-bars"></i>
@@ -32,7 +28,7 @@
             </div>
             <div class="header-categories-container">
                 <ul class="categories-list">
-                    <li><a href="home/home.html">HOME <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#">HOME <i class="fa-solid fa-angle-right"></i></a></li>
                     <hr>
                     <li><a href="#">CAT_1 <i class="fa-solid fa-angle-right"></i></a></li>
                     <hr>
@@ -60,21 +56,25 @@
             <i class="concealed-bars fa-solid fa-bars"></i>
             <div class="horizontal-categories-nav-container">
                 <ul class="horizontal-categories-nav">
-                    <li><a href="../home/home.html" class="home-horizontal">HOME</a></li>
-                    <li><a href="../register/register.html" class="cat-1-horizontal">Register</a></li>
-                    <li><a href="../login/login.html" class="cat-2-horizontal">Log in</a></li>
-                    <li><a href="#" class="cat-3-horizontal">CAT_3</a></li>
+                    <li><a href="/src/pages/home/home.html" class="estilo-nav">HOME</a></li>
+                    <li><a href="/src/pages/register/register.html" class="estilo-nav_2">Register</a></li>
+                    <li><a href="#" class="estilo-nav">Bedroom</a></li>
+                    <li><a href="#" class="estilo-nav">Living Room</a></li>
+                    <li><a href="#" class="estilo-nav">Contact</a></li>
                 </ul>
             </div>
-            <div class="main-title-container">
-                <h1 class="main-title">LUXER</h1>
+            
+            <div class="main-title-container"> 
+            <img class="imagen-logo" src="/src/pages/productsDetails/images/logos png/luxerstudiochiquito.png">
             </div>
-            <div class="navigation">
-                <input type="text" class="nav-bar"> <button type="reset" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <!--Temporarily, the button will reset the search-->
-            </div>
+    
+            <form class="busqueda">
+              <input type="text" placeholder="">
+              <button class="magnifier" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          <ul><br></ul>
             <div class="shopping-cart-container">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <li><a class="fa-solid fa-cart-shopping"></a></li>
             </div>
         </div>
     </header>
@@ -82,28 +82,39 @@
 
     </main>
     <footer>
-        <div class="footer-categories-container">
-            <hr>
-            <div class="footer-cat-1-container">
-                <h3 class="footer-cat-1"><a href="#"> Footer Category 1<i class="fa-solid fa-angle-right"></i></a></h3>
-            </div>
-            <hr>
-            <div class="footer-cat-2-container">
-                <h3 class="footer-cat-2"><a href="#"> Footer Category 2<i class="fa-solid fa-angle-right"></i></a></h3>
-            </div>
-            <hr>
-            <div class="footer-cat-3-container">
-                <h3 class="footer-cat-3"><a href="#"> Footer Category 3<i class="fa-solid fa-angle-right"></i></a></h3>
-            </div>
-            <hr>
-            <div class="footer-cat-4-container">
-                <h3 class="footer-cat-4"><a href="#"> Footer Category 4<i class="fa-solid fa-angle-right"></i></a></h3>
-            </div>
-            <hr>
-        </div>
-        <div class="copyright-container">
-            <h5><i class="fa-regular fa-copyright"></i>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
-        </div>
-    </footer>
+        <div class="div-footer">
+                    <div class="bloque-footer">
+                
+                        <h4>Luxer Studio</h4>
+                        <p>Mueblería de diseño contemporáneo.</p>
+                        <p>Productos Exclusivos para poner tu casa a tono.</p>
+        
+                    </div>
+        
+                    <div class="bloque-footer">
+                    
+                        <h4>Contacto</h4>
+                        <p>Avenida del Libertador 1073, Recoleta, CABA.</p>
+                        <p>Lunes a Sábados de 11 a 19:30 hs.</p>
+                        <p>+54 9 11 2276-9785</p>
+                    </div>
+        
+                    <div class="bloque-footer">
+                        
+                        <h4>Newsletter</h4>
+                        <p>No te pierdas las últimas novedades y ofertas</p>
+        
+                        <form action="" method="POST" class="caja-form">
+                
+                            <input id="email" type="email" name="email" placeholder="Ingresá tu e-mail" required class="estilo-input">
+                        
+                            <button type="submit" class="submit">Suscribite</button>
+                        </form>
+        
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">Copyright © 2022 Luxer Studio SA </p>
+            </footer>
 </body>
 </html>
