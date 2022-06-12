@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+.imagen-logo{
+    width: 20%;
+}
 
 .emergent-info{
     background-color: #000000;
@@ -64,24 +67,6 @@
 .nav-bar{
     width: 100%;
 }
-/* Here finishes the option menu that is concealed behind the bars menu */
-.simplified-header-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2% 0;
-    padding: 0 5%;
-    background-color: #D9D9D9;
-    border: #B8B4B4 solid 1px;
-}
-.simplified-header-container i{
-    font-size: 2rem;
-    color: #A68474;
-}
-.main-title{
-    margin: 5px 0;
-}
-/* */
 
 h2{
     flex-direction: row;
@@ -116,6 +101,16 @@ main{
     padding: 1%;
 }
 
+.silla{
+    width: 65%;
+    height: 65%;
+    margin-right: 5%;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    transition: all 0.2s;
+    padding: auto;
+}
+
 .segundoArticulo{
     display: flex;
     flex-direction: row;
@@ -124,6 +119,16 @@ main{
     margin-right: 15%;
     border-radius: 10px;
     padding: 1%;
+}
+
+.sillon{
+    width: 65%;
+    height: 65%;
+    margin-right: 5%;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    transition: all 0.2s;
+    padding: auto;
 }
 
 .clase, .precio{
@@ -140,15 +145,6 @@ p{
     justify-content: space-between;
 }
 
-article img{
-    width: 50%;
-    height: auto;
-    margin-right: 5%;
-    border-bottom: 1px solid #ebebeb;
-    display: flex;
-    transition: all 0.2s;
-    padding: auto;
-}
 
 select, input{
     background-color: rgba(1,1,1,031.5rem);
@@ -218,12 +214,126 @@ button:hover{
     color: black;
 }
 
-@media (max-width: 480px){
+/*header*/
+.simplified-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0;
+    padding: 0 5%;
+    background-color: #D9D9D9;
+    border: #B8B4B4 solid 1px;
+}
+
+.busqueda {
+    display: flex;
+    width: 25%;
+    border-radius: 3px;
+    background-color: #B8B4B4 ;
+    justify-content: space-between;
+    
+    
+}
+
+.busqueda input {
+    
+    flex-grow: 0.8;
+    background: transparent;
+    border: transparent;
+    font-size: 12px;
+    padding: 8px;
+    
+}
+
+.busqueda button[type="submit"] {
+    flex-grow: 0;
+    background-color: transparent;
+    color: white;
+    margin-right: 5px;
+    padding: 5px;
+    border: 0px;
+}
+
+.main-title{
+    margin: 5px 0;
+}
+
+.estilo-nav{
+    color:#A68474;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+}
+
+.estilo-nav_2{
+    color:#A68474;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+}
+
+.imagen-logo{
+    width: 20%;
+}
+
+/*finish header*/
+
+/* Footer */
+footer{
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #B8B4B4;
+
+}
+.div-footer{
+   
+    font-size: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.estilo-input {
+    display: inline-block;
+    background-color:#D9D9D9;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    border-color: transparent;
+}
+
+.submit{
+    margin-left: 4px;
+    background-color: #A68474;
+
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    border-color: transparent;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+/*footer*/
+
+
+/*@media (max-width: 480px){
     article img{
         margin: 14%;
     }
 }
-
+*/
 @media (max-width: 768px){
     .quantity, .colour{
         display: none;
@@ -231,9 +341,49 @@ button:hover{
 }
 
 @media (min-width: 769px){
-    
+    .dropdown-menu-container{
+        display: none;
+    }
+    .concealed-bars{
+        display: none;
+    }
+    .simplified-header-container{
+        display: flex;
+        padding: 0;
+    }
+    .main-title-container{
+        text-align: center;
+        flex-grow: 100;
+        justify-self: center;
+    }
+    .main-title{
+        width: 30%;
+        margin: auto;
+    }
+    .shopping-cart-container{
+        text-align: right;
+    }
+    .horizontal-categories-nav-container{
+        text-align: left;
+    }
+    .horizontal-categories-nav{
+        display: flex;
+        padding: 0;
+    }
+    .horizontal-categories-nav li{
+        list-style: none;
+        padding: 0 10px;
+        border-left: 1px solid #B8B4B4; 
+        border-right: 1px solid #B8B4B4; 
+    }
+    .navigation{
+        width: 25%;
+        height: 30px;
+    }
+    .navigation button i{
+        font-size: 1.5em;
+    }
 }
-
 @media (max-width: 1270px){
     
 }
