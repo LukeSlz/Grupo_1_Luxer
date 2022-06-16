@@ -244,6 +244,32 @@ ul.slider li:target {
 }
 
 
+.center{
+    text-align: center;
+}
+
+.also-like {
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 5%;
+
+}
+
+.imagen-alsolike{
+    width: 85%;
+    
+}
+
+.info-alsolike{
+    width: 85%;
+    text-align: center;
+    
+    
+    
+}
+
+
 .footer-categories-container a{
     font-size: 24px;
     display: flex;
