@@ -90,18 +90,20 @@
 }
 
 /*finish header*/
-
+.center{
+    display: block;
+}
 .conteiner{
-    width: 100%;
-    
+    display: block;
+    width: 70%;
+    height: 500px;
+    margin: auto;
 }
 
 .imagen-producto{
-    float: left;
     width: 100%;
+    height: 100%;
     padding: 2px;
-    
-
 }
 
 ul, li {
@@ -113,8 +115,7 @@ ul, li {
 ul.slider{
     position: relative;
     width: 100%;
-    height: 450px;
-  
+    height: 100%;
 }
 
 ul.slider li {
