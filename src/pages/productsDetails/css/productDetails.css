@@ -111,7 +111,7 @@ ul.slider li:target {
 }
 
 .social-icons {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 input{
@@ -295,7 +295,11 @@ border-radius: 3px;
     
 }
 
-.icono-carrito{
+.shopping-cart-container{
+    padding: 8px;
+    color: white;
+}
+.menu-hamburguesa{
     padding: 8px;
     color: white;
 }
