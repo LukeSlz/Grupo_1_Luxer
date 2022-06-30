@@ -2,22 +2,24 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const path = require('path');
+app.set('view engine', 'ejs');
 app.use(express.static('pages'));
 
+
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'pages/home/home.html'))
+    res.render('home')
 })
 app.get('/login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'pages/login/login.html'))
+    res.render('login.ejs')
 })
 app.get('/productsDetails', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'pages/productsDetails/productsDetails.html'))
+    res.render('productsDetails.ejs')
 })
 app.get('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'pages/register/register.html'))
+    res.render('register.ejs')
 })
 app.get('/shoppingCart', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'pages/shoppingCart/shoppingCart.html'))
+    res.render('shoppingCart.ejs')
 })
 
 app.listen(port, () => {
