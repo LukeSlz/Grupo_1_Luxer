@@ -1,11 +1,19 @@
+/*****  Requires    *****/
 const express = require('express');
 const app = express();
-const port = 3000;
 const path = require('path');
+
+/*****  Port    *****/
+const port = 7000;
+
+/*****  Middlewares *****/
+app.use(express.static('public'));
+
+/*****  EJS - Template Engine   *****/
 app.set('view engine', 'ejs');
-app.use(express.static('pages'));
+app.set('views', './src/views');
 
-
+/*****  Route System    *****/
 app.get('/', (req, res) => {
     res.render('home')
 })
@@ -22,6 +30,8 @@ app.get('/shoppingCart', (req, res) => {
     res.render('shoppingCart.ejs')
 })
 
+
+/***** Port Run *****/
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
