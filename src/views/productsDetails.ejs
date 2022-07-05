@@ -1,0 +1,153 @@
+<%- include('./partials/head') %>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+<main>
+
+    <div class="conteiner">
+
+    <div class="imagen-producto">
+        <ul class= "slider">
+        <li id="slide1">
+            <img src="images\espejo-glass.jpg"/>
+          </li>
+          <li id="slide2">
+            <img src="images/espejo-round.jpg"/>
+          </li>
+          <li id="slide3">
+            <img src="images/maceta-linda.jpg"/>
+          </li>
+        </ul>
+        <ul class="menu">
+            <li>
+              <a href="#slide1">1</a>
+            </li>
+            <li>
+              <a href="#slide2">2</a>
+            </li>
+             <li>
+              <a href="#slide3">3</a>
+            </li>
+          </ul>
+
+
+    </div>
+
+    
+    
+
+<div class="producto">
+
+<h1>Espejo Glass</h1>
+<h2>$70.500</h2>
+
+<p class="descripcion">Realizado en madera maciza, varios estilos. Vidrio premium de 0.50cm de profundidad.</p> 
+<p class="medidas">Medidas: 180x90cm, 200x110cm, 240x120cm, 260x120cm.</p>
+<p class="extra">Origen Nacional. Cuidados: Limpieza con paño semi-húmedo o seco.</p>
+
+
+<div class="social-icons">
+
+<i class="fa-brands fa-facebook-square"></i>
+<i class="fa-solid fa-share"></i>
+</div>
+
+<br>
+
+<label class="mm">Material:</label>
+<br>
+
+
+<div class="elegir-material">
+    
+    <form action="" method="POST" class="form-elegir">
+
+<br>
+<label class="label-radio"><input type="radio" name="material" value="Material">Paraíso</label>
+<label class="label-radio"><input type="radio" name="material" value="Material">Caoba</label>
+<label class="label-radio"><input type="radio" name="material" value="Material">Roble</label>
+</div>
+</form>
+
+
+<label class="mm">Medidas:</label>
+
+<br>
+
+<div class= "elegir-medidas">
+    <form action="" method="POST" class="form-elegir">         
+<br>
+<label class="label-radio"><input type="radio" name="medidas" value="Medidas">180x90cm</label>
+
+<label class="label-radio"><input type="radio" name="medidas" value="Medidas">200x110cm</label>
+
+<label class="label-radio"><input type="radio" name="medidas" value="Medidas">240x120cm</label>
+</form>
+
+</div>
+
+
+<br>
+
+<label class="boton-comprar"><input type="submit" name="comprar" value="Comprar">Comprar</label>
+
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h2 class="center">También Puede Gustarte</h2>
+<br>
+
+<div class="also-like">
+
+<article class="articulo">
+
+<img class="imagen-alsolike" src="images/escritorio-white.jpg" alt="Imagen del escritorio">
+
+<div class="info-alsolike">
+<h4>Escritorio White</h4>
+<h5>$20.500</h5>
+</div>
+</article>
+
+<article class="articulo">
+
+    <img class="imagen-alsolike" src="images/sillon-pringles.jpg" alt="Imagen de Sillón Pringles">
+    
+    <div class="info-alsolike">
+    <h4>Sillón Pringles</h4>
+    <h5>$40.600</h5>
+    </div>
+    </article>
+
+<article class="articulo">
+
+    <img class="imagen-alsolike" src="images/sillon-divan.jpg" alt="Imagen de Diván">
+        
+        <div class="info-alsolike">
+        <h4>Diván Froyd</h4>
+        <h5>$96.000</h5>
+        </div>
+        </article>
+
+        
+
+</div>
+
+<br>
+
+
+
+</main> 
+
+<%- include('./partials/footer') %>
+
+</body>
+</html>

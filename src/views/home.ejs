@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/044c3f9b87.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        
+        <div class="emergent-info">
+           
+            <!--Aqui irian promociones de temporada o mensajes variables emergentes-->
+        </div>
+    
+        <div class="dropdown-menu-container">
+            <div class="upper-dropdown-options">
+                <i class="displayed-bars fa-solid fa-bars"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+           
+            <form class="navigation-form" action="/register">
+                <div class="navigation">
+                    <input type="text" class="nav-bar"> <button type="reset" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <!--Temporarily, the button will reset the search-->
+                </div>
+            </form>
+        </div>
+        <!--[END OF DEPLOYABLE MENU]-->
+        <div class="simplified-header-container">
+            <div class="menu-hamburguesa"><i class="concealed-bars fa-solid fa-bars"></i></div>
+            <div class="horizontal-categories-nav-container">
+                <ul class="horizontal-categories-nav">
+                    <li><a href="#" class="estilo-nav">HOME</a></li>
+                    <li><a href="#" class="estilo-nav">New In</a></li>
+                    <li><a href="#" class="estilo-nav">Bedroom</a></li>
+                    <li><a href="#" class="estilo-nav">Living Room</a></li>
+                    <li><a href="#" class="estilo-nav">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="main-title-container"> 
+            <img class="imagen-logo" src="/home/images\logos png\luxerstudiochiquito.png">
+            </div>
+    
+            <form class="busqueda">
+              <input type="text" placeholder="">
+              <button class="magnifier" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          <ul><br></ul>
+            <div class="shopping-cart-container">
+                <li><a class="fa-solid fa-cart-shopping"></a></li>
+            </div>
+        </div>
+    </header>
+<main>
+    <div class="conteiner">
+        <div class="imagen-producto">
+            <ul class= "slider">
+                <li id="slide1">
+                    <img src="/home/images\espejo-glass.jpg">
+                </li>
+                <li id="slide2">
+                    <img src="/home/images/espejo-round.jpg">
+                </li>
+                <li id="slide3">
+                    <img src="/home/images/maceta-linda.jpg">
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a href="#slide1">1</a>
+                </li>
+                <li>
+                    <a href="#slide2">2</a>
+                </li>
+                <li>
+                    <a href="#slide3">3</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+   <div class="home-2">
+
+<div class="new-collection">
+    <h2 class="title-nc"> New Collection | Italian Style</h2>
+    <img class="imagen-nc" src="\home\images\sillon-italian.jpg">
+        <p class="p-description">Diseño italiano exclusivo importado desde Italia. Estilo vanguardista para otorgar el toque moderno que estás buscando en tu casa. <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eos ducimus earum molestias itaque. Officia molestias vero dolorum nesciunt dolore voluptatem quo. <br> Laboriosam doloribus aspernatur odit rem nemo tempora fuga.</p>
+
+        <form>
+    <input type="submit" name="boton" value="Ver Productos" class="boton">
+    <input type="submit" name="boton" value="Más Estilos" class="boton">
+        </form>
+        
+</div>
+
+
+   </div>
+
+
+<div class= "alsolike-container">
+
+        <h2 class="center">También Puede Gustarte</h2>
+       
+        <br>
+        
+        <div class="also-like">
+        
+        <article class="articulo">
+        
+        <img class="imagen-alsolike" src="/home/images/escritorio-white.jpg" alt="Imagen del escritorio">
+    
+        </article>
+        
+        <article class="articulo">
+        
+            <img class="imagen-alsolike" src="/home/images/sillon-pringles.jpg" alt="Imagen de Sillón Pringles">
+            
+            
+            </article>
+        
+        <article class="articulo">
+        
+            <img class="imagen-alsolike" src="/home/images/sillon-divan.jpg" alt="Imagen de Diván">
+                
+            
+                </article>
+        
+                
+        
+        </div>
+    </div>
+        
+   
+
+    
+        
+
+    </main>
+
+    <footer>
+        <div class="div-footer">
+                    <div class="bloque-footer">
+                
+                        <h4>Luxer Studio</h4>
+                        <p>Mueblería de diseño contemporáneo.</p>
+                        <p>Productos Exclusivos para poner tu casa a tono.</p>
+        
+                    </div>
+        
+                    <div class="bloque-footer">
+                    
+                        <h4>Contacto</h4>
+                        <p>Avenida del Libertador 1073, Recoleta, CABA.</p>
+                        <p>Lunes a Sábados de 11 a 19:30 hs.</p>
+                        <p>+54 9 11 2276-9785</p>
+                    </div>
+        
+                    <div class="bloque-footer">
+                        
+                        <h4>Newsletter</h4>
+                        <p>No te pierdas las últimas novedades y ofertas</p>
+        
+                        <form action="" method="POST" class="caja-form">
+                
+                            <input id="email" type="email" name="email" placeholder="Ingresá tu e-mail" required class="estilo-input">
+                        
+                            <button type="submit" class="submit">Suscribite</button>
+                        </form>
+        
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">Copyright © 2022 Luxer Studio SA </p>
+            </footer>
+</body>
+</html>

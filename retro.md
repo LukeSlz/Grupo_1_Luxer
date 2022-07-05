@@ -10,4 +10,16 @@ Establecimos deadlines para pequeños entregables, para posteriormente revisarlo
 Un punto que consideramos óptimo a mejorar en nuestro desempeño como equipo de trabajo colaborativo es capitalizar de una manera más eficiente el tiempo invertido: definir una rutina estructurada en nuestro flujo de trabajo.
 
 Nuestra idea es continuar con el ritmo de trabajo mantenido hasta el momento.
+_____________________________________________________________________________________________________________________________________________________________________
 
+## Sprint 2
+
+Para este Sprint tuvimos algunas novedades entre los integrantes del proyecto, lo cual nos causó un ligero movimiento en los ordenes del dia y deadlines autoimpuestos por el equipo para las soluciones parciales de las diferentes partes de la entrega.
+Lo anterior se tradujo en un pequeño diferencial en la presentacion de una de las páginas del proyecto (Home) versus su previa presentacion como wireframe. A pesar de esto, el desarrollo de esta página se definió ser abarcado por el equipo en conjunto para futuras entregas.
+
+Por otro lado, se utilizaron los wireframes previamente diseñados como un camino base para la elaboracion del codigo de cada página. Siguiendo todos unos estandares previamente pactados en cuanto a fonts y paleta de colores.
+
+Al momento de la entrega, hubo diferencias entre los elementos parciales respectivos a cada pagina. La solución para estos será prioridad al utilizar la metodologia de carpeta 'Partials' para la proxima entrega.
+
+Continuamos con establecimiento de deadlines autoimpuestos y seguimiento en conjunto del avance del proyecto mediante pequeñas reuniones periodicas.
+Estamos comprometiendonos progresivametne a estandarizar la continuidad de las mismas.
