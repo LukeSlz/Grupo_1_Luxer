@@ -19,8 +19,8 @@ const upload = multer({storage})
 
 /*****  Routes  *****/
 router.get('/createProduct', createProdController.viewForm);
-router.post('/createProduct', upload.any('images-create'),(req, res, next)=>{
-    console.log('files uploaded');
+router.post('/createProduct', upload.any('imagesCreate'),(req, res, next)=>{
+    console.log('New product created');
     next();
 }, createProdController.createNew);
 
