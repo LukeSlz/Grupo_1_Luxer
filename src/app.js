@@ -2,8 +2,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+    /*****  Routers *****/
+const createProductRouter = require('./routes/createProduct')
 
-app.use(express.static('pages'));
 
 /*****  Port    *****/
 const port = 7000;
@@ -31,7 +32,7 @@ app.get('/register', (req, res) => {
 app.get('/shoppingCart', (req, res) => {
     res.render('shoppingCart.ejs')
 })
-
+app.use(createProductRouter);
 
 /***** Port Run *****/
 app.listen(port, () => {

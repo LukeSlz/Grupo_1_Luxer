@@ -5,7 +5,46 @@
     <%- include('./partials/header')  %> 
 
     <main>
-
+        <div class="main-container-createProd">
+            <h2 class="tittle">Crear un producto nuevo</h2>
+            <form action="/createProduct" method="POST" enctype="multipart/form-data">
+                <div class="field">
+                    <label for="name-create">Nombre del producto</label><br>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="field">
+                    <label for="description-create">Descripción del producto</label><br>
+                    <textarea name="description-create" id="description-create" cols="50" rows="5" required></textarea>
+                </div>
+                <div class="field">
+                    <label for="images-create">Imagen(es) del producto</label><br>
+                    <input type="file" name="images-create" id="images-create" multiple required>
+                </div>
+                <div class="field">
+                    <label for="material-create">Material</label><br>
+                    <select name="material-create" id="material-create">
+                        <option value="mat-A-create">Material A</option>
+                        <option value="mat-B-create">Material B</option>
+                        <option value="mat-C-create">Material C</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="categories-create">Categorías del producto</label><br>
+                    <label><input type="checkbox" name="categories-create" value="cat-A-create" id="cat-A-create">Category A <br></label>
+                    <label><input type="checkbox" name="categories-create" value="cat-B-create" id="cat-B-create">Category B <br></label>
+                    <label><input type="checkbox" name="categories-create" value="cat-C-create" id="cat-C-create">Category C <br></label>
+                    <label><input type="checkbox" name="categories-create" value="cat-D-create" id="cat-D-create">Category D <br></label>
+                    <label><input type="checkbox" name="categories-create" value="cat-E-create" id="cat-E-create">Category E <br></label>
+                </div>
+                <div class="field">
+                    <label for="price-create">Precio</label>
+                    $<input type="number" step="100" name="price-create" id="price-create" placeholder="10,000">
+                </div>
+                <div class="field">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
     </main>
 
     <%- include('./partials/footer')  %> 
