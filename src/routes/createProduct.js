@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const createProdController = require('../controllers/createProduct');
 
 /*****  Multer  *****/
 const storage = multer.diskStorage({
@@ -17,16 +18,11 @@ const storage = multer.diskStorage({
 const upload = multer({storage})
 
 /*****  Routes  *****/
-router.get('/createProduct', (req, res) =>{
-    res.render('createProduct');
-});
+router.get('/createProduct', createProdController.viewForm);
 router.post('/createProduct', upload.any('images-create'),(req, res, next)=>{
     console.log('files uploaded');
     next();
-},
-    (req, res) =>{
-        res.send('Files Uploaded');
-    });
+}, createProdController.createNew);
 
 /*****  Exports *****/
 module.exports = router;
