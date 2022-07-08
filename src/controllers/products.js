@@ -5,8 +5,8 @@ const multer = require('multer');
 
 /*****  Controller Methods  *****/
         /*****  Create a new product Controler   *****/
-const controllerCreateProduct = {
-    viewForm: (req, res) => {
+const productController = {
+    viewFormCreate: (req, res) => {
         res.render('createProduct');
     },
 //------------- Method para la creacion de nuevos productos. Se accedera por POST --------
@@ -38,14 +38,11 @@ const controllerCreateProduct = {
         fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
 //Redirigimos el usuario al home.
         res.redirect('/')
-    }
-}
-
-const controllerModifyProduct = {
-        viewForm: (req, res) => {
-                res.render('modifyProduct');
+    },
+    viewFormModify: (req, res) => {
+        res.render('modifyProduct');
         }
 }
 
 /*****  Export  *****/
-module.exports = controllerCreateProduct, controllerCreateProduct;
+module.exports = productController;

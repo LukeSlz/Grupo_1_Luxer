@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
     /*****  Routers *****/
-const createProductRouter = require('./routes/createProduct')
+const createProductRouter = require('./routes/createModifyProduct')
 
 
 /*****  Port    *****/

@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const createProdController = require('../controllers/product');
+const productsController = require('../controllers/products');
 
 /*****  Multer  *****/
 const storage = multer.diskStorage({
@@ -18,11 +18,15 @@ const storage = multer.diskStorage({
 const upload = multer({storage})
 
 /*****  Routes  *****/
-router.get('/createProduct', createProdController.viewForm);
+    /*****  Create  *****/
+router.get('/createProduct', productsController.viewFormCreate);
 router.post('/createProduct', upload.single('imagesCreate'),(req, res, next)=>{
     console.log('New product created');
     next();
-}, createProdController.createNew);
+}, productsController.createNew);
+
+    /*****  Modify  *****/
+router.get('/modifyProduct', productsController.viewFormModify)
 
 /*****  Exports *****/
 module.exports = router;
