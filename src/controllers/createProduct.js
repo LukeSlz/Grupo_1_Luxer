@@ -14,7 +14,7 @@ const controllerCreateProduct = {
         let newProduct = {
             name: req.body.nameCreate,
             description: req.body.descriptionCreate,
-            images: 'Still to resolve',
+            images: req.file.filename,
             material: req.body.materialCreate,
             categories: req.body.categoriesCreate,
             price: req.body.priceCreate,
