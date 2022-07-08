@@ -4,6 +4,7 @@ const fs = require('fs');
 const multer = require('multer');
 
 /*****  Controller Methods  *****/
+        /*****  Create a new product Controler   *****/
 const controllerCreateProduct = {
     viewForm: (req, res) => {
         res.render('createProduct');
@@ -40,5 +41,11 @@ const controllerCreateProduct = {
     }
 }
 
+const controllerModifyProduct = {
+        viewForm: (req, res) => {
+                res.render('modifyProduct');
+        }
+}
+
 /*****  Export  *****/
-module.exports = controllerCreateProduct;
+module.exports = controllerCreateProduct, controllerCreateProduct;

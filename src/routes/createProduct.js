@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const createProdController = require('../controllers/createProduct');
+const createProdController = require('../controllers/product');
 
 /*****  Multer  *****/
 const storage = multer.diskStorage({
