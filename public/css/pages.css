@@ -91,10 +91,11 @@ h3{
     position: relative;
     font-size: 1em;
     border-radius: 3px;
+    display: none;
 }
 
 .imagen-logo{
-    width: 20%;
+    width: 100%;
 }
 
 .emergent-info{
@@ -228,19 +229,21 @@ footer{
     }
     .horizontal-categories-nav-container{
         text-align: left;
-        min-width: 600px;
+        width: 45%;
     }
     .horizontal-categories-nav{
         display: flex;
-        padding: 0;
-        min-width: 600px;
+        padding: 0;;
     }
 
     .horizontal-categories-nav li{
         list-style: none;
         padding: 0 10px;
         border-left: 1px solid #B8B4B4; 
-        border-right: 1px solid #B8B4B4; 
+        border-right: 1px solid #B8B4B4;
+    }
+    .estilo-nav{
+        display: block;
     }
     .navigation{
         width: 25%;
