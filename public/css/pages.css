@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
 /* Body */
 
 body{
@@ -33,56 +37,54 @@ h3{
 
 .simplified-header-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 2% 0;
-    padding: 0 5%;
+    padding: 0 1%;
     background-color: #D9D9D9;
-    border: #B8B4B4 solid 1px;
+    border-top: #B8B4B4 solid 2px;
+    border-bottom: #B8B4B4 solid 2px;
 }
-
+.simplified-header-container i{
+    font-size: 2em;
+    color:#A68474;
+}
 .busqueda {
     display: flex;
     width: 25%;
     border-radius: 3px;
     background-color: #B8B4B4 ;
-    justify-content: space-between;
-    
-    
 }
 
 .busqueda input {
-    
-    flex-grow: 0.5;
     background: transparent;
     border: transparent;
-    font-size: 12px;
+    font-size: 1em;
     padding: 8px;
-    
+    width: 75%;
 }
-
-.shopping-cart-container{
-    padding: 8px;
+.busqueda button[type="submit"] {
+    width: auto;
+    font-size: 80%;
+    background-color: transparent;
     color: white;
+    padding: 5px;
 }
 .menu-hamburguesa{
     padding: 8px;
     color: white;
+    text-align: end;
 }
 
-.busqueda button[type="submit"] {
-    flex-grow: 0;
-    background-color: transparent;
-    color: white;
-    margin-right: 5px;
-    padding: 5px;
-    border: 0px;
+.main-title-container{
+    width: 65%;
 }
-
 .main-title{
     margin: 5px 0;
 }
-
+.header-icons-container{
+    display: flex;
+}
 .estilo-nav{
     color:#A68474;
     text-decoration: none;
@@ -223,9 +225,6 @@ footer{
     .main-title{
         width: 30%;
         margin: auto;
-    }
-    .shopping-cart-container{
-        text-align: right;
     }
     .horizontal-categories-nav-container{
         text-align: left;
