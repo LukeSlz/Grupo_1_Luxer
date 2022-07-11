@@ -5,14 +5,23 @@
     <div class="dropdown-menu-container">
         <div class="upper-dropdown-options">
             <i class="displayed-bars fa-solid fa-bars"></i>
-            <i class="fa-regular fa-user"></i>
+            <a href="../login"><i class="fa-regular fa-user"></i></a>
         </div>
-        <form class="navigation-form" action="/register">
-            <div class="navigation">
+        <form class="navigation-form-dropdown-menu" action="/">
+            <div class="navigation-dropdown-menu">
                 <input type="text" class="nav-bar"> <button type="reset" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
                 <!--Temporarily, the button will reset the search-->
             </div>
         </form>
+        <nav class="deployable-categories-header">
+            <ul class="categories-list-header">
+                <li><a href="#" class="deployable-header-nav">Nuevas tendencias</a></li><hr>
+                <li><a href="#" class="deployable-header-nav">Muebles</a></li><hr>
+                <li><a href="#" class="deployable-header-nav">Exteriores</a></li><hr>
+                <li><a href="#" class="deployable-header-nav">Interiores</a></li><hr>
+                <li><a href="#" class="deployable-header-nav">Iluminación</a></li><hr>
+            </ul>
+        </nav>
     </div>
     <!--[END OF DEPLOYABLE MENU]-->
     <div class="simplified-header-container">
@@ -32,9 +41,8 @@
         <div class="main-title-container"> 
             <img class="imagen-logo" src="images\logos-luxer\luxerstudiochiquito.png">
         </div>
-        <div class="header-icons-container">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-regular fa-user"></i>
+        <div class="header-icons-c  ontainer">
+            <a href="../shoppingCart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </div>
 </header>
