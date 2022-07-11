@@ -186,6 +186,7 @@ footer{
 .bloque-footer{
     width: 30%;
 }
+
 .estilo-input {
     display: inline-block;
     background-color:#D9D9D9;
@@ -193,6 +194,8 @@ footer{
     padding: 5px 15px;
     border-radius: 3px;
     border-color: transparent;
+    width: 100%;
+    margin: 5px 0;
 }
 
 .submit{
@@ -204,6 +207,7 @@ footer{
     border-radius: 3px;
     border-color: transparent;
 }
+
 
 .copyright{
     display: flex;

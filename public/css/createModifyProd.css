@@ -1,0 +1,9 @@
+.tittle{
+    margin: 0;
+}
+.form-prod input, .form-prod select{
+    width: auto;
+}
+.field{
+    margin: 10px 0;
+}

@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const productsController = require('../controllers/products');
+const productsMiddleware = require('../middlewares/createModifyProduct')
 
 /*****  Multer  *****/
 const storage = multer.diskStorage({
@@ -20,10 +21,8 @@ const upload = multer({storage})
 /*****  Routes  *****/
     /*****  Create  *****/
 router.get('/createProduct', productsController.viewFormCreate);
-router.post('/createProduct', upload.single('imagesCreate'),(req, res, next)=>{
-    console.log('New product created');
-    next();
-}, productsController.createNew);
+
+router.post('/createProduct', upload.single('imagesCreate'), productsMiddleware, productsController.createNew);
 
     /*****  Modify  *****/
 router.get('/modifyProduct', productsController.viewFormModify)
