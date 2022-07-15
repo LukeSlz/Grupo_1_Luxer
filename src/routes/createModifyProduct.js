@@ -25,7 +25,7 @@ router.get('/createProduct', productsController.viewFormCreate);
 router.post('/createProduct', upload.single('imagesCreate'), productsMiddleware, productsController.createNew);
 
     /*****  Modify  *****/
-router.get('/modifyProduct', productsController.viewFormModify)
+router.get('/modifyProduct/:id', productsController.viewFormModify)
 
 /*****  Exports *****/
 module.exports = router;

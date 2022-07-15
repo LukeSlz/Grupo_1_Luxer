@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
     /*****  Routers *****/
-const createProductRouter = require('./routes/createModifyProduct')
+const createModifyProdRouter = require('./routes/createModifyProduct')
 
 
 /*****  Port    *****/
@@ -32,7 +32,7 @@ app.get('/register', (req, res) => {
 app.get('/shoppingCart', (req, res) => {
     res.render('shoppingCart.ejs')
 })
-app.use(createProductRouter);
+app.use(createModifyProdRouter);
 
 /***** Port Run *****/
 app.listen(port, () => {
