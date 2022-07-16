@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <%- include('./partials/head')  %> 
+
 <body>
 
     <%- include('./partials/header') %>
@@ -9,45 +11,24 @@
 
     <div class="conteiner-pd">
 
-    <div class="imagen-producto-pd">
-        <ul class= "slider-pd">
-        <li id="slide1-pd">
-            <img src="images/imagen-producto/espejo-glass.jpg"/>
-          </li>
-          <li id="slide2-pd">
-            <img src="images/espejo-round.jpg"/>
-          </li>
-          <li id="slide3-pd">
-            <img src="images/maceta-linda.jpg"/>
-          </li>
-        </ul>
-        <ul class="menu-pd">
-            <li>
-              <a href="#slide1-pd">1</a>
-            </li>
-            <li>
-              <a href="#slide2-pd">2</a>
-            </li>
-             <li>
-              <a href="#slide3-pd">3</a>
-            </li>
-          </ul>
+      <img class="imagen-producto-pd" src="images/imagen-producto/espejo-glass.jpg"/>
 
-
-    </div>
-
-    
-    
 
 <div class="producto-pd">
 
 <h1>Espejo Glass</h1>
-<h2>$70.500</h2>
-
+<h3 class="h2precio">$70.500</h3>
+<br>
+<br>
 <p class="descripcion-pd">Realizado en madera maciza, varios estilos. Vidrio premium de 0.50cm de profundidad.</p> 
+<br>
+<br>
 <p class="medidas-pd">Medidas: 180x90cm, 200x110cm, 240x120cm, 260x120cm.</p>
+<br>
+<br>
 <p class="extra-pd">Origen Nacional. Cuidados: Limpieza con paño semi-húmedo o seco.</p>
 
+<br>
 
 <div class="social-icons-pd">
 
@@ -56,19 +37,20 @@
 </div>
 
 <br>
+<br>
 
 <label class="mm">Material:</label>
 <br>
 
 
-<div class="elegir-material">
+<div class="elegir-medidas">
     
     <form action="" method="POST" class="form-elegir">
 
 <br>
-<label class="label-radio"><input type="radio" name="material" value="Material">Paraíso</label>
-<label class="label-radio"><input type="radio" name="material" value="Material">Caoba</label>
-<label class="label-radio"><input type="radio" name="material" value="Material">Roble</label>
+<label class="label-radio-pd"><input type="radio" name="material" value="Material">Paraíso</label>
+<label class="label-radio-pd"><input type="radio" name="material" value="Material">Caoba</label>
+<label class="label-radio-pd"><input type="radio" name="material" value="Material">Roble</label>
 </div>
 </form>
 
@@ -88,11 +70,25 @@
 </form>
 
 </div>
-
-
+<label class="mm">Cantidad:</label>
+<br>
 <br>
 
-<label class="boton-comprar-pd"><input type="submit" name="comprar" value="Comprar">Comprar</label>
+<div class="select-option">
+<select name="cantidad" id="">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+
+</select> 
+
+</div>
+
+<br>
+<br>
+<form>
+  <button type="submit" class="comprar-button" href="..shoppingCart.ejs">Comprar</button>
+</form>
 
 </div>
 </div>
@@ -100,39 +96,44 @@
 <br>
 <br>
 <br>
+
+
+
+
+
+<h2 class="center">También Puede Gustarte</h2>
 <br>
+
+<div class="also-like">
+
+<article class="articulo">
+
+<img class="imagen-alsolike" src="images/imagen-producto/escritorio-white.jpg" alt="Imagen del escritorio">
 <br>
-
-<h2 class="center-pd">También Puede Gustarte</h2>
-<br>
-
-<div class="also-like-pd">
-
-<article class="articulo-pd">
-
-<img class="imagen-alsolike-pd" src="images/escritorio-white.jpg" alt="Imagen del escritorio">
-
-<div class="info-alsolike-pd">
+<div class="info-alsolike">
 <h4>Escritorio White</h4>
 <h5>$20.500</h5>
 </div>
+
 </article>
 
-<article class="articulo-pd">
 
-    <img class="imagen-alsolike-pd" src="images/sillon-pringles.jpg" alt="Imagen de Sillón Pringles">
-    
-    <div class="info-alsolike-pd">
+<article class="articulo">
+
+    <img class="imagen-alsolike" src="images/imagen-producto/sillon-pringles.jpg" alt="Imagen de Sillón Pringles">
+    <br>
+    <br>
+    <div class="info-alsolike">
     <h4>Sillón Pringles</h4>
     <h5>$40.600</h5>
     </div>
     </article>
 
-<article class="articulo-pd">
+<article class="articulo">
 
-    <img class="imagen-alsolike-pd" src="images/sillon-divan.jpg" alt="Imagen de Diván">
-        
-        <div class="info-alsolike-pd">
+    <img class="imagen-alsolike" src="images/imagen-producto/sillon-divan.jpg" alt="Imagen de Diván">
+    <br>
+        <div class="info-alsolike">
         <h4>Diván Froyd</h4>
         <h5>$96.000</h5>
         </div>
@@ -142,7 +143,6 @@
 
 </div>
 
-<br>
 
 
 

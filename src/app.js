@@ -32,6 +32,19 @@ app.get('/register', (req, res) => {
 app.get('/shoppingCart', (req, res) => {
     res.render('shoppingCart.ejs')
 })
+app.get('/createProduct', (req, res) => {
+    res.render('createProduct.ejs')
+})
+app.get('/modifyProduct', (req, res) => {
+    res.render('modifyProduct.ejs')
+})
+app.get('/allProducts', (req, res) => {
+    res.render('allProducts.ejs')
+})
+app.get('/allUsers', (req, res) => {
+    res.render('allUsers.ejs')
+})
+
 app.use(createModifyProdRouter);
 
 /***** Port Run *****/

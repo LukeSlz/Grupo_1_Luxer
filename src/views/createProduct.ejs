@@ -6,30 +6,39 @@
 
     <main>
         <div class="main-container-createProd">
-            <h2 class="tittle">Crear un producto nuevo</h2>
+
+            <h2 class="title">DAR DE ALTA NUEVO PRODUCTO</h2>
+
             <form action="/createProduct" method="POST" enctype="multipart/form-data" class="form-prod">
                 <div class="field">
                     <label for="nameCreate">Nombre del producto</label><br>
-                    <input type="text" name="nameCreate" id="name" required>
+                    <input class="text-input" type="text" name="nameCreate" id="name" required>
                 </div>
+
                 <div class="field">
                     <label for="descriptionCreate">Descripción del producto</label><br>
-                    <textarea name="descriptionCreate" id="descriptionCreate" cols="50" rows="5" required></textarea>
+                    <textarea class="description-input" name="descriptionCreate" id="descriptionCreate" cols="50" rows="5" required></textarea>
                 </div>
+                
                 <div class="field">
-                    <label for="imagesCreate">Imágen(es) del producto</label><br>
+                    <label for="imagesCreate">Agregar Imágenes</label><br>
                     <input type="file" name="imagesCreate" id="imagesCreate" multiple>
                 </div>
                 <div class="field">
-                    <label for="materialCreate">Material</label><br>
+                    <label for="materialCreate">Material</label>
+                    <br>
+                    <br>
                     <select name="materialCreate" id="materialCreate" required>
                         <option value="mat-A-create">Material A</option>
                         <option value="mat-B-create">Material B</option>
                         <option value="mat-C-create">Material C</option>
                     </select>
+                    
                 </div>
                 <div class="field">
-                    <label for="categoriesCreate">Categorías del producto</label><br>
+                    <label for="categoriesCreate">Categorías del producto</label>
+                    <br>
+                    <br>
                     <label><input type="checkbox" name="categoriesCreate" value="cat-A-create" id="cat-ACreate">Category A <br></label>
                     <label><input type="checkbox" name="categoriesCreate" value="cat-B-create" id="cat-BCreate">Category B <br></label>
                     <label><input type="checkbox" name="categoriesCreate" value="cat-C-create" id="cat-CCreate">Category C <br></label>
@@ -38,10 +47,12 @@
                 </div>
                 <div class="field">
                     <label for="priceCreate">Precio</label>
-                    $<input type="number" step="100" name="priceCreate" id="priceCreate" placeholder="10,000" required>
+                    <br>
+                    <input class = "text-input" type="number" step="100" name="priceCreate" id="priceCreate" placeholder="$" required>
                 </div>
+                <br>
                 <div class="field">
-                    <button type="submit">Crear</button>
+                    <button class = "send-button" type="submit">Crear</button>
                 </div>
             </form>
         </div>
