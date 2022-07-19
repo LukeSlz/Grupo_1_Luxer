@@ -34,7 +34,9 @@ app.get('/productsDetails', (req, res) => {
 app.get('/allProducts', (req, res) => {
     res.render('allProducts.ejs')
 })
-
+app.get('/userDetails', (req, res) => {
+    res.render('userDetails.ejs')
+})
 
 /***** Port Run *****/
 app.listen(port, () => {
