@@ -1,0 +1,46 @@
+
+.users-listado-title{
+    text-align: center;
+    
+}
+
+.listado-users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.listado-usuario{
+    width: 33%;
+    padding: 10px;
+    
+}
+
+.imagen-usuario{
+    width: 85%;
+    border-radius: 2px;
+    
+}
+
+
+.listado-button{
+    margin-top: -20px;
+    color: white;
+    background-color: #A89B95;
+    padding: 10px 20px;
+    border: 2px;
+    border-radius: 3px;
+    transition-property: text-decoration;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-delay: 0.2s;
+}
+
+.listado-button:hover{
+    margin-top: -20px;
+    color: white;
+    background-color: #816b62;
+    padding: 10px 20px;
+    border: 2px;
+    border-radius: 3px;
+}

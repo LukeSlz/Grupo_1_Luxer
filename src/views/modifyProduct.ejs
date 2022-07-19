@@ -6,23 +6,23 @@
 
     <main>
         <div class="main-container-modifyProd">
-            <h2 class="tittle">Modificar un producto</h2>
-            <form action="/modifyProduct" method="POST" enctype="multipart/form-data" class="form-prod">
+            <h2 class="title">MODIFICAR PRODUCTO</h2>
+            <form action="/modifyProduct/<%= myProduct.id %>?" method="POST" enctype="multipart/form-data" class="form-prod">
                 <div class="field">
                     <label for="nameModify">Nombre del producto</label><br>
-                    <input type="text" name="nameModify" id="name" required>
+                    <input type="text" name="nameModify" id="name" value="<%= myProduct.name %>">
                 </div>
                 <div class="field">
                     <label for="descriptionModify">Descripción del producto</label><br>
-                    <textarea name="descriptionModify" id="descriptionModify" cols="50" rows="5" required></textarea>
+                    <textarea name="descriptionModify" id="descriptionModify" cols="50" rows="5" ><%= myProduct.description %></textarea>
                 </div>
                 <div class="field">
                     <label for="imagesModify">Imágen(es) del producto</label><br>
-                    <input type="file" name="imagesModify" id="imagesModify" multiple>
+                    <input type="file" name="imagesModify" id="imagesModify" value="<%= myProduct.images %>">
                 </div>
                 <div class="field">
                     <label for="materialModify">Material</label><br>
-                    <select name="materialModify" id="materialModify" required>
+                    <select name="materialModify" id="materialModify" value="<%= myProduct.material %>">
                         <option value="mat-A-Modify">Material A</option>
                         <option value="mat-B-Modify">Material B</option>
                         <option value="mat-C-Modify">Material C</option>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="field">
                     <label for="priceModify">Precio</label>
-                    $<input type="number" step="100" name="priceModify" id="priceModify" placeholder="10,000" required>
+                    $<input type="number" step="100" name="priceModify" id="priceModify" placeholder="10,000" value="<%= myProduct.price %>">
                 </div>
                 <div class="field">
                     <button type="submit">Modificar</button>
