@@ -9,5 +9,5 @@ module.exports = {
     },
     viewAllUsers: (req,res) => {
         res.render('allUsers');
-    },
+    }
 }
