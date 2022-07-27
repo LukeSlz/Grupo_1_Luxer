@@ -7,7 +7,7 @@
     <main>
         <div class="main-container-modifyProd">
             <h2 class="title">MODIFICAR PRODUCTO</h2>
-            <form action="/modifyProduct/<%= myProduct.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-prod">
+            <form action="/products/<%= myProduct.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data" class="form-prod">
                 <div class="field">
                     <label for="nameModify">Nombre del producto</label><br>
                     <input type="text" name="nameModify" id="name" value="<%= myProduct.name %>">

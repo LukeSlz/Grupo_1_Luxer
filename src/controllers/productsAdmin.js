@@ -27,7 +27,7 @@ const productController = {
             description: req.body.descriptionCreate,
             images: req.file.filename,
             material: req.body.materialCreate,
-            category: req.body.categoriesCreate,
+            category: req.body.categoryCreate,
             price: req.body.priceCreate
             };
         products.push(newProduct);
@@ -35,7 +35,7 @@ const productController = {
         fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
         res.redirect('/')
         },
-    viewFormModify: (req, res) => {
+    viewFormEdit: (req, res) => {
         let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
         products = JSON.parse(productsArchive);
         let myProduct;
@@ -44,26 +44,41 @@ const productController = {
                         myProduct = item;
                 }
         });
-        res.render('modifyProduct', {myProduct})
+        res.render('editProduct', {myProduct})
     },
-    modify: (req, res) => {
+    edit: (req, res) => {
         let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
         products = JSON.parse(productsArchive);
+        let theProductIndex = products.findIndex(prod => prod.id == req.params.id);
         let modifiedProduct = {
-            id: req.params.id,
+            id: products[theProductIndex].id,
             name: req.body.nameModify,
             description: req.body.descriptionModify,
             images: req.file.filename,
             material: req.body.materialModify,
-            category: req.body.categoriesModify,
+            category: req.body.categoryModify,
             price: req.body.priceModify
         };
-        theProductIndex = products.findIndex(prod => prod.id == req.params.id);
         products.splice(theProductIndex, 1, modifiedProduct);
         let productsJSON = JSON.stringify(products);
         fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
         res.redirect('/');
-        console.log('An item was modified');
+    },
+    viewDelete: (req, res) => {
+        let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
+        products = JSON.parse(productsArchive);
+        let theProductIndex = products.findIndex(prod => prod.id == req.params.id);
+        let theProduct = products[theProductIndex];
+        res.render('deleteProduct', {theProduct});
+    },
+    delete: (req, res) => {
+        let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
+        products = JSON.parse(productsArchive);
+        let theProductIndex = products.findIndex(prod => prod.id == req.params.id);
+        products.splice(theProductIndex, 1);
+        let productsJSON = JSON.stringify(products);
+        fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
+        res.redirect('/');
     }
 }
 

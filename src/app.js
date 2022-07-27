@@ -5,7 +5,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 
     /*****  Routers *****/
-const productsRouter = require('./routes/products');
+const productsAdminRouter = require('./routes/productsAdmin');
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const shoppingCartRouter = require('./routes/shoppingCart');
@@ -28,8 +28,8 @@ app.use(homeRouter);
 app.use(usersRouter);
     /*****  Shopping Cart   *****/
 app.use(shoppingCartRouter);
-    /*****  Products (Create, Modify)   *****/
-app.use(productsRouter);
+    /*****  Products Admin (Create, Modify)   *****/
+app.use(productsAdminRouter);
 
 app.get('/productsDetails', (req, res) => {
     res.render('productsDetails.ejs')
