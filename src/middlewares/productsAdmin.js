@@ -1,5 +1,3 @@
-
-
 module.exports = {
     createdItem: (req, res, next)=>{
         console.log('New product created');

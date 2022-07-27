@@ -4,7 +4,7 @@ const fs = require('fs');
 const multer = require('multer');
 
 /*****  Controller Methods  *****/
-const productController = {
+module.exports = {
     viewFormCreate: (req, res) => {
         res.render('createProduct');
     },
@@ -81,6 +81,3 @@ const productController = {
         res.redirect('/');
     }
 }
-
-/*****  Export  *****/
-module.exports = productController;

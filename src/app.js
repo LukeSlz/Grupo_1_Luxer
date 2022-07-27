@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 
     /*****  Routers *****/
 const productsAdminRouter = require('./routes/productsAdmin');
+const productsDetailRouter = require('./routes/productsDetail');
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const shoppingCartRouter = require('./routes/shoppingCart');
@@ -30,13 +31,9 @@ app.use(usersRouter);
 app.use(shoppingCartRouter);
     /*****  Products Admin (Create, Modify)   *****/
 app.use(productsAdminRouter);
+    /*****  Products (General)   *****/
+app.use(productsDetailRouter);
 
-app.get('/productsDetails', (req, res) => {
-    res.render('productsDetails.ejs')
-})
-app.get('/allProducts', (req, res) => {
-    res.render('allProducts.ejs')
-})
 app.get('/userDetails', (req, res) => {
     res.render('userDetails.ejs')
 })
