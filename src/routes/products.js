@@ -21,11 +21,11 @@ const upload = multer({storage})
 /*****  Routes  *****/
     /*****  Create  *****/
 router.get('/createProduct', productsController.viewFormCreate);
-
 router.post('/createProduct', upload.single('imagesCreate'), productsMiddleware, productsController.createNew);
 
     /*****  Modify  *****/
-router.get('/modifyProduct/:id', productsController.viewFormModify)
+router.get('/modifyProduct/:id', productsController.viewFormModify);
+router.put('/modifyProduct/:id', upload.single('imagesModify'), productsController.modify);
 
 /*****  Exports *****/
 module.exports = router;

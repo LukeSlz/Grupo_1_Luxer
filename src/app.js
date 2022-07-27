@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const methodOverride = require('method-override');
+
     /*****  Routers *****/
 const productsRouter = require('./routes/products');
 const homeRouter = require('./routes/home');
@@ -13,6 +15,7 @@ const port = 7000;
 
 /*****  Middlewares *****/
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
 
 /*****  EJS - Template Engine   *****/
 app.set('view engine', 'ejs');

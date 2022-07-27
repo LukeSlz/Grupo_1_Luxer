@@ -7,7 +7,7 @@
     <main>
         <div class="main-container-modifyProd">
             <h2 class="title">MODIFICAR PRODUCTO</h2>
-            <form action="/modifyProduct/<%= myProduct.id %>?" method="POST" enctype="multipart/form-data" class="form-prod">
+            <form action="/modifyProduct/<%= myProduct.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-prod">
                 <div class="field">
                     <label for="nameModify">Nombre del producto</label><br>
                     <input type="text" name="nameModify" id="name" value="<%= myProduct.name %>">
@@ -22,19 +22,19 @@
                 </div>
                 <div class="field">
                     <label for="materialModify">Material</label><br>
-                    <select name="materialModify" id="materialModify" value="<%= myProduct.material %>">
-                        <option value="mat-A-Modify">Material A</option>
-                        <option value="mat-B-Modify">Material B</option>
-                        <option value="mat-C-Modify">Material C</option>
+                    <select name="materialModify" id="materialModify">
+                        <option value="mat-A" <%= myProduct.material=='mat-A'?"selected":' ' %> >Material A</option>
+                        <option value="mat-B" <%= myProduct.material=='mat-B'?"selected":' ' %> >Material B</option>
+                        <option value="mat-C" <%= myProduct.material=='mat-C'?"selected":' ' %> >Material C</option>
                     </select>
                 </div>
                 <div class="field">
                     <label for="categoriesModify">Categorías del producto</label><br>
-                    <label><input type="checkbox" name="categoriesModify" value="cat-A-Modify" id="cat-AModify">Category A <br></label>
-                    <label><input type="checkbox" name="categoriesModify" value="cat-B-Modify" id="cat-BModify">Category B <br></label>
-                    <label><input type="checkbox" name="categoriesModify" value="cat-C-Modify" id="cat-CModify">Category C <br></label>
-                    <label><input type="checkbox" name="categoriesModify" value="cat-D-Modify" id="cat-DModify">Category D <br></label>
-                    <label><input type="checkbox" name="categoriesModify" value="cat-E-Modify" id="cat-EModify">Category E <br></label>
+                    <label><input type="radio" name="categoryModify" value="cat-A" id="cat-A" <%= myProduct.category=='cat-A'?'checked':' ' %> >Category A <br></label>
+                    <label><input type="radio" name="categoryModify" value="cat-B" id="cat-B" <%= myProduct.category=='cat-B'?'checked':' ' %> >Category B <br></label>
+                    <label><input type="radio" name="categoryModify" value="cat-C" id="cat-C" <%= myProduct.category=='cat-C'?'checked':' ' %> >Category C <br></label>
+                    <label><input type="radio" name="categoryModify" value="cat-D" id="cat-D" <%= myProduct.category=='cat-D'?'checked':' ' %> >Category D <br></label>
+                    <label><input type="radio" name="categoryModify" value="cat-E" id="cat-E" <%= myProduct.category=='cat-E'?'checked':' ' %> >Category E <br></label>
                 </div>
                 <div class="field">
                     <label for="priceModify">Precio</label>

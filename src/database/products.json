@@ -1,1 +1,1 @@
-[{"id":1,"name":"Test","description":"Producto para testear Create y Modify","images":"1657920939917.webp","material":"mat-C-create","categories":"cat-A-create","price":"70000"}]
+[{"id":"1","name":"ModifiedTest","description":"Producto para testear, acaba de ser modificado","images":"1658888129846.jpg","material":"mat-A","price":"999900"},{"id":"2","name":"Test2Modified","description":"Prducto para testear 2. Tambien se ha modificado","images":"1658888208722.jpg","material":"mat-C","price":"45000"}]
