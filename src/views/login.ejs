@@ -7,6 +7,9 @@
     
     <main>
         <main>
+            <% if (locals.errors && errors.email) { %>
+                <p><%= errors.email.msg %> </p>
+                <% } %> 
             <div class="contenedor_login">
             <div class="main-instructions-container">
                 <h2 class="login">Log in</h2>
@@ -16,7 +19,7 @@
                     <div class="main-inputs-container">
                         <div class="email-input-login">
                             <label for="email"></label>
-                            <input type="text" name="email" id="email" placeholder="Correo">
+                            <input type="email" name="email" id="email" placeholder="Correo">
                         </div>
                         <div class="password-input">
                             <label for="password"></label>

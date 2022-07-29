@@ -10,16 +10,21 @@ module.exports = {
         res.render('login');
     },
     login: (req, res) => {
-      let errors = validationResult(req);
-      if(errors.isEmpty()){
+      let resultValidation = validationResult(req);
+      if (resultValidation.errors.length>0){
+        console.log(errors);
+        res.send(errors)
+        console.log(req.body);
+      }else{
         let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
         users = JSON.parse(usersArchive);
         let loggedUser = users.find(usuario => usuario.Email === req.body.email);
-        req.session.user = loggedUser;
-        res.redirect('/')
-      }else{
-        console.log(errors);
-        res.send(errors)
+        if(!loggedUser){
+          res.render('login.ejs', {errors: {email: {msg: 'Las credenciales son invalidas'}}});
+        }else{
+          req.session.user = loggedUser;
+          res.redirect('/');
+        }
       }
     },
     viewAllUsers: (req,res) => {

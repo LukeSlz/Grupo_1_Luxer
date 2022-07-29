@@ -19,6 +19,8 @@ const port = 7000;
 /*****  Middlewares *****/
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(session({
     secret: 'topSecret',
     resave: true,
