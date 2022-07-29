@@ -4,7 +4,7 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');
 
-const usersController = require('../controllers/users')
+const usersController = require('../controllers/usersController')
 
 
 
@@ -23,5 +23,6 @@ const upload= multer({ storage })
 router.get('/login', usersController.viewFormLogin);
 router.get('/register', usersController.viewFormRegister);
 router.get('/allUsers', usersController.viewAllUsers);
+router.post("/register", upload.single("profile-pic"), usersController.create);
 
 module.exports = router;

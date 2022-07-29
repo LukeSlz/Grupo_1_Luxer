@@ -29,8 +29,10 @@ app.use(homeRouter);
 app.use(usersRouter);
     /*****  Shopping Cart   *****/
 app.use(shoppingCartRouter);
-    /*****  Products (Create, Modify)   *****/
-app.use(productsRouter); 
+    /*****  Products Admin (Create, Modify)   *****/
+app.use(productsAdminRouter);
+    /*****  Products (General)   *****/
+app.use(productsDetailRouter);
 
 app.get('/userDetails', (req, res) => {
     res.render('userDetails.ejs')
