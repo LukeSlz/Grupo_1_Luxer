@@ -26,7 +26,7 @@ app.use(usersRouter);
     /*****  Shopping Cart   *****/
 app.use(shoppingCartRouter);
     /*****  Products (Create, Modify)   *****/
-app.use(productsRouter);
+app.use(productsRouter); 
 
 app.get('/productsDetails', (req, res) => {
     res.render('productsDetails.ejs')

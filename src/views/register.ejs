@@ -6,9 +6,13 @@
 
     <main>
         <div class="main-instructions-container">
-            <h2 class="register">Registro</h2>
-            <p>Por favor complete la siguiente informacion</p>
+            <h2 class="register">REGISTRARSE</h2> 
+            <br>
+            <p>Completá los siguientes campos y registrate sin costo</p>
         </div>
+        <br>
+        
+        <br>
         <form class="main-register-form" action="/register" method="GET">
             <div class="main-inputs-container">
                 <div class="name-input">
@@ -31,24 +35,32 @@
                     <label for="repassword"></label>
                     <input type="password" name="repassword" id="repassword" placeholder="Verificar contraseña">
                 </div>
+                <div class="add-profile-pic">
+                    <form action="/profile" method="post" enctype="multipart/form-data">
+                        <input type="file" name="profile-pic" />
+                      </form>
+                </div>
             </div>
             <div class="toggles-container">
-                <hr>
+                <br>
                 <div class="t-and-c-container">
                     <input type="checkbox" name="t-and-c" id="t-and-c">
-                    <label for="t-and-c">He leído y accepto los <a href="#">T&C</a></label>
+                    <label for="t-and-c">He leído y accepto los <a href="#">Términos & Condiciones</a></label>
                 </div>
-                <hr>
+                <br>
                 <div class="newsletter-container">
                     <input type="checkbox" name="newsletter" id="newsletter">
                     <label for="newsletter">Inscribirme al Newsletter de LUXER</label>
                 </div>
+                <br>
                 <hr>
             </div>
-            <div class="create-account-button-container">
-                <button type="reset">CREAR CUENTA</button>
-                <!--Temporarily, the button will only reset the form-->
-            </div>
+            <br>
+           
+                <div class="field">
+                    <button class = "send-button" type="submit">Creá tu Cuenta</button>
+                </div>
+            
         </form>
     </main>
 
