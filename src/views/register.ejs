@@ -38,9 +38,10 @@
                     <input type="password" name="repassword" id="repassword" placeholder="Verificar contraseña">
                 </div>
                 <div class="add-profile-pic">
-                    <form action="/profile" method="post" enctype="multipart/form-data">
+                    <div class="pic-input">
+                        <label for="profile-pic"></label>
                         <input type="file" name="profile-pic" />
-                      </form>
+                    </div>
                 </div>
             </div>
             <div class="toggles-container">
@@ -60,7 +61,7 @@
             <br>
            
                 <div class="field">
-                    <button class = "send-button" type="reset">Creá tu Cuenta</button>
+                    <button class = "send-button" type="submit">Creá tu Cuenta</button>
                 </div>
             
         </form>

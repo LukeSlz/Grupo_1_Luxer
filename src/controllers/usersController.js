@@ -18,13 +18,13 @@ module.exports = {
   
 
     create: (req, res) => {
-      let userArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
+      let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
       users = JSON.parse(usersArchive);
 
     let lastUser;
     if(users.length > 0){
     lastUser = users.pop();
-    users.push(lastUsers)
+    users.push(lastUser)
 
 
       let user = {
@@ -35,7 +35,6 @@ module.exports = {
         Contraseña: req.body.password,
         Categoria: 1,
         Imagen:  req.file ? req.file.filename : '',
-        
       };
     users.push(user);
     let usersJSON = JSON.stringify(users);
