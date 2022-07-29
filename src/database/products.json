@@ -1,1 +1,1 @@
-[{"id":1,"name":"Test","description":"Producto para testear Create y Modify","images":"1657920939917.webp","material":"mat-C-create","categories":"cat-A-create","price":"70000"}]
+[{"id":1,"name":"Test1Modded","description":"Testing the new routes and modifying the product.trial","images":"1658937825640.webp","material":"mat-C","category":"cat-E","price":"77700"},{"id":2,"name":"ModdedTest2","description":"Testing the new routes for second time. Modded the item","images":"1658937774965.webp","material":"mat-C","category":"cat-E","price":"12900"}]

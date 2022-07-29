@@ -2,8 +2,11 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const methodOverride = require('method-override');
+
     /*****  Routers *****/
-const productsRouter = require('./routes/products');
+const productsAdminRouter = require('./routes/productsAdmin');
+const productsDetailRouter = require('./routes/productsDetail');
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const shoppingCartRouter = require('./routes/shoppingCart');
@@ -13,6 +16,7 @@ const port = 7000;
 
 /*****  Middlewares *****/
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
 
 /*****  EJS - Template Engine   *****/
 app.set('view engine', 'ejs');
@@ -28,12 +32,6 @@ app.use(shoppingCartRouter);
     /*****  Products (Create, Modify)   *****/
 app.use(productsRouter); 
 
-app.get('/productsDetails', (req, res) => {
-    res.render('productsDetails.ejs')
-})
-app.get('/allProducts', (req, res) => {
-    res.render('allProducts.ejs')
-})
 app.get('/userDetails', (req, res) => {
     res.render('userDetails.ejs')
 })
