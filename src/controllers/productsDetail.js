@@ -5,7 +5,9 @@ const fs = require('fs');
 /*****  Controller Methods  *****/
 module.exports = {
     viewAll: (req, res) => {
-        res.render('allProducts');
+        let productsArchive = fs.readFileSync(path.join(__dirname,'../database/products.json'));
+        let products = JSON.parse(productsArchive);
+        res.render('allProducts', {products});
     },
     viewDetail: (req, res) => {
         let productsArchive = fs.readFileSync(path.join(__dirname,'../database/products.json'));

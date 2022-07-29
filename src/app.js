@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const usersMiddleware = require('./middlewares/users')
 
     /*****  Routers *****/
 const productsAdminRouter = require('./routes/productsAdmin');
@@ -17,6 +19,12 @@ const port = 7000;
 /*****  Middlewares *****/
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'topSecret',
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(usersMiddleware.access);
 
 /*****  EJS - Template Engine   *****/
 app.set('view engine', 'ejs');

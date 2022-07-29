@@ -41,7 +41,10 @@
             <img class="imagen-logo" src="/images\logos-luxer\luxerstudiochiquito.png">
         </div>
         <div class="header-icons-container">
-            <a href="../login"><i class="fa-regular fa-user"></i></a>
+            <div class="user-container">
+                <a href="../login"><i class="fa-regular fa-user"></i></a>
+                <% if(locals.user){locals.user.Nombre} %> 
+            </div>
             <a href="../shoppingCart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </div>

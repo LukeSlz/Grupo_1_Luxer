@@ -12,11 +12,11 @@
                 <h2 class="login">Log in</h2>
                 <p>Ingresa tu correo/usuario y contraseña</p>
             </div>
-            <form class="main-login-form" action="/login" method="GET">
+            <form class="main-login-form" action="/login" method="POST">
                     <div class="main-inputs-container">
-                        <div class="name-input">
-                            <label for="name"></label>
-                            <input type="text" name="name" id="name" placeholder="Correo o usuario">
+                        <div class="email-input-login">
+                            <label for="email"></label>
+                            <input type="text" name="email" id="email" placeholder="Correo">
                         </div>
                         <div class="password-input">
                             <label for="password"></label>
@@ -32,11 +32,11 @@
                         <hr>
                     </div>
                     <div class="create-account-button-container">
-                        <button type="reset" class="button_login">Iniciar sesion</button>                                              
+                        <button type="submit" class="button_login">Iniciar sesion</button>                                              
                     </div>
                     <div class="">
                         <hr>
-                        <button href="/src/pages/register/register.html">Crear una cuenta nueva</button>
+                        <button><a href="/register"> Crear una cuenta nueva</a></button>
                     </div>
             </form>
         </div>

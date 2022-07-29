@@ -33,7 +33,7 @@ module.exports = {
         products.push(newProduct);
         let productsJSON = JSON.stringify(products);
         fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
-        res.redirect('/')
+        res.redirect('/products')
         },
     viewFormEdit: (req, res) => {
         let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
@@ -62,7 +62,7 @@ module.exports = {
         products.splice(theProductIndex, 1, modifiedProduct);
         let productsJSON = JSON.stringify(products);
         fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
-        res.redirect('/');
+        res.redirect('/products');
     },
     viewDelete: (req, res) => {
         let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
@@ -78,6 +78,6 @@ module.exports = {
         products.splice(theProductIndex, 1);
         let productsJSON = JSON.stringify(products);
         fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
-        res.redirect('/');
+        res.redirect('/products');
     }
 }

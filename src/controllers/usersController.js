@@ -2,12 +2,26 @@
 const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
+const bcrypt = require('bcryptjs');
+const {validationResult} = require('express-validator');
 
 module.exports = {
     viewFormLogin: (req, res) => {
         res.render('login');
     },
-    
+    login: (req, res) => {
+      let errors = validationResult(req);
+      if(errors.isEmpty()){
+        let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
+        users = JSON.parse(usersArchive);
+        let loggedUser = users.find(usuario => usuario.Email === req.body.email);
+        req.session.user = loggedUser;
+        res.redirect('/')
+      }else{
+        console.log(errors);
+        res.send(errors)
+      }
+    },
     viewAllUsers: (req,res) => {
         res.render('allUsers');
     },
@@ -32,7 +46,7 @@ module.exports = {
         Nombre: req.body.name,
         Apellido: req.body.surname,
         Email: req.body.email,
-        Contraseña: req.body.password,
+        Contraseña: bcrypt.hashSync(req.body.password, 10),
         Categoria: 1,
         Imagen:  req.file ? req.file.filename : '',
       };
