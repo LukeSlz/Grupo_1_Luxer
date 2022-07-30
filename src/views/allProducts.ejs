@@ -9,9 +9,19 @@
 
 <main>
 
-    
-<h1 class="listado-title">LISTADO DE PRODUCTOS</h1>
-<br>
+  <h1 class="listado-title">LISTADO DE PRODUCTOS</h1>
+  <% products.forEach(product => { %>
+    <div class="listado-articles">
+      <article class="listado-articulo">
+        <img class ="imagen-listado" src="images/new-products/<%= product.images %>" alt="Imagen de <% product.name %> ">
+        <button><a href="/products/<%= product.id %> ">VER</a></button>
+        <div class="info-listado">
+          <h4 class="item-name"><%= product.name %> </h4>
+          <h5 class="item-price"><%= product.price %> </h5>
+        </div>
+      </article>
+    </div>
+  <% }) %> 
 
 <div class="listado-articles">
 

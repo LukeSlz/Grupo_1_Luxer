@@ -16,6 +16,8 @@ const storage = multer.diskStorage({
         cb(null, imageName)
     }
 })
+
+
 const upload = multer({storage})
 
 /*****  Routes  *****/

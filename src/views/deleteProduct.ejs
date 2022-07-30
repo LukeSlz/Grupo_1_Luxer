@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head')  %> 
+<body>
+    <%- include('./partials/header')  %> 
+
+    <main>
+        <div class="main-container">
+            <h1 class="title">Are you sure you want to delete <%= theProduct.name %>?</h1><br>
+            <h2 class="message">This action cannot be undone</h2><br>
+            <div class="button-container">
+                <form action="/products/<%= theProduct.id %>/delete?_method=DELETE" method="POST">
+                    <button type="submit">DELETE</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <%- include('./partials/footer')  %> 
+</body>
+</html>

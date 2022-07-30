@@ -3,52 +3,67 @@
 <%- include('./partials/head')  %> 
 <body>
     <%- include('./partials/header') %> 
-
     <main>
         <div class="main-instructions-container">
-            <h2 class="register">Registro</h2>
-            <p>Por favor complete la siguiente informacion</p>
+            <h2 class="register">REGISTRARSE</h2> 
+            <br>
+            <p>Completá los siguientes campos y registrate sin costo</p>
         </div>
-        <form class="main-register-form" action="/register" method="GET">
+        <br>
+        
+        <br>
+
+        <form class="main-register-form" action="/register" method="POST" enctype="multipart/form-data">
+        
+   
             <div class="main-inputs-container">
                 <div class="name-input">
                     <label for="name"></label>
-                    <input type="text" name="name" id="name" placeholder="Nombre">
+                    <input type="text" name="name" id="name" placeholder="Nombre" required>
                 </div>
                 <div class="surname-input">
                     <label for="surname"></label>
-                    <input type="text" name="surname" id="surname" placeholder="Apellido">
+                    <input type="text" name="surname" id="surname" placeholder="Apellido" required>
                 </div>
                 <div class="email-input">    
                     <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="e-mail">
+                    <input type="email" name="email" id="email" placeholder="e-mail" required>
                 </div>
                 <div class="password-input">
                     <label for="password"></label>
-                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
                 </div>
                 <div class="repassword-input">
                     <label for="repassword"></label>
-                    <input type="password" name="repassword" id="repassword" placeholder="Verificar contraseña">
+                    <input type="password" name="repassword" id="repassword" placeholder="Verificar contraseña" required>
+                </div>
+                <div class="add-profile-pic">
+                    <div class="pic-input">
+                        <label for="profile-pic"></label>
+                        <input type="file" name="profile-pic"  required>
+                    </div>
                 </div>
             </div>
             <div class="toggles-container">
-                <hr>
+                <br>
                 <div class="t-and-c-container">
                     <input type="checkbox" name="t-and-c" id="t-and-c">
-                    <label for="t-and-c">He leído y accepto los <a href="#">T&C</a></label>
+                    <label for="t-and-c">He leído y accepto los <a href="#">Términos & Condiciones</a></label>
                 </div>
-                <hr>
+                <br>
                 <div class="newsletter-container">
                     <input type="checkbox" name="newsletter" id="newsletter">
                     <label for="newsletter">Inscribirme al Newsletter de LUXER</label>
                 </div>
+                <br>
                 <hr>
             </div>
-            <div class="create-account-button-container">
-                <button type="reset">CREAR CUENTA</button>
-                <!--Temporarily, the button will only reset the form-->
-            </div>
+            <br>
+           
+                <div class="field">
+                    <button class = "send-button" type="submit">Creá tu Cuenta</button>
+                </div>
+            
         </form>
     </main>
 

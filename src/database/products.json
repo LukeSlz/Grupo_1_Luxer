@@ -1,1 +1,1 @@
-[{"id":1,"name":"Test","description":"Producto para testear Create y Modify","images":"1657920939917.webp","material":"mat-C-create","categories":"cat-A-create","price":"70000"},{"id":2,"name":"gato","description":"gato","images":"1658811755020.jpg","material":"mat-B-create","categories":"cat-D-create","price":"68000"}]
+[{"id":1,"name":"Pato # 1","description":"Producto del pato 1","images":"1659101406196.webp","material":"mat-B","category":"cat-C","price":"123400"}]
