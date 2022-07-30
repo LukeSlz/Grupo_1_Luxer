@@ -20,17 +20,32 @@
                         <div class="email-input-login">
                             <label for="email"></label>
                             <input type="email" name="email" id="email" placeholder="Correo">
+                            <% if(locals.errors && errors.email){ %>
+                                <div class="errors-container">
+                                    <p style="color: red;"><%= errors.email.msg %> </p>
+                                </div>
+                            <% } %> 
                         </div>
                         <div class="password-input">
                             <label for="password"></label>
                             <input type="password" name="password" id="password" placeholder="Contraseña">
+                            <% if(locals.errors && errors.password){ %>
+                                <div class="errors-container">
+                                    <p style="color: red;"><%= errors.password.msg %> </p>
+                                </div>
+                            <% } %> 
+                            <% if(locals.errors && errors.invalid){ %>
+                                <div class="errors-container">
+                                    <p style="color: red;"><%= errors.invalid.msg %> </p>
+                                </div>
+                            <% } %> 
                         </div>                    
                     </div>
                     <div class="toggles-container">
                         <hr>
-                        <div class="t-and-c-container">
-                            <input type="checkbox" name="t-and-c" id="t-and-c">
-                            <label for="t-and-c">Recordar mi usuario en este dispositivo </label>
+                        <div class="remindMe-container">
+                            <input type="checkbox" name="remindMe" id="remindMe">
+                            <label for="remindMe">Recordar mi usuario en este dispositivo </label>
                         </div>
                         <hr>
                     </div>

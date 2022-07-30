@@ -6,6 +6,11 @@
     <%- include('./partials/header') %>
 
 <main>
+    <% if(locals.successMsg){ %>
+        <div class="loggedIn-container">
+            <h3><%= successMsg %> </h3>
+        </div>
+    <% } %> 
     <div class="conteiner">
         <div class="imagen-producto">
             <ul class= "slider">

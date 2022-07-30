@@ -4,6 +4,9 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
+    /*****  Middlewares     *****/
 const usersMiddleware = require('./middlewares/users')
 
     /*****  Routers *****/
@@ -26,6 +29,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+app.use(cookieParser());
 app.use(usersMiddleware.access);
 
 /*****  EJS - Template Engine   *****/

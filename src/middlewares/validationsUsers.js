@@ -1,10 +1,4 @@
 const { body } = require('express-validator');
-const path = require('path');
-const fs = require('fs');
-
-/*****  Archivo usuarios  *****/
-let usersArchive = fs.readFileSync(path.join(__dirname,'../database/users.json'));
-let users = JSON.parse(usersArchive);
 
 /*****  Express Validator *****/
 module.exports = [

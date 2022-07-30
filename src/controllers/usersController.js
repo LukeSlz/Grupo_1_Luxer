@@ -11,21 +11,31 @@ module.exports = {
     },
     login: (req, res) => {
       let resultValidation = validationResult(req);
-      if (resultValidation.errors.length>0){
-        console.log(errors);
-        res.send(errors)
+      if (!resultValidation.isEmpty()){
+        console.log(resultValidation);
+        res.render('login', {errors: resultValidation.mapped()})
         console.log(req.body);
       }else{
         let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
         users = JSON.parse(usersArchive);
-        let loggedUser = users.find(usuario => usuario.Email === req.body.email);
-        if(!loggedUser){
-          res.render('login.ejs', {errors: {email: {msg: 'Las credenciales son invalidas'}}});
+        let loggedUser = users.find(usuario => usuario.email === req.body.email);
+        let loggedUserPass = (loggedUser.password===req.body.password)?true:false;
+        console.log(loggedUser);
+        if(!loggedUser  || loggedUserPass==false){
+          res.render('login', {errors: {invalid: {msg: 'Las credenciales son inválidas'}}});
         }else{
           req.session.user = loggedUser;
+          if(req.body.remindMe){
+            res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*24})
+          }
           res.redirect('/');
         }
       }
+    },
+    logout: (req, res) => {
+      req.session.destroy();
+      res.cookie('email',null,{maxAge: -1});
+      res.redirect('/')
     },
     viewAllUsers: (req,res) => {
         res.render('allUsers');

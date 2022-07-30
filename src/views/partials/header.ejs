@@ -42,8 +42,11 @@
         </div>
         <div class="header-icons-container">
             <div class="user-container">
-                <a href="../login"><i class="fa-regular fa-user"></i></a>
-                <% if(locals.user){locals.user.Nombre} %> 
+                <a href="../login"><i class="fa-regular fa-user"></i>
+                <% if(locals.user){ %>
+                    <p class="userName"><%= locals.user.name %> </p>
+                <% } %> 
+                </a>
             </div>
             <a href="../shoppingCart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
