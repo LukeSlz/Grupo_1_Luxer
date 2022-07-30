@@ -9,6 +9,7 @@ module.exports = {
     viewFormLogin: (req, res) => {
         res.render('login');
     },
+    
     login: (req, res) => {
       let resultValidation = validationResult(req);
       if (!resultValidation.isEmpty()){
@@ -32,11 +33,13 @@ module.exports = {
         }
       }
     },
+    
     logout: (req, res) => {
       req.session.destroy();
       res.cookie('email',null,{maxAge: -1});
       res.redirect('/')
     },
+    
     viewAllUsers: (req,res) => {
         res.render('allUsers');
     },
@@ -50,10 +53,10 @@ module.exports = {
       let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
       users = JSON.parse(usersArchive);
 
-    let lastUser;
-    if(users.length > 0){
-    lastUser = users.pop();
-    users.push(lastUser)
+      let lastUser;
+      if(users.length > 0){
+      lastUser = users.pop();
+      users.push(lastUser)
 
 
       let user = {
@@ -65,11 +68,11 @@ module.exports = {
         Categoria: 1,
         Imagen:  req.file ? req.file.filename : '',
       };
-    users.push(user);
-    let usersJSON = JSON.stringify(users);
-    fs.writeFileSync(path.join(__dirname, '../database/users.json'), usersJSON);
-    res.redirect('/')
-    }
+      users.push(user);
+      let usersJSON = JSON.stringify(users);
+      fs.writeFileSync(path.join(__dirname, '../database/users.json'), usersJSON);
+      res.redirect('/')
+      }
   
 } 
 
