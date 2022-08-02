@@ -20,16 +20,22 @@ module.exports = {
         let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
         users = JSON.parse(usersArchive);
         let loggedUser = users.find(usuario => usuario.email === req.body.email);
-        let loggedUserPass = (loggedUser.password===req.body.password)?true:false;
-        console.log(loggedUser);
-        if(!loggedUser  || loggedUserPass==false){
-          res.render('login', {errors: {invalid: {msg: 'Las credenciales son inválidas'}}});
+        if(loggedUser){
+          bcrypt.compare(req.body.password, loggedUser.password)
+          .then((result) => {
+            if(result==false){
+              res.render('login', {errors: {invalid: {msg: 'Las credenciales son inválidas'}}});
+            }else{
+              req.session.user = loggedUser;
+              res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*24})
+              res.redirect('/');
+            }
+          })
+          .catch((e) => {
+            console.log('Error');
+          });
         }else{
-          req.session.user = loggedUser;
-          if(req.body.remindMe){
-            res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*24})
-          }
-          res.redirect('/');
+          res.render('login', {errors: {noUser: {msg: "El usuario no existe"}}})
         }
       }
     },
@@ -61,12 +67,12 @@ module.exports = {
 
       let user = {
         id: lastUser? lastUser.id + 1: 1,
-        Nombre: req.body.name,
-        Apellido: req.body.surname,
-        Email: req.body.email,
-        Contraseña: bcrypt.hashSync(req.body.password, 10),
-        Categoria: 1,
-        Imagen:  req.file ? req.file.filename : '',
+        name: req.body.name,
+        lastName: req.body.surname,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        category: 1,
+        profilePic:  req.file ? req.file.filename : '',
       };
       users.push(user);
       let usersJSON = JSON.stringify(users);

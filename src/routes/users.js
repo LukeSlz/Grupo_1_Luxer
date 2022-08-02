@@ -27,7 +27,7 @@ router.get('/login', usersController.viewFormLogin);
 router.post('/login', usersValidations, usersMiddleware.access, usersController.login);
   /*****  Register   *****/
 router.get('/register', usersController.viewFormRegister);
-router.post("/register", upload.single("profile-pic"), usersController.create);
+router.post("/register", upload.single("profilePic"), usersController.create);
   /*****  View Users   *****/
 router.get('/allUsers', usersController.viewAllUsers);
 

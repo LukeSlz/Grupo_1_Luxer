@@ -24,6 +24,10 @@
                                 <div class="errors-container">
                                     <p style="color: red;"><%= errors.email.msg %> </p>
                                 </div>
+                            <% }else if(locals.errors && errors.noUser){ %>
+                                <div class="errors-container">
+                                    <p style="color: red;"><%= errors.noUser.msg %> </p>
+                                </div>
                             <% } %> 
                         </div>
                         <div class="password-input">
