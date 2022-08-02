@@ -54,7 +54,6 @@ module.exports = {
       res.render('register');
   },
   
-
     create: (req, res) => {
       let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
       users = JSON.parse(usersArchive);
@@ -63,7 +62,6 @@ module.exports = {
       if(users.length > 0){
       lastUser = users.pop();
       users.push(lastUser)
-
 
       let user = {
         id: lastUser? lastUser.id + 1: 1,
