@@ -7,7 +7,8 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
     /*****  Middlewares     *****/
-const usersMiddleware = require('./middlewares/users')
+const usersMiddleware = require('./middlewares/userLogin')
+
 
     /*****  Routers *****/
 const productsAdminRouter = require('./routes/productsAdmin');
@@ -30,7 +31,7 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(cookieParser());
-app.use(usersMiddleware.access);
+app.use(usersMiddleware);
 
 /*****  EJS - Template Engine   *****/
 app.set('view engine', 'ejs');
@@ -48,9 +49,7 @@ app.use(productsAdminRouter);
     /*****  Products (General)   *****/
 app.use(productsDetailRouter);
 
-app.get('/userDetails', (req, res) => {
-    res.render('userDetails.ejs')
-})
+
 
 /***** Port Run *****/
 app.listen(port, () => {
