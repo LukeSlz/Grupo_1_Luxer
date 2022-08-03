@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const productsController = require('../controllers/products');
-const productsMiddleware = require('../middlewares/createModifyProduct')
+const productsController = require('../controllers/productsAdmin');
+
 
 /*****  Multer  *****/
 const storage = multer.diskStorage({
@@ -24,10 +24,10 @@ const upload = multer({storage})
     /*****  Create  *****/
 router.get('/createProduct', productsController.viewFormCreate);
 
-router.post('/createProduct', upload.single('imagesCreate'), productsMiddleware, productsController.createNew);
+router.post('/createProduct', upload.single('imagesCreate'), productsController.createNew);
 
     /*****  Modify  *****/
-router.get('/modifyProduct/:id', productsController.viewFormModify)
+// router.get('/modifyProduct/:id', productsController.viewFormModify)
 
 /*****  Exports *****/
 module.exports = router;

@@ -6,8 +6,7 @@ const multer = require('multer');
 const usersValidations = require('../middlewares/validationsUsers');
 
 const usersController = require('../controllers/usersController');
-const usersMiddleware = require('../middlewares/users');
-
+const guestMiddleware = require("../middlewares/guestMiddleware")
 
 /*****  Multer *****/
 const storage = multer.diskStorage({
@@ -23,12 +22,15 @@ const upload= multer({ storage })
 
 /*****  Routes  *****/
   /*****  Login   *****/
-router.get('/login', usersController.viewFormLogin);
-router.post('/login', usersValidations, usersMiddleware.access, usersController.login);
+router.get('/login', guestMiddleware, usersController.viewFormLogin);
+router.post('/login', usersValidations, usersController.login);
   /*****  Register   *****/
 router.get('/register', usersController.viewFormRegister);
 router.post("/register", upload.single("profilePic"), usersController.create);
   /*****  View Users   *****/
 router.get('/allUsers', usersController.viewAllUsers);
+
+
+
 
 module.exports = router;
