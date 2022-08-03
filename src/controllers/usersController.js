@@ -27,7 +27,7 @@ module.exports = {
               res.render('login', {errors: {invalid: {msg: 'Las credenciales son inválidas'}}});
             }else{
               req.session.user = loggedUser;
-              res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*24})
+              res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*2})
               res.redirect('/');
             }
           })
@@ -42,7 +42,7 @@ module.exports = {
     
     logout: (req, res) => {
       req.session.destroy();
-      res.cookie('email',null,{maxAge: -1});
+      res.clearCookie("email")
       res.redirect('/')
     },
     
