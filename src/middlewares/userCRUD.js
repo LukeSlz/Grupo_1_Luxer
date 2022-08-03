@@ -1,8 +1,25 @@
-function guestMiddleware(req, res, next){
-    if (req.session.user){
-        return res.redirect("/products/create");
-    }
-    next();
-}
+module.exports = {
+    create:  (req, res, next) => {
+        if (req.session.user) {
+            next();
+        } else {
+            return res.redirect("/");
+        }
+    },
 
-module.exports = guestMiddleware;
+    update:  (req, res, next) => {
+        if (req.session.user) {
+            next();
+        } else {
+            return res.redirect("/");
+        }
+    },
+
+    delete:  (req, res, next) => {
+        if (req.session.user) {
+            next();
+        } else {
+            return res.redirect("/");
+        }
+    }
+};
