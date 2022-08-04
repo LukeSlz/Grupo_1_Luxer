@@ -1,7 +1,3 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
 /*
 #D9D9D9
 #B8B4B4
@@ -42,8 +38,10 @@ main{
     padding: 30px;
 }
 .main-register-form button{
-    padding: 5px;
-    background-color: #D9D9D9;
+    padding: 10px;
+    background-color: #A89B95;
+    border: 1px solid #A89B95;
+    color: #FFFFFF
 }
 .main-register-form input{
     margin: 7px;

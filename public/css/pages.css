@@ -81,8 +81,16 @@ header{
     color: white;
     padding: 5px;
 }
+.burger-menu-container{
+    width: 10%;
+    text-align: center;
+}
+.main-title-container{
+    text-align: center;
+    width: 80%;
+}
 .imagen-logo{
-    width: 100%;
+    width: 70%;
 }
 
 .header-icons-container{
@@ -228,6 +236,9 @@ footer{
     .concealed-bars{
         display: none !important;
     }
+    .burger-menu-container{
+        display: none;
+    }
     .simplified-header-container{
         display: flex;
         padding: 0;
@@ -235,23 +246,22 @@ footer{
     .main-title-container{
         text-align: center;
         justify-self: center;
-        width: 60%;
+        width: 40%;
     }
-    .main-title{
-        width: 30%;
-        margin: auto;
+    .imagen-logo{
+        width: 100%;
     }
     .horizontal-categories-nav-container{
         text-align: left;
-        width: auto;
+        width: 20%;
     }
     .horizontal-categories-nav{
         display: flex;
         padding: 0;;
         align-items: center;
-        font-size: 1.2rem;
+        font-size: 1.3em;
+        justify-content: space-evenly;
     }
-
     .horizontal-categories-nav li{
         list-style: none;
         border-left: 1px solid #B8B4B4; 
@@ -260,6 +270,10 @@ footer{
     .estilo-nav{
         display: block;
         align-content: center;
+    }
+    .header-icons-container{
+        width: 20%;
+        justify-content: space-evenly;
     }
     .navigation-dropdown-menu{
         width: 25%;

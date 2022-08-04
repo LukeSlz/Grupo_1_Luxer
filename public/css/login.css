@@ -1,20 +1,7 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
 
-main{
-    text-align: center;
-}
 .main-instructions-container{
     margin-top: 30px;
     padding-top: 10px;
-}
-main{
-    background-color: #D9D9D9;
-    margin: 10%;
-    border-radius: 50px;
-    
 }
 .main-login-form{
     padding: 30px;
@@ -25,8 +12,15 @@ main{
 }
 
 .main-login-form button{
-    padding: 5px;
-    background-color: #D9D9D9;
+    padding: 10px;
+    background-color: #A89B95;
+    border: 1px solid #A89B95;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+.create-account-button a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 .main-login-form input{
     margin: 7px;

@@ -14,12 +14,18 @@
     padding: 10px;
     
 }
-
+.listado-articulo button{
+    margin-top: -10px;
+    background-color: #A89B95;
+}
 .imagen-listado{
     width: 85%;
     border-radius: 2px;
 }
-
+.link-to-detail{
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 .listado-button{
     margin-top: -20px;
