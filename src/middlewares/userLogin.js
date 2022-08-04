@@ -6,8 +6,7 @@ users = JSON.parse(usersArchive);
 
 function userLogin (req,res,next){
     res.locals.logged = false
-        const email = req.cookies.email
-        console.log(req.session.user)
+        const email = req.cookies.email;
         if (!req.session.user){
             if (email){
                 let userLogged = users.find(user => email == user.email)
@@ -19,6 +18,7 @@ function userLogin (req,res,next){
             } 
             
         } else {
+            console.log(req.session.user);
             res.locals.logged = true
             res.locals.user = req.session.user
         }
