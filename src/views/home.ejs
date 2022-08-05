@@ -11,6 +11,11 @@
             <h3><%= successMsg %> </h3>
         </div>
     <% } %> 
+    <% if(locals.errors && errors.noAdmin){ %>
+        <div class="not-admin-container">
+            <h3 class="not-an-admin"><%= errors.noAdmin.msg %> </h3>
+        </div>
+    <% } %> 
     <div class="conteiner">
         <div class="imagen-producto">
             <ul class= "slider">

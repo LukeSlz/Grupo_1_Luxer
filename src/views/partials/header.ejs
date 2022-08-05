@@ -5,7 +5,7 @@
     <div class="dropdown-menu-container">
         <div class="upper-dropdown-options">
             <i class="displayed-bars fa-solid fa-bars"></i>
-            <a href="../login"><i class="fa-regular fa-user"></i></a>
+            <a href="/login"><i class="fa-regular fa-user"></i></a>
         </div>
         <form class="navigation-form-dropdown-menu" action="/">
             <div class="navigation-dropdown-menu">
@@ -36,19 +36,20 @@
             </ul>
         </div>
         <div class="main-title-container"> 
-            <img class="imagen-logo" src="/images\logos-luxer\luxerstudiochiquito.png">
+            <a href="/"><img class="imagen-logo" src="/images\logos-luxer\luxerstudiochiquito.png"></a>
         </div>
         <!-- No esta siendo utilizado en el momento, aparecera unicamente en products-->
         <form class="busqueda">
             <input class = "busqueda-v" type="text" name="busqueda" placeholder="Busqueda">
         </form>
         <div class="header-icons-container">
-            <div class="user-container">
-                <a href="../login"><i class="fa-regular fa-user"></i>
+            <a href="/login">
                 <% if(locals.user){ %>
-                    <p class="userName"><%= locals.user.name %> </p>
+                    <p class="user-name"><%= locals.user.name %> </p>
                 <% } %> 
-                </a>
+            </a>
+            <div class="user-container">
+                <a href="/login"><i class="fa-regular fa-user"></i></a>
             </div>
             <a href="../shoppingCart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>

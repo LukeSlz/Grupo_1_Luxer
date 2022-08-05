@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head')  %> 
+<body>
+    
+    <%- include('./partials/header') %>
+    
+    <main>
+        <form class="logout-form" action="/logout" method="POST">
+            <div class="goodbye-sign">
+                <h1><%= locals.user.name %></h1>
+                <h2>?Quer[es cerrar sesión?</h2>
+            </div>
+            <div class="logout-buttons-container">
+                <div class="go-back-button-container">
+                    <button class="go-back-button"><a href="/"> Atras </a></button>
+                </div>
+                <div class="logout-button-container">
+                    <button type="submit" class="logout-button">Cerrar Sesión</button>                                              
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
+</html>
