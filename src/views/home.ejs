@@ -16,54 +16,66 @@
             <h3 class="not-an-admin"><%= errors.noAdmin.msg %> </h3>
         </div>
     <% } %> 
-    <div class="conteiner">
-        <div class="imagen-producto">
-            <ul class= "slider">
-                <li id="slide1">
-                    <img src="images/imagen-producto/espejo-glass.jpg">
-                </li>
-                <li id="slide2">
-                    <img src="images/imagen-producto/espejo-round.jpg">
-                </li>
-                <li id="slide3">
-                    <img src="images/imagen-producto/maceta-linda.jpg">
-                </li>
-            </ul>
-            <ul class="menu">
-                <li>
-                    <a href="#slide1">1</a>
-                </li>
-                <li>
-                    <a href="#slide2">2</a>
-                </li>
-                <li>
-                    <a href="#slide3">3</a>
-                </li>
-            </ul>
+    
+<header class="slider">
+    <div class="overlay-text">
+        <p>El toque moderno que estás buscando en tu casa <br> Transformá tus espacios</p>
+        <a class="conocenos">Conocenos</a>
+    </div>
+    <div class="slides">
+        <img src="images/imagen-producto/living-tres.jpg" alt="Imagen Slider">    
+    </div>
+</header>
+
+
+    <div class="italian-style">
+        <div class="contenedor-producto">
+            <img src="images/imagen-producto/sillon-italian.jpg" alt="Sillón Italian">
+        </div>
+
+        <div class="descripcion-italian">
+            <h2>New Collection</h2>
+            <h1>Italian Style 1996</h1>
+            <p>Diseño italiano exclusivo importado desde Italia. Estilo vanguardista para otorgar el toque moderno que estás buscando en tu casa. Lorem ipsum dolor sit 1997 bla bla jaja. </p>
+           
+                <form class="italian-button">
+                    <input type="submit" name="boton" value="Ver Colección" class="boton-home" href="/allProducts">
+                    <input type="submit" name="boton" value="Más Estilos" class="boton-home" href="/allProducts">
+                </form>
+        </div>
+        
+    </div>
+
+<div class= "categorias-conteiner">
+    <div class="categorias-home">
+        <div class="categorias-image">
+            <form action="/shop" method="GET">
+                <button type="submit" value="french">French</button>
+                <img src="images/imagen-producto/maceta-linda.jpg" alt="maceta">
+            </form>
+        </div>
+        <div class="categorias-image">
+            <form action="/shop" method="GET">
+                <button type="submit" value="latin">Latin American</button>
+                <img src="images/imagen-producto/silla-naranja.jpg" alt="silla naranja">
+            </form>
+        </div>
+        <div class="categorias-image">
+            <form action="/shop" method="GET">
+                <button type="submit" value="canadian">Canadian</button>
+                <img src="images/imagen-producto/lampara-simple.jpg" alt="lampara simple">
+            </form>
         </div>
     </div>
-    
-   <div class="home-2">
 
-<div class="new-collection">
-    <h2 class="title-nc"> New Collection | Italian Style</h2>
-    <img class="imagen-nc" src="images/imagen-producto/sillon-italian.jpg">
-        <p class="p-description">Diseño italiano exclusivo importado desde Italia. Estilo vanguardista para otorgar el toque moderno que estás buscando en tu casa. <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eos ducimus earum molestias itaque. Officia molestias vero dolorum nesciunt dolore voluptatem quo. <br> Laboriosam doloribus aspernatur odit rem nemo tempora fuga.</p>
-
-        <form>
-    <input type="submit" name="boton" value="Ver Productos" class="boton">
-    <input type="submit" name="boton" value="Más Estilos" class="boton">
-        </form>
-        
 </div>
 
 
-   </div>
 
 
 <div class= "alsolike-container">
 
-        <h2 class="center">También Puede Gustarte</h2>
+        <h1 class="center">También Puede Gustarte</h1>
        
         <br>
         
