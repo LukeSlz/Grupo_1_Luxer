@@ -1,4 +1,106 @@
 
+.productCart {
+    width: 100%;
+  }
+  .productCart .contenedor {
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 140px;
+    position: relative;
+  }
+ .title{
+    text-align: left;
+    margin-bottom: 10px;
+ }
+  .cartItems {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 15px;
+    border-bottom: 1px solid #b3b1b3;
+  }
+  .cartItems .item {
+    width: 100%;
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #e1e8ee;
+  }
+  .item .image {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    margin-right: 30px;
+    overflow: hidden;
+  }
+  .item .image img {
+    height: 200px;
+  }
+  .description {
+    padding-top: 10px;
+    margin-right: 30px;
+    width: 20%;
+  }
+  .description p {
+    font-size: 18px;
+    color: black;
+  }
+  
+  
+  
+  .total-price {
+    width: 15%;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+
+  }
+  .item .buttons {
+    padding: 30px;
+  }
+  .productCart .summary {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    padding: 60px;
+    background-color: #fff;
+  }
+
+  
+  article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .boton-shop {
+    color: white;
+background-color: #A89B95;
+padding: 10px 10px;
+border: 2px;
+border-radius: 3px;
+  }
+
+  .summary{
+    background-color: #B8B4B4;
+
+  }
+  
+
+
+  
+
+
+
+/*
 .primerArticulo{
     display: flex;
     flex-direction: row;
@@ -85,6 +187,9 @@ hr{
     margin-left: 10%;
     margin-right: 10%;
 }
+
+
+
 
 .realizar-compra{
     margin-right: 30%;

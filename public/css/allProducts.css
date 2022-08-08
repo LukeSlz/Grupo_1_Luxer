@@ -1,3 +1,7 @@
+main img{
+object-fit: cover;
+}
+
 .listado-title{
     text-align: center;
     
@@ -21,6 +25,7 @@
 .imagen-listado{
     width: 85%;
     border-radius: 2px;
+    object-fit: cover;
 }
 .link-to-detail{
     text-decoration: none;
