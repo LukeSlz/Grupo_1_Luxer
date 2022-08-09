@@ -27,12 +27,18 @@ module.exports = {
               res.render('login', {errors: {invalid: {msg: 'Las credenciales son inválidas'}}});
             }else{
               req.session.user = loggedUser;
-              res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*2})
-              res.redirect('/');
+              if(req.body.remindme){
+                console.log('There is a reminder');
+                res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*2})
+                res.redirect('/');
+              }else{
+                console.log('No reminder');
+                res.redirect('/');
+              }
             }
           })
           .catch((e) => {
-            console.log('Error');
+            console.log('Error', e);
           });
         }else{
           res.render('login', {errors: {noUser: {msg: "El usuario no existe"}}})
@@ -40,6 +46,9 @@ module.exports = {
       }
     },
     
+    viewLogout: (req, res) => {
+      res.render('logout');
+    },
     logout: (req, res) => {
       req.session.destroy();
       res.clearCookie("email")
@@ -66,7 +75,7 @@ module.exports = {
       let user = {
         id: lastUser? lastUser.id + 1: 1,
         name: req.body.name,
-        lastName: req.body.surname,
+        lastName: req.body.lastName,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
         category: 1,
@@ -75,7 +84,7 @@ module.exports = {
       users.push(user);
       let usersJSON = JSON.stringify(users);
       fs.writeFileSync(path.join(__dirname, '../database/users.json'), usersJSON);
-      res.redirect('/')
+      res.redirect('/login')
       }
   
 } 

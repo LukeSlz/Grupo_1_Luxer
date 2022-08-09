@@ -11,8 +11,8 @@
             <% } %> 
         <div class="contenedor_login">
         <div class="main-instructions-container">
-            <h1 class="login">Log in</h1>
-            <p>Ingresa tu correo/usuario y contraseña</p>
+            <h1 class="login">Log In</h1>
+            <p>Ingresá tu correo y contraseña</p>
         </div>
         <form class="main-login-form" action="/login" method="POST">
                 <div class="main-inputs-container">
@@ -45,16 +45,19 @@
                     </div>                    
                 </div>
                 <div class="toggles-container">
-                    <div class="remindMe-container">
-                        <input type="checkbox" name="remindMe" id="remindMe">
-                        <label for="remindMe">Recordar mi usuario en este dispositivo </label>
+                    <div class="remindme-container">
+                        <input type="checkbox" name="remindme" id="remindme">
+                        <label for="remindme">Recordar mi usuario en este dispositivo </label>
                     </div>
+                    <br>
+                    <br>
                 </div>
                 <div class="login-button-container">
-                    <button type="submit" class="button_login">Iniciar sesion</button>                                              
+                    <button type="submit" class="send-button">Iniciar sesión</button>                                              
                 </div>
+                <br>
                 <div class="create-account-button-container">
-                    <button class="create-account-button"><a href="/register"> Crear una cuenta nueva</a></button>
+                    <a href="/register"></a><button class="send-button">Crear una cuenta nueva</button></a>
                 </div>
         </form>
     </div>

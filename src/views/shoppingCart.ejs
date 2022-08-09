@@ -7,139 +7,77 @@
         
     
     <main>
-        <br>
         
-        <section> 
-            <h2>Carrito de compras</h2>
-        <br>
-            <hr>
-            
-            <br>
-            <article>
-                <div class="primerArticulo">   
-                    <img class="silla" src="./images/imagen-producto/sillon-negro.jpg" alt="Imagen de silla">
-                    <div class="flex1">
-                        <h4> <em> Bestseller</em> </h4> 
-                        <br>
-                        <div class="clase">
-                            <h3 class="clase">SILLA TERCIOPELO</h3>
-                            <h3 class="precio">$61.00</h3>
+        <main class="productCart">
+            <div class="contenedor">
+                <div class="cartItems">
+                
+                        <h1 class ="title">Carrito de Compras</h1>
+                    
+                    
+                    <div class="item">
+                        <div class="image">
+                            <img src="./images/imagen-producto/sillon-negro.jpg" alt="producto">
                         </div>
-                        <br>
-                        <div class="descripcion">
-                             <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit</em></p>
-                        </div>
-                        <br>
-                        <div class="colour"> 
-                            <h4>Color </h4>
-                            <select name="colores" id="">
-                                <option value="1">Brown</option>
-                                <option value="2">Black</option>
-                                <option value="3">Green</option>
-                                <option value="4">Red</option>
-                                <option value="5">Blue</option>
-                            </select> 
-                        </div>
-                        <br>
-                        <div class="quantity">
-                            <h4>Cantidad</h4>
-                            <input id="Cantidad" type="number" name="Cantidad" value="1">
-                        </div>
-                        <br>
-                        <div class="edit">
-                            <a href=""><i class="fa-solid fa-pen"></i>Editar</a>
-                        </div>
-                        <br>
-                        <div class="wishlist">
-                            <a href=""><i class="fa-regular fa-heart"></i>Mis compras</a>
-                        </div>
-                        <br>
-                        <div class="remove">
-                            <a href=""><i class="fa-regular fa-trash-can"></i>Eliminar</a>
-                        </div>
-                </div>
-            </article>
-                 
-        <br>
-            
-        <hr>
 
-        <br>
-        <article>
-            <div class="segundoArticulo">   
-                <img class="sillon" src="./images/imagen-producto/silla-naranja.jpg" alt="Imagen de sillon">
-                <div class="flex2">
-                    <div class="clase">
-                        <h3 class="clase">SILLON HIERRO</h3>
-                        <h3 class="precio">$319.50</h3>
-                   </div>
-                    <br>
-                    <div class="descripcion">
-                         <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit</em></p>
+                        <div class="description">
+                            <h2>Sillón Negro</h2>
+                            <p>Un sillón negro sin mucha ciencia.</p>
+                            <p>$29.000 ARS</p>
+                        </div>
+
+                        <div class="total-price">$29.000 ARS</div>
+
+                        <div class="buttons">
+                            <span class="delete-btn"><i class="fa-solid fa-trash-can"></i>
+                            </span>
+                            
+                        </div>
                     </div>
-                    <br>
-                    <div class="colour"> 
-                        <h4>Color </h4>
-                        <select name="colores" id="">
-                            <option value="1">Black / Grey</option>
-                            <option value="2">Black / Blue</option>
-                        </select> 
+
+                    
+                    <div class="item">
+                        <div class="image">
+                            <img style="mix-blend-mode: multiply;" src="./images/imagen-producto/sillon-negro.jpg">
+                        </div>
+
+                        <div class="description">
+                            <h2>Silla Naranja</h2>
+                            <p>La mejor silla naranja de tu vida, amén.</p>
+                            <p>$16.400 ARS</p>
+                        </div>
+
+                        <div class="total-price">$16.400 ARS</div>
+
+                        <div class="buttons">
+                            <span class="delete-btn"><i class="fa-solid fa-trash-can"></i>
+                            </span>
+                            
+                        </div>
                     </div>
-                    <br>
-                    <div class="quantity">
-                        <h4>Cantidad</h4>
-                        <input id="Cantidad" type="number" name="Cantidad" value="1">
-                    </div>
-                    <br>
-                    <div class="edit">
-                        <a href=""><i class="fa-solid fa-pen"></i>Editar</a>
-                    </div>
-                    <br>
-                    <div class="wishlist">
-                        <a href=""><i class="fa-regular fa-heart"></i>Mis compras</a>
-                    </div>
-                    <br>
-                    <div class="remove">
-                        <a href=""><i class="fa-regular fa-trash-can"></i>Eliminar</a>
-                    </div>
+
+                    
+                </div>
+                
+                <section class="summary">
+                    <h1>Resumen de Compra</h1>
+                        <br>
+                    <h2>Total Productos</h2>
+                    <h4>$59.900 ARS</h4>
+                        <br>
+                    <h2>Envío</h2>
+                    <h4>$900 ARS</h4>
+                        <br>
+                    <h2>Total</h2>
+                    <h2>$60.400 ARS</h2>
+                        <br>
+                    <form action="" method="GET">
+                        <button class="boton-shop" type="submit">Comprar</button>
+                    </form>
+                </section>
+
             </div>
-        </article>
         
-        </section>
-        <br>
-        
-        <hr>
-        
-        <br>
-        
-        <section>
-            <div class="realizar-compra">    
-                <div class="cuenta-subtotal">
-                   <h4>Subtotal </h4>
-                   <h4>$380.50</h4>
-                </div>
-                <br>
-                <div class="cuenta-delivery">
-                    <h4>Delivery</h4>
-                    <h4>$35</h4>
-                </div>
-                <br>
-                <hr>
-                <br>
-                <div class="cuenta-total">
-                    <h3>Total</h3>
-                    <h3>$415.50</h3>
-                </div>
-                </div>
-                <br>
-                <hr>
-            </div> 
-            <br>
-            <div class="boton-comprar">
-                <button type="submit">Continuar compra</button>
-            </div> 
-            <br>
-        </section>
     </main>
 
         <br>    

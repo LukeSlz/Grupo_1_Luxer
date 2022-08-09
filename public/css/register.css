@@ -46,11 +46,20 @@ main{
 .main-register-form input{
     margin: 7px;
     width: 100%;
+    padding: 8px;
+    border-color: transparent;
+    border-radius: 3px;
+    background-color: #B8B4B4;
+    
 }
+
 .main-inputs-container{
     max-width: 600px;
     margin: auto;
+    
+    
 }
+
 .t-and-c-container, .newsletter-container{
     display: flex;
     justify-content: flex-start;

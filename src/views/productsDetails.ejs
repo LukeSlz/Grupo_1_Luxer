@@ -4,31 +4,80 @@
 <%- include('./partials/head')  %> 
 
 <body>
-
     <%- include('./partials/header') %>
+    <main>
+        <div class="conteiner-pd">
+            <img src="/images/new-products/<%= product.images %> " alt="Image of<%= product.name %> " class="imagen-producto-pd">
+            <div class="producto-pd">
+                <h2>Luxer Studio</h2>
+                <h1><%= product.name %></h1>
+                <h3 class="h2precio"><%= product.price %> </h3>
+                <hr>
+                <p class="descripcion-pd"><%= product.description %> </p>
+                <h4>Material: </h4><h5><%= product.material %> </h5>
+                <h4>Categoría: </h4><h5><%= product.category %> </h5>
 
-<main>
+                <div class="social-icons-pd">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+                <form action="/shoppingCart" method="get">
+                    <button type="submit" class="comprar-button">Agregar al Carrito</button>
+                </form>
+            </div>
+        </div>
+        <!--Sección de 'Tambien te puede gustar'-->
+        <div class="also-like">
+            <h2 class="center">También Puede Gustarte</h2>
+            <article class="articulo">
+                <img class="imagen-alsolike" src="/images/imagen-producto/escritorio-white.jpg" alt="Imagen del escritorio">
+                <br>
+                <div class="info-alsolike">
+                    <h4>Escritorio White</h4>
+                    <h5>$20.500</h5>
+                </div>
 
-    <div class="conteiner-pd">
+</article>
+
+
+<article class="articulo">
+
+    <img class="imagen-alsolike" src="/images/imagen-producto/sillon-pringles.jpg" alt="Imagen de Sillón Pringles">
+    <br>
+    <br>
+    <div class="info-alsolike">
+    <h4>Sillón Pringles</h4>
+    <h5>$40.600</h5>
+    </div>
+    </article>
+
+<article class="articulo">
+
+    <img class="imagen-alsolike" src="/images/imagen-producto/sillon-divan.jpg" alt="Imagen de Diván">
+    <br>
+        <div class="info-alsolike">
+        <h4>Diván Froyd</h4>
+        <h5>$96.000</h5>
+        </div>
+        </article>
+
+        
+
+</div>
+<!--<div class="conteiner-pd">
 
       <img class="imagen-producto-pd" src="/images/imagen-producto/espejo-glass.jpg"/>
 
 
 <div class="producto-pd">
 
+<h2>Luxer Studio</h2>
 <h1>Espejo Glass</h1>
-<h3 class="h2precio">$70.500</h3>
-<br>
-<br>
-<p class="descripcion-pd">Realizado en madera maciza, varios estilos. Vidrio premium de 0.50cm de profundidad.</p> 
-<br>
-<br>
-<p class="medidas-pd">Medidas: 180x90cm, 200x110cm, 240x120cm, 260x120cm.</p>
-<br>
-<br>
-<p class="extra-pd">Origen Nacional. Cuidados: Limpieza con paño semi-húmedo o seco.</p>
+<h3 class="h2precio">$18.900 ARS</h3>
 
-<br>
+<p class="descripcion-pd">Realizado en madera maciza, varios estilos. Vidrio premium de 0.50cm de profundidad. Bordes pulidos para una experiencia visual vanguardista de caracter Canadiense. Ahre que escribía.</p> 
+<p class="medidas-pd">Medidas: 180x90cm, 200x110cm, 240x120cm, 260x120cm.</p>
+<p class="extra-pd">Origen Nacional. Cuidados: Limpieza con paño semi-húmedo o seco.</p>
 
 <div class="social-icons-pd">
 
@@ -41,52 +90,30 @@
 
 <label class="mm">Material:</label>
 <br>
-
-
-<div class="elegir-medidas">
-    
-    <form action="" method="POST" class="form-elegir">
+<br>
+<select>
+    <option value="">Caoba</option>
+    <option value="">Abeto</option>
+    <option value="">Abedul</option>
+</select>
 
 <br>
-<label class="label-radio-pd"><input type="radio" name="material" value="Material">Paraíso</label>
-<label class="label-radio-pd"><input type="radio" name="material" value="Material">Caoba</label>
-<label class="label-radio-pd"><input type="radio" name="material" value="Material">Roble</label>
-</div>
-</form>
-
+<br>
 
 <label class="mm">Medidas:</label>
-
-<br>
-
-<div class= "elegir-medidas">
-    <form action="" method="POST" class="form-elegir">         
-<br>
-<label class="label-radio-pd"><input type="radio" name="medidas" value="Medidas">180x90cm</label>
-
-<label class="label-radio-pd"><input type="radio" name="medidas" value="Medidas">200x110cm</label>
-
-<label class="label-radio-pd"><input type="radio" name="medidas" value="Medidas">240x120cm</label>
-</form>
-
-</div>
-<label class="mm">Cantidad:</label>
 <br>
 <br>
 
-<div class="select-option">
-<select name="cantidad" id="">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-
-</select> 
-
-</div>
+<select>
+    <option value="">120x30cm</option>
+    <option value="">140x35cm</option>
+    <option value="">160x40cm</option>
+</select>
 
 <br>
 <br>
 <form>
+  <button type="submit" class="comprar-button"><a href="/shoppingCart">Agregar al Carrito</button></a>
   <button type="submit" class="comprar-button"><a href="/shoppingCart">Comprar</button></a>
 </form>
 
@@ -144,9 +171,9 @@
 </div>
 
 
-
-
-</main> 
+-->
+    
+    </main> 
 
 <%- include('./partials/footer') %>
 

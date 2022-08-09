@@ -1,18 +1,35 @@
+main img{
+object-fit: cover;
+}
+
 .listado-title{
     text-align: center;
     
 }
-
+.create-product-button-container{
+    display: flex;
+    margin: 0 10%;
+    padding: 2%;
+    border-top: 1px #A89B95 solid;
+    border-bottom: 1px #A89B95 solid;
+}
+.item-price{
+    font-size: 1em;
+}
+.edit-product-button-container{
+    display: flex;
+    margin: 0 10%;
+}
 .listado-articles {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
-
 .listado-articulo{
-    width: 33%;
+    width: 49%;
     padding: 10px;
-    
+    display: inline-block;
+    border-bottom: #A89B95 1px solid;
 }
 .listado-articulo button{
     margin-top: -10px;
@@ -20,7 +37,9 @@
 }
 .imagen-listado{
     width: 85%;
+    height: 50%;
     border-radius: 2px;
+    object-fit: cover;
 }
 .link-to-detail{
     text-decoration: none;
@@ -47,4 +66,12 @@
     padding: 10px 20px;
     border: 2px;
     border-radius: 3px;
+}
+
+@media(min-width: 769px){
+    .listado-articulo{
+        width: 33%;
+        padding: 10px;
+        display: inline-block;
+    }
 }

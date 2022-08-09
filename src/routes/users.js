@@ -22,11 +22,14 @@ const upload= multer({ storage })
 
 /*****  Routes  *****/
   /*****  Login   *****/
-router.get('/login', guestMiddleware, usersController.viewFormLogin);
+router.get('/login', guestMiddleware.onlyForGuest, usersController.viewFormLogin);
 router.post('/login', usersValidations, usersController.login);
   /*****  Register   *****/
-router.get('/register', guestMiddleware , usersController.viewFormRegister);
+router.get('/register', guestMiddleware.onlyForGuest , usersController.viewFormRegister);
 router.post("/register", upload.single("profilePic"), usersController.create);
+  /*****  Log Out   *****/
+router.get('/logout', guestMiddleware.isLogged, usersController.viewLogout);
+router.post("/logout", guestMiddleware.isLogged, usersController.logout);
   /*****  View Users   *****/
 router.get('/allUsers', usersController.viewAllUsers);
 

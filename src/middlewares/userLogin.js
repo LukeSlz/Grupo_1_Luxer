@@ -10,15 +10,12 @@ function userLogin (req,res,next){
         if (!req.session.user){
             if (email){
                 let userLogged = users.find(user => email == user.email)
-                console.log(userLogged)
                 delete userLogged.password
                 req.session.user = userLogged
                 res.locals.logged = true
                 res.locals.user = req.session.user
             } 
-            
         } else {
-            console.log(req.session.user);
             res.locals.logged = true
             res.locals.user = req.session.user
         }
