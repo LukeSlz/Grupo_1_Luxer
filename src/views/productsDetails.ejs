@@ -4,13 +4,67 @@
 <%- include('./partials/head')  %> 
 
 <body>
-
     <%- include('./partials/header') %>
+    <main>
+        <div class="conteiner-pd">
+            <img src="/images/new-products/<%= product.images %> " alt="Image of<%= product.name %> " class="imagen-producto-pd">
+            <div class="producto-pd">
+                <h2>Luxer Studio</h2>
+                <h1><%= product.name %></h1>
+                <h3 class="h2precio"><%= product.price %> </h3>
+                <hr>
+                <p class="descripcion-pd"><%= product.description %> </p>
+                <h4>Material: </h4><h5><%= product.material %> </h5>
+                <h4>Categoría: </h4><h5><%= product.category %> </h5>
 
-<main>
+                <div class="social-icons-pd">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-solid fa-share"></i>
+                </div>
+                <form action="/shoppingCart" method="get">
+                    <button type="submit" class="comprar-button">Agregar al Carrito</button>
+                </form>
+            </div>
+        </div>
+        <!--Sección de 'Tambien te puede gustar'-->
+        <div class="also-like">
+            <h2 class="center">También Puede Gustarte</h2>
+            <article class="articulo">
+                <img class="imagen-alsolike" src="/images/imagen-producto/escritorio-white.jpg" alt="Imagen del escritorio">
+                <br>
+                <div class="info-alsolike">
+                    <h4>Escritorio White</h4>
+                    <h5>$20.500</h5>
+                </div>
+
+</article>
 
 
-    <div class="conteiner-pd">
+<article class="articulo">
+
+    <img class="imagen-alsolike" src="/images/imagen-producto/sillon-pringles.jpg" alt="Imagen de Sillón Pringles">
+    <br>
+    <br>
+    <div class="info-alsolike">
+    <h4>Sillón Pringles</h4>
+    <h5>$40.600</h5>
+    </div>
+    </article>
+
+<article class="articulo">
+
+    <img class="imagen-alsolike" src="/images/imagen-producto/sillon-divan.jpg" alt="Imagen de Diván">
+    <br>
+        <div class="info-alsolike">
+        <h4>Diván Froyd</h4>
+        <h5>$96.000</h5>
+        </div>
+        </article>
+
+        
+
+</div>
+<!--<div class="conteiner-pd">
 
       <img class="imagen-producto-pd" src="/images/imagen-producto/espejo-glass.jpg"/>
 
@@ -117,9 +171,9 @@
 </div>
 
 
-
-
-</main> 
+-->
+    
+    </main> 
 
 <%- include('./partials/footer') %>
 
