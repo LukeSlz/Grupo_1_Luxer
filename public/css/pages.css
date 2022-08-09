@@ -111,6 +111,9 @@ header{
     font-size: 1.5em;
 }
 /*  Elementos ocultos en version mobile  */
+.horizontal-categories-nav{
+    display: none;
+}
 .estilo-nav{
     color:#A68474;
     text-decoration: none;

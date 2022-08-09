@@ -10,118 +10,28 @@
 <main>
 
   <h1 class="listado-title">LISTADO DE PRODUCTOS</h1>
-
-  <% products.forEach(product => { %>
-    <div class="listado-articles">
+  <% if (locals.user && locals.user.category===9) { %>
+    <div class="create-product-button-container">
+      <a href="/products/create"><button class="create-product-button">Create New</button></a>
+    </div>
+  <% } %>
+  <div class="listado-articles">
+    <% products.forEach(product => { %>
       <article class="listado-articulo">
-
         <img class ="imagen-listado" src="images/new-products/<%= product.images %>" alt="Imagen de <% product.name %> ">
-          <button><a class="link-to-detail" href="/products/<%= product.id %> ">Comprar</a></button>
-        <div class="info-listado">
+        <div class="info-listado-container">
+        <a class="link-to-detail" href="/products/<%= product.id %> "><button>Ver</button></a>
           <h4 class="item-name"><%= product.name %> </h4>
-          <h5 class="item-price"><%= product.price %> </h5>
-
+          <h5 class="item-price">$<%= product.price %> </h5>
         </div>
-
+        <% if (locals.user && locals.user.category===9) { %>
+          <div class="edit-product-button-container">
+            <a href="/products/<%= product.id %>/edit "><button class="edit-product-button">Edit Item</button></a>
+          </div>
+        <% } %>
       </article>
-    </div>
-
-  <% }) %> 
-
-<div class="listado-articles">
-
-<article class="listado-articulo">
-
-<img class="imagen-listado" src="images/imagen-producto/macetas-cute.jpg" alt="Imagen de las macetas">
-
-<form>
-    <a href="/productDetails.ejs"><button type="submit" class="listado-button">Comprar</button></a>
-  </form>
-<br>
-<div class="info-listado">
-<h4>Macetas Cute</h4>
-<h5>$4.790</h5>
-</div>
-
-</article>
-
-<article class="listado-articulo">
-
-    <img class="imagen-listado" src="images/imagen-producto/sillon-italian.jpg" alt="Imagen del sillon">
-    
-    <form>
-        <button type="submit" class="listado-button" href="..productDetails.ejs">Comprar</button>
-      </form>
-    <br>
-    <div class="info-listado">
-    <h4>Sillón Italian</h4>
-    <h5>$89.000</h5>
-    </div>
-    
-</article>
-
-<article class="listado-articulo">
-
-    <img class="imagen-listado" src="images/imagen-producto/escritorio-white.jpg" alt="Imagen del escritorio">
-    
-    <form>
-        <button type="submit" class="listado-button" href="..productDetails.ejs">Comprar</button>
-      </form>
-    <br>
-    <div class="info-listado">
-    <h4>Escritorio White</h4>
-    <h5>$31.000</h5>
-    </div>
-    
-</article>
-
-<article class="listado-articulo">
-
-    <img class="imagen-listado" src="images/imagen-producto/sillon-divan.jpg" alt="Imagen del sillón diván">
-    
-    <form>
-        <button type="submit" class="listado-button" href="..productDetails.ejs">Comprar</button>
-      </form>
-    <br>
-    <div class="info-listado">
-    <h4>Sillón Diván</h4>
-    <h5>$70.900</h5>
-    </div>
-    
-</article>
-
-<article class="listado-articulo">
-
-    <img class="imagen-listado" src="images/imagen-producto/silla-italian.jpg" alt="Imagen de la silla">
-    
-    <form>
-        <button type="submit" class="listado-button" href="..productDetails.ejs">Comprar</button>
-      </form>
-    <br>
-    <div class="info-listado">
-    <h4>Silla Italian</h4>
-    <h5>$11.300</h5>
-    </div>
-    
-</article>
-
-<article class="listado-articulo">
-
-    <img class="imagen-listado" src="images/imagen-producto/lampara-simple.jpg" alt="Imagen de la lámpara">
-    
-    <form>
-        <button type="submit" class="listado-button" href="..productDetails.ejs">Comprar</button>
-      </form>
-    <br>
-    <div class="info-listado">
-    <h4>Lámpara Focus</h4>
-    <h5>$9.250</h5>
-    </div>
-    
-</article>
-
-
-</div>
+    <% }) %> 
+  </div>
 
 </main> 
 
