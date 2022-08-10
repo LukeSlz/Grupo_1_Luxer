@@ -5,11 +5,11 @@
     <%- include('./partials/header')  %> 
 
     <main>
-        <div class="main-container">
-            <h1 class="title">Are you sure you want to delete <%= theProduct.name %>?</h1><br>
-            <h2 class="message">This action cannot be undone</h2><br>
-            <div class="button-container">
-                <form action="/products/<%= theProduct.id %>/delete?_method=DELETE" method="POST">
+        <div class="delete-product-main-container">
+            <h1 class="delete-product-title">Are you sure you want to delete <%= theProduct.name %>?</h1><br>
+            <h2 class="delete-product-message">This action cannot be undone</h2><br>
+            <div class="delete-product-button-container">
+                <form action="/products/delete/<%= theProduct.id %>?_method=DELETE" method="POST">
                     <button type="submit">DELETE</button>
                 </form>
             </div>

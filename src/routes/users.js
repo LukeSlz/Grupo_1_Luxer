@@ -6,7 +6,8 @@ const multer = require('multer');
 const usersValidations = require('../middlewares/validationsUsers');
 
 const usersController = require('../controllers/usersController');
-const guestMiddleware = require("../middlewares/guestMiddleware")
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 /*****  Multer *****/
 const storage = multer.diskStorage({
@@ -32,7 +33,7 @@ router.get('/logout', guestMiddleware.isLogged, usersController.viewLogout);
 router.post("/logout", guestMiddleware.isLogged, usersController.logout);
   /*****  View Users   *****/
 router.get('/users', usersController.viewAllUsers);
-router.get('/users/:id', usersController.viewUserDetails);
+router.get('/users/:id', guestMiddleware.sameUser, usersController.viewUserDetails);
 
 
 

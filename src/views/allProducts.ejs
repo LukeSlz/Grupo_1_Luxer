@@ -18,15 +18,17 @@
   <div class="listado-articles">
     <% products.forEach(product => { %>
       <article class="listado-articulo">
-        <img class ="imagen-listado" src="images/new-products/<%= product.images %>" alt="Imagen de <% product.name %> ">
         <div class="info-listado-container">
-        <a class="link-to-detail" href="/products/<%= product.id %> "><button>Ver</button></a>
+          <a class="link-to-detail" href="/products/<%= product.id %> "><div>
+            <img class ="imagen-listado" src="images/new-products/<%= product.images %>" alt="Imagen de <% product.name %> ">
+            <h2 class="view-product-hidden">Ver Producto</h2>
+          </div></a>
           <h4 class="item-name"><%= product.name %> </h4>
           <h5 class="item-price">$<%= product.price %> </h5>
         </div>
         <% if (locals.user && locals.user.category===9) { %>
           <div class="edit-product-button-container">
-            <a href="/products/<%= product.id %>/edit "><button class="edit-product-button">Edit Item</button></a>
+            <a href="/products/edit/<%= product.id %> "><button class="edit-product-button">Edit Item</button></a>
           </div>
         <% } %>
       </article>

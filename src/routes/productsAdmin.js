@@ -22,15 +22,15 @@ const upload = multer({storage})
 
 /*****  Routes  *****/
     /*****  Create  *****/
-router.get('/products/create', usersCRUDMiddleware.create, isAdminMiddleware, productsAdminController.viewFormCreate);
-router.post('/products/create', upload.single('imagesCreate'), productsAdminMiddleware.createdItem, isAdminMiddleware, productsAdminController.createNew);
+router.get('/products/create', usersCRUDMiddleware.create, isAdminMiddleware.isAdministrator, productsAdminController.viewFormCreate);
+router.post('/products/create', upload.single('imagesCreate'), productsAdminMiddleware.createdItem, isAdminMiddleware.isAdministrator, productsAdminController.createNew);
 
     /*****  Modify  *****/
-router.get('/products/:id/edit', usersCRUDMiddleware.update, isAdminMiddleware, productsAdminController.viewFormEdit);
-router.put('/products/:id/edit', upload.single('imagesModify'), productsAdminMiddleware.editedItem, isAdminMiddleware, productsAdminController.edit);
+router.get('/products/edit/:id', usersCRUDMiddleware.update, isAdminMiddleware.isAdministrator, productsAdminController.viewFormEdit);
+router.put('/products/edit/:id', upload.single('imagesModify'), productsAdminMiddleware.editedItem, isAdminMiddleware.isAdministrator, productsAdminController.edit);
 
     /*****  Delete  *****/
-router.get('/products/:id/delete', usersCRUDMiddleware.delete, isAdminMiddleware, productsAdminController.viewDelete);
-router.delete('/products/:id/delete', productsAdminMiddleware.deletedItem, isAdminMiddleware, productsAdminController.delete)
+router.get('/products/delete/:id', usersCRUDMiddleware.delete, isAdminMiddleware.isAdministrator, productsAdminController.viewDelete);
+router.delete('/products/delete/:id', productsAdminMiddleware.deletedItem, isAdminMiddleware.isAdministrator, productsAdminController.delete)
 /*****  Exports *****/
 module.exports = router;

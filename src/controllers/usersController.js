@@ -28,11 +28,9 @@ module.exports = {
             }else{
               req.session.user = loggedUser;
               if(req.body.remindme){
-                console.log('There is a reminder');
                 res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*2})
                 res.redirect('/');
               }else{
-                console.log('No reminder');
                 res.redirect('/');
               }
             }

@@ -45,6 +45,25 @@ object-fit: cover;
     text-decoration: none;
     color: #FFFFFF;
 }
+.info-listado-container{
+    position: relative;
+    transition: 200ms;
+}
+.view-product-hidden{
+    position: absolute;
+    font-size: 2em;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-shadow: 2px 2px 1px black;
+    visibility: hidden;
+}
+.info-listado-container:hover {
+    opacity: 80%;
+}
+.info-listado-container:hover .view-product-hidden{
+    visibility: visible;
+}
 
 .listado-button{
     margin-top: -20px;
