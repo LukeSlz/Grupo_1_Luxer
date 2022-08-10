@@ -8,10 +8,32 @@
     <%- include('./partials/header') %>
 
 <main>
+    <div class="conteiner-pd">
+        <img class="imagen-producto-pd" src="/images/user-images/<%= user.profilePic %> " alt="Imagen del usuario <%= user.name %> "><br>
+        <div class="user-info-container-ud">
+            <h1><%= user.name %></h1>
+            <% if(user.category === 9){ %>
+                <h3 class="h2precio">Administrador</h3>
+            <% } %>
+            <div class="social-icons-pd">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="/shoppingCart"><button class="comprar-button">Últimas Compras</button></a>
+            <br>
+            <% if (locals.user && user.id == req.params.id) { %>
+             
+            <% } %>
+            <a href="/logout"><button class="comprar-button">Logout</button></a>
+        </div>
+    </div>
+
 
     <div class="conteiner-pd">
 
-      <img class="imagen-producto-pd" src="images/user-images/homero-simpson.jpg" alt = "Homero">
+      <img class="imagen-producto-pd" src="/images/user-images/homero-simpson.jpg" alt = "Homero">
 
 
 <div class="producto-pd">
@@ -54,7 +76,7 @@
 
 
 
-
+<!--
 
 <h2 class="center">Más Usuarios</h2>
 <br>
@@ -99,7 +121,7 @@
 </div>
 
 
-
+-->
 
 </main> 
 

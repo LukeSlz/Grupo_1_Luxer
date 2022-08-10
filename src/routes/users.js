@@ -31,7 +31,8 @@ router.post("/register", upload.single("profilePic"), usersController.create);
 router.get('/logout', guestMiddleware.isLogged, usersController.viewLogout);
 router.post("/logout", guestMiddleware.isLogged, usersController.logout);
   /*****  View Users   *****/
-router.get('/allUsers', usersController.viewAllUsers);
+router.get('/users', usersController.viewAllUsers);
+router.get('/users/:id', usersController.viewUserDetails);
 
 
 

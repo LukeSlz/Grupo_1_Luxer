@@ -58,6 +58,13 @@ module.exports = {
     viewAllUsers: (req,res) => {
         res.render('allUsers');
     },
+    viewUserDetails: (req, res) => {
+      let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
+      let users = JSON.parse(usersArchive);
+      let theUserIndex = users.findIndex(user => user.id == req.params.id);
+      let theUser = users[theUserIndex];
+      res.render('userDetails', {user: theUser});
+    },
 
     viewFormRegister: (req, res) => {
       res.render('register');

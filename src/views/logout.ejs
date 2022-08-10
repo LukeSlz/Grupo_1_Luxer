@@ -6,20 +6,20 @@
     <%- include('./partials/header') %>
     
     <main>
-        <form class="logout-form" action="/logout" method="POST">
-            <div class="goodbye-sign">
-                <h1><%= locals.user.name %></h1>
-                <h2>¿Estás seguro de que querés salir?</h2>
+        <div class="goodbye-sign">
+            <h1><%= locals.user.name %></h1>
+            <h2>¿Estás seguro de que querés salir?</h2>
+        </div>
+        <div class="logout-buttons-container">
+            <div class="go-back-button-container">
+                <a href="/"><button class="go-back-button"> Atrás </button></a>
             </div>
-            <div class="logout-buttons-container">
-                <div class="go-back-button-container">
-                    <button class="go-back-button"><a href="/"> Atrás </a></button>
-                </div>
-                <div class="logout-button-container">
+            <div class="logout-button-container">
+            <form class="logout-form" action="/logout" method="POST">
                     <button type="submit" class="logout-button">Cerrar Sesión</button>                                              
-                </div>
+                </form>
             </div>
-        </form>
+        </div>
     </main>
 
     <%- include('./partials/footer') %>
