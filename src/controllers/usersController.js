@@ -4,6 +4,9 @@ const fs = require('fs');
 const multer = require('multer');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require('express-validator');
+const db = require('../database/models');
+const sequelize = db.sequelize
+
 
 module.exports = {
     viewFormLogin: (req, res) => {
@@ -54,14 +57,20 @@ module.exports = {
     },
     
     viewAllUsers: (req,res) => {
-        res.render('allUsers');
+      db.User.findAll({
+        include: ['user_category']
+      })
+        .then(users => {
+          res.render('allUsers', {users})
+        })
     },
     viewUserDetails: (req, res) => {
-      let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
-      let users = JSON.parse(usersArchive);
-      let theUserIndex = users.findIndex(user => user.id == req.params.id);
-      let theUser = users[theUserIndex];
-      res.render('userDetails', {user: theUser});
+      db.User.findByPk(req.params.id, {
+        include: ['user_category']
+      })
+        .then(user => {
+          res.render('userDetails', {user})
+        })
     },
 
     viewFormRegister: (req, res) => {

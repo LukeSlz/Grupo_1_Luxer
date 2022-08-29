@@ -1,14 +1,14 @@
 /*	Data for users	*/
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (1, 'Hetti', 'Shoebotham', 'hshoebotham0@desdev.cn', 'oBQMH8mnKUR', 1, 'http://dummyimage.com/190x100.png/ff4444/ffffff');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (2, 'Micaela', 'Finch', 'mfinch1@netvibes.com', '5jJOuOL', 1, 'http://dummyimage.com/114x100.png/ff4444/ffffff');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (3, 'Bartholomeo', 'Wroughton', 'bwroughton2@google.com.au', 'DY0z41Kf1', 1, 'http://dummyimage.com/165x100.png/ff4444/ffffff');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (4, 'Marcela', 'Grimwade', 'mgrimwade3@wiley.com', 'o4JU9mpjK', 1, 'http://dummyimage.com/138x100.png/dddddd/000000');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (5, 'Elene', 'Drance', 'edrance4@patch.com', 'lV9yrr', 1, 'http://dummyimage.com/211x100.png/ff4444/ffffff');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (6, 'Moina', 'Roddan', 'mroddan5@webmd.com', 'KTu378wy6YbS', 1, 'http://dummyimage.com/153x100.png/ff4444/ffffff');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (7, 'Leigha', 'Formby', 'lformby6@usgs.gov', 'Drvxl0Fz', 1, 'http://dummyimage.com/100x100.png/cc0000/ffffff');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (8, 'Laura', 'Jaulmes', 'ljaulmes7@pbs.org', '3SD5GTtM', 1, 'http://dummyimage.com/222x100.png/cc0000/ffffff');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (9, 'Grier', 'Seedhouse', 'gseedhouse8@rambler.ru', 'sMN6CNQcit', 1, 'http://dummyimage.com/107x100.png/cc0000/ffffff');
-insert into users (id, name, lastName, email, password, category_id, profilePic) values (10, 'Raffarty', 'Howgill', 'rhowgill9@netvibes.com', 'axrQKO', 1, 'http://dummyimage.com/151x100.png/dddddd/000000');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (1, 'Hetti', 'Shoebotham', 'hshoebotham0@desdev.cn', 'oBQMH8mnKUR', 1, 'homero-simpson.jpg');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (2, 'Micaela', 'Finch', 'mfinch1@netvibes.com', '5jJOuOL', 1, 'marge-simpson.jpg');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (3, 'Bartholomeo', 'Wroughton', 'bwroughton2@google.com.au', 'DY0z41Kf1', 1, 'mr-burns.webp');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (4, 'Marcela', 'Grimwade', 'mgrimwade3@wiley.com', 'o4JU9mpjK', 1, 'lisa-simpson.jpg');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (5, 'Elene', 'Drance', 'edrance4@patch.com', 'lV9yrr', 1, 'bart-simpson.jpg');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (6, 'Moina', 'Roddan', 'mroddan5@webmd.com', 'KTu378wy6YbS', 1, 'maggie-simpson.jpg');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (7, 'Leigha', 'Formby', 'lformby6@usgs.gov', 'Drvxl0Fz', 1, 'smithers.jpg');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (8, 'Laura', 'Jaulmes', 'ljaulmes7@pbs.org', '3SD5GTtM', 1, 'ned-flanders.webp');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (9, 'Grier', 'Seedhouse', 'gseedhouse8@rambler.ru', 'sMN6CNQcit', 1, 'reverendo.jpg');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (10, 'Raffarty', 'Howgill', 'rhowgill9@netvibes.com', 'axrQKO', 1, 'foto-1659480597346.jpg');
 
 /*	Data for user_categories	*/
 insert into user_categories (id, category) values (1, 'cliente');

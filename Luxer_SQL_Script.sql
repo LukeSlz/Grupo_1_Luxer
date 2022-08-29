@@ -54,7 +54,7 @@ CREATE TABLE `purchases_products`(
 DROP TABLE IF EXISTS `user_categories`;
 CREATE TABLE `user_categories`(
     `id` INT NOT NULL AUTO_INCREMENT,
-    `category` INT NOT NULL,
+    `category` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`id`)
 );
 ALTER TABLE `users` ADD FOREIGN KEY (`category_id`) REFERENCES `user_categories`(`id`);
