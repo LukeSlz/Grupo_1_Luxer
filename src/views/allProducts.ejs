@@ -10,7 +10,7 @@
 <main>
 
   <h1 class="listado-title">LISTADO DE PRODUCTOS</h1>
-  <% if (locals.user && locals.user.category===9) { %>
+  <% if (locals.user && locals.user.category_id===9) { %>
     <div class="create-product-button-container">
       <a href="/products/create"><button class="create-product-button">Create New</button></a>
     </div>
@@ -26,7 +26,7 @@
           <h4 class="item-name"><%= product.name %> </h4>
           <h5 class="item-price">$<%= product.price %> </h5>
         </div>
-        <% if (locals.user && locals.user.category===9) { %>
+        <% if (locals.user && locals.user.category_id===9) { %>
           <div class="edit-product-button-container">
             <a href="/products/edit/<%= product.id %> "><button class="edit-product-button">Edit Item</button></a>
           </div>
