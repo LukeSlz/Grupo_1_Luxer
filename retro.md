@@ -54,5 +54,16 @@ Con este sprint no tuvimos problemas muy grandes, pero si nos demoramos un poco 
 
 Todas las rutas que eran necesarias hacer pudimos generarlas de forma adecuada y la pagina esta completamente funcional, hay algunos detalles que nos gustaría corregir, son estéticos y en el curso de las siguientes semanas podremos, además de agregar un log out que es algo que tenemos pendiente hacer para que funcione de forma mas adecuada.
 
+_____________________________________________________________________________________________________________________________________________________________________
+
+## Sprint 6
+
+Este sprint presentó un nivel de dificultad de un menor nivel a comparación del anterior. A la hora de poner manos en el código tuvimos algunos inconvenientes con el Workbench (concretamente no podíamos avanzar por culpa de un bug) que, gracias al profesor Lucas pudimos resolver al finalizar una clase. 
+
+Una vez más seguimos paso a paso la organización del tablero de trabajo lo cual agilizó bastante el proceso de llevar a cabo cada una de las tareas: Primero el Diagrama, luego el Script de estructura y el de base de datos (que, una vez más, agilizamos gracias al uso de Mockaroo), la carpeta Sequalize y por último el CRUD que, como era de esperarse, nos demoró un poco más de trabajo que el resto de tareas.
+
+Estamos muy contentos con nuestro avance, y con hambre de conocimientos para continuar mejorando cada vez más nuestro proyecto :)
+
+
 
 
