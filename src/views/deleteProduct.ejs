@@ -6,7 +6,12 @@
 
     <main>
         <div class="delete-product-main-container">
-            <h1 class="delete-product-title">Are you sure you want to delete <%= theProduct.name %>?</h1><br>
+            <h1 class="delete-product-title">Are you sure you want to delete the next item?</h1><br>
+            <div class="delete-product-info">
+                <h2> <%= theProduct.name %></h2>
+                <img src="/images/new-products/<%= theProduct.images %>" alt="Image of <%= theProduct.name %> " style="width:30%">
+                <h2> $<%= theProduct.price %></h2>
+            </div>
             <h2 class="delete-product-message">This action cannot be undone</h2><br>
             <div class="delete-product-button-container">
                 <form action="/products/delete/<%= theProduct.id %>?_method=DELETE" method="POST">

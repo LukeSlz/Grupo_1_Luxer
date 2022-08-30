@@ -27,7 +27,6 @@ module.exports = {
             })
             .then(user => {
                 if(user != null){
-                    console.log(user.dataValues);
                     let checkPass = bcrypt.compareSync(req.body.password, user.dataValues.password) 
                         if(checkPass === false) {
                             res.render('login', {errors: {invalid: {msg: 'Las credenciales son inválidas'}}});
@@ -65,6 +64,7 @@ module.exports = {
         .then(users => {
             res.render('allUsers', {users})
         })
+        .catch(e => res.send(e))
     },
     viewUserDetails: (req, res) => {
         db.User.findByPk(req.params.id, {
@@ -112,7 +112,11 @@ module.exports = {
             where: {id: req.params.id}
         })
         .then(() => {
-            return res.redirect('home')
+            db.User.findByPk(req.params.id, {include: ['user_category']})
+            .then(user => {
+                req.session.user = user.dataValues;
+                return res.redirect('home')
+            })
         })
     }
 }

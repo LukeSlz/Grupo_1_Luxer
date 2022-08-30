@@ -9,6 +9,7 @@ insert into users (id, name, lastName, email, password, category_id, profilePic)
 insert into users (id, name, lastName, email, password, category_id, profilePic) values (8, 'Laura', 'Jaulmes', 'ljaulmes7@pbs.org', '$2a$10$vefCaCIrtI2OO3LwehezUu3Z2lXYpvny.0MdvM1zqPsJFUIVebRni', 1, 'ned-flanders.webp');
 insert into users (id, name, lastName, email, password, category_id, profilePic) values (9, 'Grier', 'Seedhouse', 'gseedhouse8@rambler.ru', '$2a$10$vefCaCIrtI2OO3LwehezUu3Z2lXYpvny.0MdvM1zqPsJFUIVebRni', 1, 'reverendo.jpg');
 insert into users (id, name, lastName, email, password, category_id, profilePic) values (10, 'Raffarty', 'Howgill', 'rhowgill9@netvibes.com', '$2a$10$vefCaCIrtI2OO3LwehezUu3Z2lXYpvny.0MdvM1zqPsJFUIVebRni', 1, 'foto-1659480597346.jpg');
+insert into users (id, name, lastName, email, password, category_id, profilePic) values (11, 'Admin', 'Luxer', 'admin@luxer.com', '$2a$10$Tu5onY0Pflkkab5oDWvJu.47QB0XrDdPBaw0.Iva.bQju5A/fOeku', 9, 'foto-1661871737135.png');
 
 /*	Data for user_categories	*/
 insert into user_categories (id, category) values (1, 'cliente');

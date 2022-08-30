@@ -14,12 +14,15 @@
                 <h3 class="h2precio"><%= product.price %> </h3>
                 <hr>
                 <p class="descripcion-pd"><%= product.description %> </p>
-                <h4>Material: </h4><h5><%= product.material %> </h5>
-                <h4>Categoría: </h4><h5><%= product.category %> </h5>
+                <h4>Material: </h4><h5><%= product.material_id %> </h5>
+                <h4>Categoría: </h4><h5><%= product.category_id %> </h5>
 
-                <div class="social-icons-pd">
-                    <i class="fa-brands fa-facebook-square"></i>
-                    <i class="fa-solid fa-share"></i>
+                <div class="edit-product-button-container">
+                    <% if (locals.user && locals.user.category_id===9) { %>
+                        <div class="edit-product-button-container">
+                          <a href="/products/edit/<%= product.id %> "><button class="edit-product-button">Edit Item</button></a>
+                        </div>
+                      <% } %>
                 </div>
                 <form action="/shoppingCart" method="get">
                     <button type="submit" class="comprar-button">Agregar al Carrito</button>

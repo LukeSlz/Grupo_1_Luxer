@@ -2,6 +2,9 @@
 const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
+const db = require('../database/models');
+const sequelize = db.sequelize
+
 
 /*****  Controller Methods  *****/
 module.exports = {
@@ -9,75 +12,57 @@ module.exports = {
         res.render('createProduct');
     },
     createNew: (req, res) => {
-        let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
-        let products;
-        if(productsArchive == ''){
-            products = [];
-        }else{
-            products = JSON.parse(productsArchive);
-        };
-        let lastProduct;
-        if(products.length > 0){
-                lastProduct = products.pop();
-                products.push(lastProduct)
-        };
-        let newProduct = {
-            id: lastProduct? lastProduct.id + 1: 1,
+        db.Product.create({
             name: req.body.nameCreate,
             description: req.body.descriptionCreate,
             images: req.file.filename,
-            material: req.body.materialCreate,
-            category: req.body.categoryCreate,
+            material_id: req.body.materialCreate,
+            category_id: req.body.categoryCreate,
             price: req.body.priceCreate
-            };
-        products.push(newProduct);
-        let productsJSON = JSON.stringify(products);
-        fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
-        res.redirect('/products')
+        })
+        .then(() => {
+            res.redirect('/products')
+        })
+        .catch(error => res.send(error));
         },
+        
     viewFormEdit: (req, res) => {
-        let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
-        products = JSON.parse(productsArchive);
-        let myProduct;
-        products.forEach( item => {
-                if (item.id == req.params.id){
-                        myProduct = item;
-                }
-        });
-        res.render('editProduct', {myProduct})
+        db.Product.findByPk(req.params.id, {include: ['material', 'category']})
+            .then(productFound => {
+                let product = productFound.dataValues;
+                res.render('editProduct', {product})
+            })
+            .catch(error => res.send(error));
     },
     edit: (req, res) => {
-        let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
-        products = JSON.parse(productsArchive);
-        let theProductIndex = products.findIndex(prod => prod.id == req.params.id);
-        let modifiedProduct = {
-            id: products[theProductIndex].id,
+        db.Product.update({
             name: req.body.nameModify,
             description: req.body.descriptionModify,
             images: req.file.filename,
-            material: req.body.materialModify,
-            category: req.body.categoryModify,
+            material_id: req.body.materialModify,
+            category_id: req.body.categoryModify,
             price: req.body.priceModify
-        };
-        products.splice(theProductIndex, 1, modifiedProduct);
-        let productsJSON = JSON.stringify(products);
-        fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
-        res.redirect('/products');
+        },{
+            where: {id: req.params.id}
+        })
+        .then(() => {
+            return res.redirect('/products');
+        })
+        .catch(error => res.send(error));
     },
     viewDelete: (req, res) => {
-        let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
-        products = JSON.parse(productsArchive);
-        let theProductIndex = products.findIndex(prod => prod.id == req.params.id);
-        let theProduct = products[theProductIndex];
-        res.render('deleteProduct', {theProduct});
+        db.Product.findByPk(req.params.id, {include: ['material', 'category']})
+            .then(productFound => {
+                let theProduct = productFound.dataValues;
+                res.render('deleteProduct', {theProduct});
+            })
+            .catch(error => res.send(error));
     },
     delete: (req, res) => {
-        let productsArchive = fs.readFileSync(path.join(__dirname, '../database/products.json'));
-        products = JSON.parse(productsArchive);
-        let theProductIndex = products.findIndex(prod => prod.id == req.params.id);
-        products.splice(theProductIndex, 1);
-        let productsJSON = JSON.stringify(products);
-        fs.writeFileSync(path.join(__dirname, '../database/products.json'), productsJSON);
-        res.redirect('/products');
+        db.Product.destroy({where: {id: req.params.id}})
+            .then(() => {
+                res.redirect('/products');
+            })
+            .catch(error => res.send(error));
     }
 }

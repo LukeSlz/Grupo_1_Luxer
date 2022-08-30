@@ -11,7 +11,7 @@
     <div class="conteiner-pd">
         <img class="imagen-producto-pd" src="/images/user-images/<%= user.profilePic %> " alt="Imagen del usuario <%= user.name %> " style="background: rgb(66, 53, 53)"><br>
         <div class="user-info-container-ud">
-            <h1><%= user.name %></h1>
+            <h1><%= user.name %> <%= user.lastName %> </h1>
             <% if(user.category === 9){ %>
                 <h3 class="h2precio">Administrador</h3>
             <% } %>
@@ -23,58 +23,18 @@
             </div>
             <% if (locals.user) { %>
                 <div class="edit-product-button-container">
-                  <a href="/users/edit/<%= user.id %> "><button class="edit-product-button">Edit Info</button></a>
+                    <a href="/users/edit/<%= user.id %> "><button class="comprar-button">Edit Info</button></a>
+                    <hr>
+                    <a href="/logout"><button class="comprar-button">Logout</button></a>
                 </div>
-              <% } %>
-            <br>
-            <a href="/logout"><button class="comprar-button">Logout</button></a>
+            <% } %>
+            <% if (locals.user.category_id === 9) { %>
+                <div class="button-container">
+                    <a href="/users"><button class="comprar-button"">View all users</button></a>
+                </div>
+            <% } %>
         </div>
     </div>
-
-
-    <div class="conteiner-pd">
-
-      <img class="imagen-producto-pd" src="/images/user-images/homero-simpson.jpg" alt = "Homero">
-
-
-<div class="producto-pd">
-
-<h1>Homero Simpson</h1>
-<h3 class="h2precio">Administrador</h3>
-<br>
-
-<p class="descripcion-pd">Miembro desde el 29 de Noviembre de 2015</p> 
-<br>
-<div class="social-icons-pd">
-
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star"></i>
-    <i class="fa-solid fa-star-half-stroke"></i>
-</div>
-<br>
-
-<p class="descripcion-pd">Administrador Nivel 4.5</p>
-
-<br>
-<br>
-
-<form>
-  <button type="submit" class="comprar-button" href="">Últimas Compras</button>
-  <br>
-  <br>
-  <button type="submit" class="comprar-button" href="">Enviar Mensaje</button>
-</form>
-
-<br>
-<br>
-
-</div>
-</div>
-
-<br>
-<br>
-<br>
-
 
 
 <!--

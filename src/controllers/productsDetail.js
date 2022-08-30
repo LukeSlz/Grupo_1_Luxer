@@ -18,7 +18,8 @@ module.exports = {
         db.Product.findByPk(req.params.id, {
             include: ['material', 'category']
         })
-            .then(product => {
+            .then(productFound => {
+                let product = productFound.dataValues;
                 res.render('productsDetails', {product})
             })
     }

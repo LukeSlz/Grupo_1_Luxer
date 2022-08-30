@@ -32,11 +32,11 @@ router.post("/register", upload.single("profilePic"), usersController.create);
 router.get('/logout', guestMiddleware.isLogged, usersController.viewLogout);
 router.post("/logout", guestMiddleware.isLogged, usersController.logout);
   /*****  View Users   *****/
-router.get('/users', usersController.viewAllUsers);
+router.get('/users', adminMiddleware.isAdministrator, usersController.viewAllUsers);
 router.get('/users/:id', guestMiddleware.sameUser, usersController.viewUserDetails);
   /*****  Edit User   *****/
 router.get('/users/edit/:id', guestMiddleware.isLogged, guestMiddleware.sameUser, usersController.viewEdit);
-router.post('/users/edit/:id', usersValidations, guestMiddleware.isLogged, guestMiddleware.sameUser, upload.single("profilePic"), usersController.edit);
+router.post('/users/edit/:id', usersValidations, upload.single("profilePic"), usersController.edit);
 
 
 
