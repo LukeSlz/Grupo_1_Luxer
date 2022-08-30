@@ -14,93 +14,105 @@ module.exports = {
     },
     
     login: (req, res) => {
-      let resultValidation = validationResult(req);
-      if (!resultValidation.isEmpty()){
-        console.log(resultValidation);
-        res.render('login', {errors: resultValidation.mapped()})
-        console.log(req.body);
-      }else{
-        let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
-        users = JSON.parse(usersArchive);
-        let loggedUser = users.find(usuario => usuario.email === req.body.email);
-        if(loggedUser){
-          bcrypt.compare(req.body.password, loggedUser.password)
-          .then((result) => {
-            if(result==false){
-              res.render('login', {errors: {invalid: {msg: 'Las credenciales son inválidas'}}});
-            }else{
-              req.session.user = loggedUser;
-              if(req.body.remindme){
-                res.cookie('email', loggedUser.email, {maxAge: 1000*60*60*2})
-                res.redirect('/');
-              }else{
-                res.redirect('/');
-              }
-            }
-          })
-          .catch((e) => {
-            console.log('Error', e);
-          });
+        let resultValidation = validationResult(req);
+        if (!resultValidation.isEmpty()){
+            console.log(resultValidation);
+            res.render('login', {errors: resultValidation.mapped()})
+            console.log(req.body);
         }else{
-          res.render('login', {errors: {noUser: {msg: "El usuario no existe"}}})
-        }
-      }
-    },
+            db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+            .then(user => {
+                if(user != null){
+                    console.log(user.dataValues);
+                    let checkPass = bcrypt.compareSync(req.body.password, user.dataValues.password) 
+                        if(checkPass === false) {
+                            res.render('login', {errors: {invalid: {msg: 'Las credenciales son inválidas'}}});
+                        }else{
+                            req.session.user = user.dataValues;
+                            if(req.body.remindme){
+                                res.cookie('email', user.dataValues.email, {maxAge: 1000*60*60*2})
+                                res.redirect('/');
+                            }else{
+                                res.redirect('/');
+                            }
+                        }
+                }else{
+                    res.render('login', {errors: {noUser: {msg: "El usuario no existe"}}})
+                }})
+            .catch((e) => {
+                console.log('Error', e);
+            });
+            }
+        },
     
     viewLogout: (req, res) => {
-      res.render('logout');
+        res.render('logout');
     },
     logout: (req, res) => {
-      req.session.destroy();
-      res.clearCookie("email")
-      res.redirect('/')
+        req.session.destroy();
+        res.clearCookie("email")
+        res.redirect('/')
     },
     
     viewAllUsers: (req,res) => {
-      db.User.findAll({
-        include: ['user_category']
-      })
+        db.User.findAll({
+            include: ['user_category']
+        })
         .then(users => {
-          res.render('allUsers', {users})
+            res.render('allUsers', {users})
         })
     },
     viewUserDetails: (req, res) => {
-      db.User.findByPk(req.params.id, {
-        include: ['user_category']
-      })
+        db.User.findByPk(req.params.id, {
+            include: ['user_category']
+        })
         .then(user => {
-          res.render('userDetails', {user})
+            res.render('userDetails', {user})
         })
     },
 
     viewFormRegister: (req, res) => {
-      res.render('register');
-  },
-  
+        res.render('register');
+    },
+
     create: (req, res) => {
-      let usersArchive = fs.readFileSync(path.join(__dirname, '../database/users.json'));
-      users = JSON.parse(usersArchive);
-
-      let lastUser;
-      if(users.length > 0){
-      lastUser = users.pop();
-      users.push(lastUser)
-
-      let user = {
-        id: lastUser? lastUser.id + 1: 1,
-        name: req.body.name,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        category: 1,
-        profilePic:  req.file ? req.file.filename : '',
-      };
-      users.push(user);
-      let usersJSON = JSON.stringify(users);
-      fs.writeFileSync(path.join(__dirname, '../database/users.json'), usersJSON);
-      res.redirect('/login')
-      }
-  
-} 
-
+        db.User.create({
+                name: req.body.name,
+                lastName: req.body.lastName,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                category_id: 1,
+                profilePic:  req.file ? req.file.filename : 'foto-1659480597346.jpg',
+        })
+        .then(() =>{
+            return res.redirect('login')
+        })
+    },
+    viewEdit: (req, res) =>{
+        let userId = req.params.id;
+        db.User.findByPk(userId, {include: ['user_category']})
+            .then(userFound => {
+                let user = userFound.dataValues;
+                res.render('userEdit', {user})
+            })
+    },
+    edit: (req, res) => {
+        db.User.update({
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            category_id: 1,
+            profilePic:  req.file ? req.file.filename : 'foto-1659480597346.jpg',
+        },{
+            where: {id: req.params.id}
+        })
+        .then(() => {
+            return res.redirect('home')
+        })
+    }
 }

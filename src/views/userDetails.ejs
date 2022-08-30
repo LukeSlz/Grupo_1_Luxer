@@ -9,7 +9,7 @@
 
 <main>
     <div class="conteiner-pd">
-        <img class="imagen-producto-pd" src="/images/user-images/<%= user.profilePic %> " alt="Imagen del usuario <%= user.name %> "><br>
+        <img class="imagen-producto-pd" src="/images/user-images/<%= user.profilePic %> " alt="Imagen del usuario <%= user.name %> " style="background: rgb(66, 53, 53)"><br>
         <div class="user-info-container-ud">
             <h1><%= user.name %></h1>
             <% if(user.category === 9){ %>
@@ -21,7 +21,11 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star-half-stroke"></i>
             </div>
-            <a href="/shoppingCart"><button class="comprar-button">Últimas Compras</button></a>
+            <% if (locals.user) { %>
+                <div class="edit-product-button-container">
+                  <a href="/users/edit/<%= user.id %> "><button class="edit-product-button">Edit Info</button></a>
+                </div>
+              <% } %>
             <br>
             <a href="/logout"><button class="comprar-button">Logout</button></a>
         </div>

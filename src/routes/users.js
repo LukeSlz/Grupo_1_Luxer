@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
       cb(null, 'foto' + '-' + Date.now()+ path.extname(file.originalname));      
     }
   })
-   
+
 const upload= multer({ storage })
 
 /*****  Routes  *****/
@@ -34,6 +34,9 @@ router.post("/logout", guestMiddleware.isLogged, usersController.logout);
   /*****  View Users   *****/
 router.get('/users', usersController.viewAllUsers);
 router.get('/users/:id', guestMiddleware.sameUser, usersController.viewUserDetails);
+  /*****  Edit User   *****/
+router.get('/users/edit/:id', guestMiddleware.isLogged, guestMiddleware.sameUser, usersController.viewEdit);
+router.post('/users/edit/:id', usersValidations, guestMiddleware.isLogged, guestMiddleware.sameUser, upload.single("profilePic"), usersController.edit);
 
 
 

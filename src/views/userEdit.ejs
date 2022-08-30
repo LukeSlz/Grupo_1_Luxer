@@ -5,29 +5,29 @@
     <%- include('./partials/header') %> 
     <main>
         <div class="main-instructions-container">
-            <h1 class="register">Registrate</h1> 
+            <h1 class="register">Editar info de usuario</h1> 
             <br>
-            <p>Completá los siguientes campos y registrate sin costo</p>
+            <p>Modificá los campos que desees</p>
         </div>
         <br>
         
         <br>
 
-        <form class="main-register-form" action="/register" method="POST" enctype="multipart/form-data">
+        <form class="main-register-form" action="/users/edit/<%= locals.user.id %> " method="POST" enctype="multipart/form-data">
         
    
             <div class="main-inputs-container">
                 <div class="name-input">
                     <label for="name"></label>
-                    <input type="text" name="name" id="name" placeholder="Nombre" required>
+                    <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>">
                 </div>
                 <div class="lastName-input">
                     <label for="lastName"></label>
-                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" required>
+                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" value="<%= user.lastName %>">
                 </div>
                 <div class="email-input">    
                     <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="e-mail" required>
+                    <input type="email" name="email" id="email" placeholder="e-mail" value="<%= user.email %>">
                 </div>
                 <div class="password-input">
                     <label for="password"></label>
@@ -40,28 +40,15 @@
                 <div class="add-profile-pic">
                     <div class="profilePic">
                         <label for="profilePic"></label>
+                        <img src="/images/user-images/<%= user.profilePic %>" alt="Profile picture of <%= user.name %> " style="width:100%; background: rgb(66, 53, 53)">
                         <input type="file" name="profilePic">
                     </div>
                 </div>
             </div>
-            <div class="toggles-container">
-                <br>
-                <div class="t-and-c-container">
-                    <input type="checkbox" name="t-and-c" id="t-and-c">
-                    <label for="t-and-c">He leído y accepto los <a href="#">Términos & Condiciones</a></label>
-                </div>
-                <br>
-                <div class="newsletter-container">
-                    <input type="checkbox" name="newsletter" id="newsletter">
-                    <label for="newsletter">Inscribirme al Newsletter de LUXER</label>
-                </div>
-                <br>
-                <hr>
-            </div>
+
             <br>
-           
                 <div class="field">
-                    <button class = "send-button" type="submit">Creá tu Cuenta</button>
+                    <button class = "send-button" type="submit">Guardar los cambios</button>
                 </div>
             
         </form>
