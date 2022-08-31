@@ -6,46 +6,48 @@
 
     <main>
         <div class="main-container-modifyProd">
-            <h2 class="title">MODIFICAR PRODUCTO</h2>
-            <form action="/products/edit/<%= myProduct.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-prod">
+            <h2>MODIFICAR PRODUCTO</h2>
+            <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-prod">
                 <div class="field">
                     <label for="nameModify">Nombre del producto</label><br>
-                    <input type="text" name="nameModify" id="name" value="<%= myProduct.name %>">
+                    <input type="text" name="nameModify" id="name" value="<%= product.name %>">
                 </div>
                 <div class="field">
                     <label for="descriptionModify">Descripción del producto</label><br>
-                    <textarea name="descriptionModify" id="descriptionModify" cols="50" rows="5" ><%= myProduct.description %></textarea>
+                    <textarea name="descriptionModify" id="descriptionModify" cols="50" rows="5" ><%= product.description %></textarea>
                 </div>
-                <div class="field">
+                <div class="field" id="edit-image-field-container">
                     <label for="imagesModify">Imágen(es) del producto</label><br>
-                    <input type="file" name="imagesModify" id="imagesModify" value="<%= myProduct.images %>">
+                    <img src="/images/new-products/<%= product.images %> " alt="Product image of <%= product.name %> " style="width:50%">
+                    <input type="file" name="imagesModify" id="imagesModify">
+                    <input type="hidden" name="oldImages" id="oldImages" value="<%= product.images %>" > 
                 </div>
                 <div class="field">
                     <label for="materialModify">Material</label><br>
                     <select name="materialModify" id="materialModify">
-                        <option value="mat-A" <%= myProduct.material=='mat-A'?"selected":' ' %> >Material A</option>
-                        <option value="mat-B" <%= myProduct.material=='mat-B'?"selected":' ' %> >Material B</option>
-                        <option value="mat-C" <%= myProduct.material=='mat-C'?"selected":' ' %> >Material C</option>
+                        <option value="1" <%= product.material_id==1?"selected":' ' %> >Material A</option>
+                        <option value="2" <%= product.material_id==2?"selected":' ' %> >Material B</option>
+                        <option value="3" <%= product.material_id==3?"selected":' ' %> >Material C</option>
                     </select>
                 </div>
                 <div class="field">
                     <label for="categoriesModify">Categorías del producto</label><br>
-                    <label><input type="radio" name="categoryModify" value="cat-A" id="cat-A" <%= myProduct.category=='cat-A'?'checked':' ' %> >Category A <br></label>
-                    <label><input type="radio" name="categoryModify" value="cat-B" id="cat-B" <%= myProduct.category=='cat-B'?'checked':' ' %> >Category B <br></label>
-                    <label><input type="radio" name="categoryModify" value="cat-C" id="cat-C" <%= myProduct.category=='cat-C'?'checked':' ' %> >Category C <br></label>
-                    <label><input type="radio" name="categoryModify" value="cat-D" id="cat-D" <%= myProduct.category=='cat-D'?'checked':' ' %> >Category D <br></label>
-                    <label><input type="radio" name="categoryModify" value="cat-E" id="cat-E" <%= myProduct.category=='cat-E'?'checked':' ' %> >Category E <br></label>
+                    <label><input type="radio" name="categoryModify" value="1" id="cat-A" <%= product.category_id==1?'checked':' ' %> >Category A <br></label>
+                    <label><input type="radio" name="categoryModify" value="2" id="cat-B" <%= product.category_id==2?'checked':' ' %> >Category B <br></label>
+                    <label><input type="radio" name="categoryModify" value="3" id="cat-C" <%= product.category_id==3?'checked':' ' %> >Category C <br></label>
+                    <label><input type="radio" name="categoryModify" value="4" id="cat-D" <%= product.category_id==4?'checked':' ' %> >Category D <br></label>
+                    <label><input type="radio" name="categoryModify" value="5" id="cat-E" <%= product.category_id==5?'checked':' ' %> >Category E <br></label>
                 </div>
                 <div class="field">
                     <label for="priceModify">Precio</label>
-                    $<input type="number" step="100" name="priceModify" id="priceModify" placeholder="10,000" value="<%= myProduct.price %>">
+                    $<input type="number" step="100" name="priceModify" id="priceModify" placeholder="10,000" value="<%= product.price %>">
                 </div>
                 <div class="field">
                     <button type="submit">Modificar</button>
                 </div>
             </form>
             <div class="delete-button-container">
-                <a href="../../products/delete/<%= myProduct.id %>"><button>ELIMINAR PRODUCTO</button></a>
+                <a href="../../products/delete/<%= product.id %>"><button>ELIMINAR PRODUCTO</button></a>
             </div>
         </div>
     </main>

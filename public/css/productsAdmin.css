@@ -8,7 +8,16 @@
 .field{
     margin: 10px 0;
 }
-
+#edit-image-field-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.delete-product-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .text-input {
     display: inline-block;
     background-color: #B8B4B4;

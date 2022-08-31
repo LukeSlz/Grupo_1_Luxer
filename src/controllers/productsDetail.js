@@ -1,18 +1,41 @@
 /*****  Requires    *****/
 const path = require('path');
 const fs = require('fs');
-
-let productsArchive = fs.readFileSync(path.join(__dirname,'../database/products.json'));
-let products = JSON.parse(productsArchive);
+const db = require('../database/models');
+const sequelize = db.sequelize
+const { Op } = require("sequelize");
 
 /*****  Controller Methods  *****/
 module.exports = {
     viewAll: (req, res) => {
-        res.render('allProducts', {products});
+        db.Product.findAll({
+            include: ['material', 'category']
+        })
+            .then(products => {
+                res.render('allProducts', {products});
+            })
+    },
+    search: (req, res) => {
+        db.Product.findAll({
+            include: ['material', 'category'],
+            where: {
+                name: {
+                    [Op.like]: `%${req.body.search}%`  // "%" + req.body.search + "%"
+                }
+            }
+        })
+        .then(products => {
+            res.render('allProducts', {products});
+        })
     },
     viewDetail: (req, res) => {
-        let theProductIndex = products.findIndex(prod => prod.id == req.params.id);
-        let theProduct = products[theProductIndex];
-        res.render('productsDetails', {product: theProduct});
+        db.Product.findByPk(req.params.id, {
+            include: ['material', 'category']
+        })
+            .then(productFound => {
+                let product = productFound.dataValues;
+                res.render('productsDetails', {product})
+            })
     }
+
 }

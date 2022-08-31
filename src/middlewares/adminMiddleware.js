@@ -8,7 +8,7 @@ module.exports = {
     isAdministrator: (req, res, next) => {
         if(req.session.user){
             let loggedUser = req.session.user;
-            if(loggedUser.category==9){
+            if(loggedUser.category_id==9){
                 next();
             }else{
                 res.redirect('/');

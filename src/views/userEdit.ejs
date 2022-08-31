@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head')  %> 
+<body>
+    <%- include('./partials/header') %> 
+    <main>
+        <div class="main-instructions-container">
+            <h1 class="register">Editar info de usuario</h1> 
+            <br>
+            <p>Modificá los campos que desees</p>
+        </div>
+        <br>
+        
+        <br>
+
+        <form class="main-register-form" action="/users/edit/<%= locals.user.id %> " method="POST" enctype="multipart/form-data">
+        
+   
+            <div class="main-inputs-container">
+                <div class="name-input">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>">
+                </div>
+                <div class="lastName-input">
+                    <label for="lastName"></label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" value="<%= user.lastName %>">
+                </div>
+                <div class="email-input">    
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="e-mail" value="<%= user.email %>">
+                </div>
+                <div class="password-input">
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                </div>
+                <div class="repassword-input">
+                    <label for="repassword"></label>
+                    <input type="password" name="repassword" id="repassword" placeholder="Verificar contraseña" required>
+                </div>
+                <div>
+                    <input type="hidden" name="category_idOld" value="<%= user.category_id %> ">
+                </div>
+                <div class="add-profile-pic">
+                    <div class="profilePic">
+                        <label for="profilePic"></label>
+                        <img src="/images/user-images/<%= user.profilePic %>" alt="Profile picture of <%= user.name %> " style="width:100%; background: rgb(66, 53, 53)">
+                        <input type="file" name="profilePic">
+                        <input type="hidden" name="oldProfilePic" value="<%= user.profilePic %>">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+                <div class="field">
+                    <button class = "send-button" type="submit">Guardar los cambios</button>
+                </div>
+            
+        </form>
+    </main>
+
+    <%- include ('./partials/footer') %> 
+
+</body>
+</html>
