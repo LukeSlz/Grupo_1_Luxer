@@ -6,7 +6,7 @@
 
     <main>
         <div class="main-container-modifyProd">
-            <h2 class="title">MODIFICAR PRODUCTO</h2>
+            <h2>MODIFICAR PRODUCTO</h2>
             <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-prod">
                 <div class="field">
                     <label for="nameModify">Nombre del producto</label><br>
@@ -19,7 +19,8 @@
                 <div class="field" id="edit-image-field-container">
                     <label for="imagesModify">Imágen(es) del producto</label><br>
                     <img src="/images/new-products/<%= product.images %> " alt="Product image of <%= product.name %> " style="width:50%">
-                    <input type="file" name="imagesModify" id="imagesModify" value="<%= product.images %>">
+                    <input type="file" name="imagesModify" id="imagesModify">
+                    <input type="hidden" name="oldImages" id="oldImages" value="<%= product.images %>" > 
                 </div>
                 <div class="field">
                     <label for="materialModify">Material</label><br>

@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
 const bcrypt = require('bcryptjs');
-const {validationResult} = require('express-validator');
+const {validationResult, body} = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.sequelize
 
@@ -106,8 +106,8 @@ module.exports = {
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            category_id: 1,
-            profilePic:  req.file ? req.file.filename : 'foto-1659480597346.jpg',
+            category_id: req.body.category_idOld,
+            profilePic:  req.file ? req.file.filename : req.body.oldProfilePic,
         },{
             where: {id: req.params.id}
         })

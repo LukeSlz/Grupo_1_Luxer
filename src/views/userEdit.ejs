@@ -37,11 +37,15 @@
                     <label for="repassword"></label>
                     <input type="password" name="repassword" id="repassword" placeholder="Verificar contraseña" required>
                 </div>
+                <div>
+                    <input type="hidden" name="category_idOld" value="<%= user.category_id %> ">
+                </div>
                 <div class="add-profile-pic">
                     <div class="profilePic">
                         <label for="profilePic"></label>
                         <img src="/images/user-images/<%= user.profilePic %>" alt="Profile picture of <%= user.name %> " style="width:100%; background: rgb(66, 53, 53)">
                         <input type="file" name="profilePic">
+                        <input type="hidden" name="oldProfilePic" value="<%= user.profilePic %>">
                     </div>
                 </div>
             </div>

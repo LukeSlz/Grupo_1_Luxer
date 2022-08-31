@@ -38,7 +38,7 @@ module.exports = {
         db.Product.update({
             name: req.body.nameModify,
             description: req.body.descriptionModify,
-            images: req.file.filename,
+            images: req.file ? req.file.filename : req.body.oldImages,
             material_id: req.body.materialModify,
             category_id: req.body.categoryModify,
             price: req.body.priceModify

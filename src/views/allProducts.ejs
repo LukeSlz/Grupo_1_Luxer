@@ -15,6 +15,13 @@
       <a href="/products/create"><button class="create-product-button">Create New</button></a>
     </div>
   <% } %>
+  <div class="search-product-container">
+    <form action="/products" method="POST">
+      <label for="search">
+        <input type="text" name="search" id="search" placeholder="Busca tu producto"><button type="submit">Buscar</button>
+      </label>
+    </form>
+  </div>
   <div class="listado-articles">
     <% products.forEach(product => { %>
       <article class="listado-articulo">
