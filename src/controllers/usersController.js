@@ -8,7 +8,7 @@ const {validationResult} = require('express-validator');
 module.exports = {
     viewFormLogin: (req, res) => {
         res.render('login');
-    },
+    }, 
     
     login: (req, res) => {
       let resultValidation = validationResult(req);
