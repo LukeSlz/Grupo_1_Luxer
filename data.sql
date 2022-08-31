@@ -17,8 +17,8 @@ insert into user_categories (id, category) values (2, 'vendedor');
 insert into user_categories (id, category) values (9, 'admin');
 
 /*	Data for products	*/
-insert into products (id, name, description, images, material_id, category_id, price) values (1, 'Pato', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
-', '1659101406196.webp', 2, 3, '123400');
+insert into products (id, name, description, images, material_id, category_id, price) values (1, 'Cat', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+', '1658811755020.jpg', 2, 3, '123400');
 insert into products (id, name, description, images, material_id, category_id, price) values (2, 'Sala Clásica', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
 ', '1660064119810.jpg', 1, 4, '150000');
 insert into products (id, name, description, images, material_id, category_id, price) values (3, 'Silla Elegant', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
