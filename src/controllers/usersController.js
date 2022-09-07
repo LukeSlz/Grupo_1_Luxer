@@ -16,9 +16,7 @@ module.exports = {
     login: (req, res) => {
         let resultValidation = validationResult(req);
         if (!resultValidation.isEmpty()){
-            console.log(resultValidation);
             res.render('login', {errors: resultValidation.mapped()})
-            console.log(req.body);
         }else{
             db.User.findOne({
                 where: {
@@ -80,17 +78,24 @@ module.exports = {
     },
 
     create: (req, res) => {
-        db.User.create({
-                name: req.body.name,
-                lastName: req.body.lastName,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                category_id: 1,
-                profilePic:  req.file ? req.file.filename : 'foto-1659480597346.jpg',
-        })
-        .then(() =>{
-            return res.redirect('login')
-        })
+        let resultValidation = validationResult(req);
+        if(!resultValidation.isEmpty()){
+            res.render('register', {errors: resultValidation.mapped()})
+            console.log(req.body);
+            console.log(resultValidation);
+        }else{
+            db.User.create({
+                    name: req.body.name,
+                    lastName: req.body.lastName,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    category_id: 1,
+                    profilePic:  req.file ? req.file.filename : 'foto-1659480597346.jpg',
+            })
+            .then(() =>{
+                return res.redirect('login');
+            });
+        }
     },
     viewEdit: (req, res) =>{
         let userId = req.params.id;

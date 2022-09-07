@@ -20,27 +20,57 @@
                 <div class="name-input">
                     <label for="name"></label>
                     <input type="text" name="name" id="name" placeholder="Nombre" required>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.name.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="lastName-input">
                     <label for="lastName"></label>
                     <input type="text" name="lastName" id="lastName" placeholder="Apellido" required>
+                    <% if (locals.errors && errors.lastName) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.lastName.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="email-input">    
                     <label for="email"></label>
                     <input type="email" name="email" id="email" placeholder="e-mail" required>
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.email.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="password-input">
                     <label for="password"></label>
                     <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.password.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="repassword-input">
                     <label for="repassword"></label>
                     <input type="password" name="repassword" id="repassword" placeholder="Verificar contraseña" required>
+                    <% if (locals.errors && errors.repassword) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.repassword.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="add-profile-pic">
                     <div class="profilePic">
                         <label for="profilePic"></label>
                         <input type="file" name="profilePic">
+                        <% if (locals.errors && errors.profilePic) { %>
+                            <div class="errors-container">
+                                <p style="color: red;"><%= errors.profilePic.msg %> </p>
+                            </div>
+                        <% } %>
                     </div>
                 </div>
             </div>
