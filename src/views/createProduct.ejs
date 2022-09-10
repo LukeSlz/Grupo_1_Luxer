@@ -13,16 +13,31 @@
                 <div class="field">
                     <label for="nameCreate">Nombre del producto</label><br>
                     <input class="text-input" type="text" name="nameCreate" id="name" required>
+                    <% if (locals.errors && errors.nameCreate) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.nameCreate.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
 
                 <div class="field">
                     <label for="descriptionCreate">Descripción del producto</label><br>
                     <textarea class="description-input" name="descriptionCreate" id="descriptionCreate" cols="50" rows="5" required></textarea>
+                    <% if (locals.errors && errors.descriptionCreate) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.descriptionCreate.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 
                 <div class="field">
                     <label for="imagesCreate">Agregar Imágenes</label><br>
-                    <input type="file" name="imagesCreate" id="imagesCreate" multiple>
+                    <input type="file" name="imagesCreate" id="imagesCreate">
+                    <% if (locals.errors && errors.imagesCreate) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.imagesCreate.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="field">
                     <label for="materialCreate">Material</label>
@@ -32,6 +47,11 @@
                         <option value="1">Material A</option>
                         <option value="2">Material B</option>
                         <option value="3">Material C</option>
+                        <% if (locals.errors && errors.materialCreate) { %>
+                            <div class="errors-container">
+                                <p style="color: red;"><%= errors.materialCreate.msg %> </p>
+                            </div>
+                        <% } %>
                     </select>
                     
                 </div>
@@ -44,11 +64,21 @@
                     <label><input type="radio" name="categoryCreate" value="3" id="cat-C">Category C <br></label>
                     <label><input type="radio" name="categoryCreate" value="4" id="cat-D">Category D <br></label>
                     <label><input type="radio" name="categoryCreate" value="5" id="cat-E">Category E <br></label>
+                    <% if (locals.errors && errors.categoriesCreate) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.categoriesCreate.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="field">
                     <label for="priceCreate">Precio</label>
                     <br>
                     <input class = "text-input" type="number" step="100" name="priceCreate" id="priceCreate" placeholder="$" required>
+                    <% if (locals.errors && errors.priceCreate) { %>
+                        <div class="errors-container">
+                            <p style="color: red;"><%= errors.priceCreate.msg %> </p>
+                        </div>
+                    <% } %>
                 </div>
                 <br>
                 <div class="field">

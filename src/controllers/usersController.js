@@ -82,6 +82,7 @@ module.exports = {
         if(!resultValidation.isEmpty()){
             res.render('register', {errors: resultValidation.mapped()})
             console.log(req.body);
+            console.log(req.file);
             console.log(resultValidation);
         }else{
             db.User.create({

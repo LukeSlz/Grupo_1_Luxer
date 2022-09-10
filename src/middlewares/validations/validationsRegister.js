@@ -17,7 +17,7 @@ module.exports = [
             }
         })
     }),
-    body('password').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/).withMessage('La contraseña debe contener minimo 8 caracteres entre: Mayus, minus, caracter especial'),
+    body('password').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i").withMessage('La contraseña debe contener minimo 8 caracteres entre: Mayus, minus, caracter especial'),
     body('repassword').custom((value, {req, loc, path}) => {
         if (value !== req.body.password){
             throw new Error('Las contraseñas no coinciden')
@@ -25,14 +25,14 @@ module.exports = [
             return value;
         };
     }),
-    body('profilePic').optional().custom((value, {req}) => {
-        if(req.file){
-            let file = req.file;
+    body('profilePic').custom((value, {req}) => {
+        value = req.file;
             let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
-            let fileExtension = path.extname(file.originalname);
+            let fileExtension = path.extname(value.originalname);
             if(!acceptedExtensions.includes(fileExtension)){
                 throw new Error(`Las extensiones de archivos permitidos son ${acceptedExtensions.join(', ')}`);
-            }
-        }
+            }else{
+                return value;
+            };
     }),
 ]
