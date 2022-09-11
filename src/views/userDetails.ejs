@@ -9,28 +9,24 @@
 
 <main>
     <div class="conteiner-pd">
-        <img class="imagen-producto-pd" src="/images/user-images/<%= user.profilePic %> " alt="Imagen del usuario <%= user.name %> " style="background: rgb(66, 53, 53)"><br>
+        <img class="imagen-producto-pd" src="/images/user-images/<%= user.profilePic %> " alt="Imagen del usuario <%= user.name %> " style="background: rgb(190, 182, 182)"><br>
         <div class="user-info-container-ud">
-            <h1><%= user.name %> <%= user.lastName %> </h1>
+            <h1><%= user.name %> <%= user.lastName %> </h1> <br>
             <% if(user.category === 9){ %>
                 <h3 class="h2precio">Administrador</h3>
             <% } %>
-            <div class="social-icons-pd">
-
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
+            <br>
             <% if (locals.user) { %>
                 <div class="edit-product-button-container">
-                    <a href="/users/edit/<%= user.id %> "><button class="comprar-button">Edit Info</button></a>
+                    <br>
+                    <a href="/users/edit/<%= user.id %> "><button class="users-buttons">Edit Info</button></a>
                     <hr>
-                    <a href="/logout"><button class="comprar-button">Logout</button></a>
+                    <a href="/logout"><button class="users-buttons">Logout</button></a>
                 </div>
             <% } %>
             <% if (locals.user.category_id === 9) { %>
                 <div class="button-container">
-                    <a href="/users"><button class="comprar-button"">View all users</button></a>
+                    <a href="/users"><button class="users-buttons">Ver Usuarios</button></a>
                 </div>
             <% } %>
         </div>

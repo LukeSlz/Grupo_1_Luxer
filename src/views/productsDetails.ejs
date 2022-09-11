@@ -20,12 +20,12 @@
                 <div class="edit-product-button-container">
                     <% if (locals.user && locals.user.category_id===9) { %>
                         <div class="edit-product-button-container">
-                          <a href="/products/edit/<%= product.id %> "><button class="edit-product-button">Edit Item</button></a>
+                          <a href="/products/edit/<%= product.id %> "><button class="users-buttons">Edit Item</button></a>
                         </div>
                       <% } %>
                 </div>
                 <form action="/shoppingCart" method="get">
-                    <button type="submit" class="comprar-button">Agregar al Carrito</button>
+                    <button type="submit" class="users-buttons">Agregar al Carrito</button>
                 </form>
             </div>
         </div>

@@ -222,7 +222,7 @@ footer{
     margin: 5px 0;
 }
 
-.submit{
+.submit-button{
     margin-left: 4px;
     background-color: #A68474;
 
@@ -240,6 +240,15 @@ footer{
     font-size: 0.8em;
     opacity: 0.8;
 }
+
+/* Sección About Us*/
+
+.about-us-container{
+    display:flex;
+    
+}
+
+
 
 
 /* MEDIA QUERYS */
