@@ -43,6 +43,16 @@ module.exports = {
             .catch(error => console.log(error));
     },
     edit: (req, res) => {
+        if(req.file){
+            db.Product.findByPk(req.params.id, {
+                include: ['material', 'category']
+            })
+            .then(productFound => {
+                let image = `../../public/images/new-products/${productFound.dataValues.images}`
+                fs.unlink(path.join(__dirname, image), (err)=>{console.log(err)});
+            })
+            .catch(e => console.log(e));
+        };
         db.Product.update({
             name: req.body.nameModify,
             description: req.body.descriptionModify,
