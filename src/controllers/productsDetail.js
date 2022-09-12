@@ -33,8 +33,12 @@ module.exports = {
             include: ['material', 'category']
         })
             .then(productFound => {
-                let product = productFound.dataValues;
-                res.render('productsDetails', {product})
+                if(productFound != null){
+                    let product = productFound.dataValues;
+                    res.render('productsDetails', {product})
+                }else{
+                    res.render('404')
+                }
             })
     }
 

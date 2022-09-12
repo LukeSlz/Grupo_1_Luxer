@@ -6,6 +6,7 @@ object-fit: cover;
     text-align: center;
     
 }
+
 .create-product-button-container{
     display: flex;
     margin: 0 10%;
@@ -13,6 +14,54 @@ object-fit: cover;
     border-top: 1px #A89B95 solid;
     border-bottom: 1px #A89B95 solid;
 }
+
+.create-product-button{
+    padding: 10px;
+    background-color: #A89B95;
+    border: 1px solid #A89B95;
+    color: #FFFFFF;
+    border-radius: 3px;
+    transition: 2ms;
+}
+
+.create-product-button:hover{
+    padding: 10px;
+    background-color: #8b7f79;
+    border: 1px solid #8b7f79;
+    color: #FFFFFF;
+    border-radius: 3px;
+    
+}
+
+.search-product-container{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.barra-search{
+    padding: 5px;
+    border-radius: 4px;
+    border-color: transparent;
+}
+
+.boton-search{
+    padding: 5px;
+    background-color: white;
+    border-color: transparent;
+    color: rgb(161, 156, 156);
+    border-radius: 3px;
+    transition: 2ms;
+}
+.boton-search:hover{
+    padding: 5px;
+    background-color: #8b7f79;
+    border: 1px solid #8b7f79;
+    color: #FFFFFF;
+    border-radius: 3px;
+    
+}
+
 .item-price{
     font-size: 1em;
 }
@@ -20,6 +69,7 @@ object-fit: cover;
     display: flex;
     margin: 0 10%;
 }
+
 .listado-articles {
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +105,7 @@ object-fit: cover;
     left: 0;
     top: 25%;
     width: 100%;
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 2px 2px 1px rgb(39, 38, 38);
     visibility: hidden;
 }
 .info-listado-container:hover {

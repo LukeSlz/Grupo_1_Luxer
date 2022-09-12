@@ -47,9 +47,27 @@
 
 .user-info-container-ud{
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    
+    justify-content: space-around;
     margin: 5%;
     align-items: flex-start;
+}
+
+.users-buttons{
+    padding: 10px;
+    background-color: #A89B95;
+    border: 1px solid #A89B95;
+    color: #FFFFFF;
+    border-radius: 3px;
+    transition: 2ms;
+}
+
+.users-buttons:hover{
+    padding: 10px;
+    background-color: #8b7f79;
+    border: 1px solid #8b7f79;
+    color: #FFFFFF;
+    border-radius: 3px;
+    
 }

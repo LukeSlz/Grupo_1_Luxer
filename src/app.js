@@ -53,5 +53,7 @@ app.use(productsDetailRouter);
 
 /***** Port Run *****/
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(` -------------------------------------`)
+    console.log(`|Luxer Studio is running on port ${port}|`)
+    console.log(` -------------------------------------`)
 })
