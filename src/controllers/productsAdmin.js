@@ -30,7 +30,7 @@ module.exports = {
             .then(() => {
                 res.redirect('/products')
             })
-            .catch(error => res.send(error));
+            .catch(error => console.log(error));
         }
     },
         
@@ -40,7 +40,7 @@ module.exports = {
                 let product = productFound.dataValues;
                 res.render('editProduct', {product})
             })
-            .catch(error => res.send(error));
+            .catch(error => console.log(error));
     },
     edit: (req, res) => {
         db.Product.update({
@@ -56,7 +56,7 @@ module.exports = {
         .then(() => {
             return res.redirect('/products');
         })
-        .catch(error => res.send(error));
+        .catch(error => console.log(error));
     },
     viewDelete: (req, res) => {
         db.Product.findByPk(req.params.id, {include: ['material', 'category']})
@@ -64,13 +64,22 @@ module.exports = {
                 let theProduct = productFound.dataValues;
                 res.render('deleteProduct', {theProduct});
             })
-            .catch(error => res.send(error));
+            .catch(error => console.log(error));
     },
     delete: (req, res) => {
+        //This finds the item in the database and stores the information to delete the image file
+        db.Product.findByPk(req.params.id, {
+            include: ['material', 'category']
+        })
+        .then(productFound => {
+            let image = `../../public/images/new-products/${productFound.dataValues.images}`
+            fs.unlink(path.join(__dirname, image), (err)=>{console.log(err)});
+        })
+        //Then the .destroy is excecuted
         db.Product.destroy({where: {id: req.params.id}})
             .then(() => {
                 res.redirect('/products');
             })
-            .catch(error => res.send(error));
+            .catch(error => console.log(error));
     }
 }

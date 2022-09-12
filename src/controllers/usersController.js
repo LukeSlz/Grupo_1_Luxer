@@ -62,7 +62,7 @@ module.exports = {
         .then(users => {
             res.render('allUsers', {users})
         })
-        .catch(e => res.send(e))
+        .catch(e => console.log(e))
     },
     viewUserDetails: (req, res) => {
         db.User.findByPk(req.params.id, {

@@ -15,7 +15,8 @@ module.exports = {
     sameUser: (req, res, next) => {
         if(req.session.user){
             let loggedUser = req.session.user;
-            if(loggedUser.id == req.params.id || loggedUser.category == 9){
+            console.log(loggedUser);
+            if(loggedUser.id == req.params.id || loggedUser.category_id == 9){
                 next();
             }else{
                 res.redirect('/');
