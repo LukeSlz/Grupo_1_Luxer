@@ -81,9 +81,6 @@ module.exports = {
         let resultValidation = validationResult(req);
         if(!resultValidation.isEmpty()){
             res.render('register', {errors: resultValidation.mapped()})
-            console.log(req.body);
-            console.log(req.file);
-            console.log(resultValidation);
         }else{
             db.User.create({
                     name: req.body.name,

@@ -15,7 +15,11 @@
 
         <form class="main-register-form" action="/register" method="POST" enctype="multipart/form-data">
         
-   
+            <section class="errors">
+                <ul>
+                    
+                </ul>
+            </section>
             <div class="main-inputs-container">
                 <div class="name-input">
                     <label for="name"></label>
@@ -89,7 +93,7 @@
                 <hr>
             </div>
             <br>
-           
+            
                 <div class="field">
                     <button class = "send-button" type="submit">Creá tu Cuenta</button>
                 </div>
@@ -98,6 +102,6 @@
     </main>
 
     <%- include ('./partials/footer') %> 
-
+    <script src="/js/register.js"></script>
 </body>
 </html>
