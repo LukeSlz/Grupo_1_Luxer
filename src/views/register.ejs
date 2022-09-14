@@ -69,7 +69,7 @@
                 <div class="add-profile-pic">
                     <div class="profilePic">
                         <label for="profilePic"></label>
-                        <input type="file" name="profilePic">
+                        <input type="file" name="profilePic" id="profilePic">
                         <% if (locals.errors && errors.profilePic) { %>
                             <div class="errors-container">
                                 <p style="color: red;"><%= errors.profilePic.msg %> </p>

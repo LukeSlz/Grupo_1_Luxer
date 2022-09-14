@@ -12,6 +12,11 @@
             <p>Ingresá tu correo y contraseña</p>
         </div>
         <form class="main-login-form" action="/login" method="POST">
+            <section class="errors">
+                <ul>
+                    
+                </ul>
+            </section>
                 <div class="main-inputs-container">
                     <div class="email-input-login">
                         <label for="email"></label>
@@ -62,5 +67,6 @@
 
     <%- include('./partials/footer') %>
 
+    <script src="/js/login.js"></script>
 </body>
 </html>

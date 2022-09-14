@@ -8,6 +8,11 @@
         <div class="main-container-modifyProd">
             <h2>MODIFICAR PRODUCTO</h2>
             <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-prod">
+                <section class="errors">
+                    <ul>
+                        
+                    </ul>
+                </section>
                 <div class="field">
                     <label for="nameModify">Nombre del producto</label><br>
                     <input type="text" name="nameModify" id="name" value="<%= product.name %>">
@@ -53,5 +58,7 @@
     </main>
 
     <%- include('./partials/footer')  %> 
+
+    <script src="/js/editProduct.js"></script>
 </body>
 </html>
