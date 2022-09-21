@@ -3,7 +3,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const usersValidations = require('../middlewares/validationsUsers');
+const usersValidations = require('../middlewares/validations/validationsUsers');
+const registerValidations = require('../middlewares/validations/validationsRegister');
 
 const usersController = require('../controllers/usersController');
 const guestMiddleware = require("../middlewares/guestMiddleware");
@@ -27,7 +28,7 @@ router.get('/login', guestMiddleware.onlyForGuest, usersController.viewFormLogin
 router.post('/login', usersValidations, usersController.login);
   /*****  Register   *****/
 router.get('/register', guestMiddleware.onlyForGuest , usersController.viewFormRegister);
-router.post("/register", upload.single("profilePic"), usersController.create);
+router.post("/register", upload.single("profilePic"), registerValidations, usersController.create);
   /*****  Log Out   *****/
 router.get('/logout', guestMiddleware.isLogged, usersController.viewLogout);
 router.post("/logout", guestMiddleware.isLogged, usersController.logout);

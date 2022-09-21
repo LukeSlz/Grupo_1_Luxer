@@ -6,8 +6,13 @@
 
     <main>
         <div class="main-container-modifyProd">
-            <h2 class="title">MODIFICAR PRODUCTO</h2>
+            <h2>MODIFICAR PRODUCTO</h2>
             <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-prod">
+                <section class="errors">
+                    <ul>
+                        
+                    </ul>
+                </section>
                 <div class="field">
                     <label for="nameModify">Nombre del producto</label><br>
                     <input type="text" name="nameModify" id="name" value="<%= product.name %>">
@@ -19,7 +24,8 @@
                 <div class="field" id="edit-image-field-container">
                     <label for="imagesModify">Imágen(es) del producto</label><br>
                     <img src="/images/new-products/<%= product.images %> " alt="Product image of <%= product.name %> " style="width:50%">
-                    <input type="file" name="imagesModify" id="imagesModify" value="<%= product.images %>">
+                    <input type="file" name="imagesModify" id="imagesModify">
+                    <input type="hidden" name="oldImages" id="oldImages" value="<%= product.images %>" > 
                 </div>
                 <div class="field">
                     <label for="materialModify">Material</label><br>
@@ -42,15 +48,17 @@
                     $<input type="number" step="100" name="priceModify" id="priceModify" placeholder="10,000" value="<%= product.price %>">
                 </div>
                 <div class="field">
-                    <button type="submit">Modificar</button>
+                    <button type="submit" class="users-buttons">Modificar</button>
                 </div>
             </form>
             <div class="delete-button-container">
-                <a href="../../products/delete/<%= product.id %>"><button>ELIMINAR PRODUCTO</button></a>
+                <a href="../../products/delete/<%= product.id %>"><button class="users-buttons">Eliminar</button></a>
             </div>
         </div>
     </main>
 
     <%- include('./partials/footer')  %> 
+
+    <script src="/js/editProduct.js"></script>
 </body>
 </html>

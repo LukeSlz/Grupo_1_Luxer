@@ -12,9 +12,18 @@
   <h1 class="listado-title">LISTADO DE PRODUCTOS</h1>
   <% if (locals.user && locals.user.category_id===9) { %>
     <div class="create-product-button-container">
-      <a href="/products/create"><button class="create-product-button">Create New</button></a>
+      <a href="/products/create"><button class="create-product-button">Nuevo Producto</button></a>
     </div>
   <% } %>
+  <br>
+  <div class="search-product-container">
+    <form action="/products" method="POST">
+      <label for="search">
+        <input type="text" name="search" id="search" placeholder="Buscar producto" class="barra-search"><button type="submit" class="boton-search">Buscar</button>
+      </label>
+    </form>
+  </div>
+  <br>
   <div class="listado-articles">
     <% products.forEach(product => { %>
       <article class="listado-articulo">
@@ -28,7 +37,7 @@
         </div>
         <% if (locals.user && locals.user.category_id===9) { %>
           <div class="edit-product-button-container">
-            <a href="/products/edit/<%= product.id %> "><button class="edit-product-button">Edit Item</button></a>
+            <a href="/products/edit/<%= product.id %> "><button class="create-product-button">Edit Item</button></a>
           </div>
         <% } %>
       </article>

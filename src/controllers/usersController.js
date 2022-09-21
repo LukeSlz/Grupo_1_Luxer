@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
 const bcrypt = require('bcryptjs');
-const {validationResult} = require('express-validator');
+const {validationResult, body} = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.sequelize
 
@@ -16,9 +16,7 @@ module.exports = {
     login: (req, res) => {
         let resultValidation = validationResult(req);
         if (!resultValidation.isEmpty()){
-            console.log(resultValidation);
             res.render('login', {errors: resultValidation.mapped()})
-            console.log(req.body);
         }else{
             db.User.findOne({
                 where: {
@@ -64,7 +62,7 @@ module.exports = {
         .then(users => {
             res.render('allUsers', {users})
         })
-        .catch(e => res.send(e))
+        .catch(e => console.log(e))
     },
     viewUserDetails: (req, res) => {
         db.User.findByPk(req.params.id, {
@@ -80,17 +78,22 @@ module.exports = {
     },
 
     create: (req, res) => {
-        db.User.create({
-                name: req.body.name,
-                lastName: req.body.lastName,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                category_id: 1,
-                profilePic:  req.file ? req.file.filename : 'foto-1659480597346.jpg',
-        })
-        .then(() =>{
-            return res.redirect('login')
-        })
+        let resultValidation = validationResult(req);
+        if(!resultValidation.isEmpty()){
+            res.render('register', {errors: resultValidation.mapped()})
+        }else{
+            db.User.create({
+                    name: req.body.name,
+                    lastName: req.body.lastName,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    category_id: 1,
+                    profilePic:  req.file ? req.file.filename : 'foto-1659480597346.jpg',
+            })
+            .then(() =>{
+                return res.redirect('login');
+            });
+        }
     },
     viewEdit: (req, res) =>{
         let userId = req.params.id;
@@ -106,8 +109,8 @@ module.exports = {
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            category_id: 1,
-            profilePic:  req.file ? req.file.filename : 'foto-1659480597346.jpg',
+            category_id: req.body.category_idOld,
+            profilePic:  req.file ? req.file.filename : req.body.oldProfilePic,
         },{
             where: {id: req.params.id}
         })
