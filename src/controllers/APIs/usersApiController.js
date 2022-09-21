@@ -4,7 +4,13 @@ const sequelize = db.sequelize;
 module.exports = {
     list: (req, res) => {
         db.User.findAll({
-            include: ['user_category']
+            include: ['user_category'],
+            attributes : [
+                "id" ,
+                "name" ,
+                "lastName",
+                "email",
+            ]
         })
         .then(users => {
             let response = {
@@ -33,7 +39,11 @@ module.exports = {
             include: ['user_category']
         })
         .then(user => {
-            let response = {
+            delete user.dataValues.password;
+            delete user.dataValues.category_id;
+            user.dataValues.linkProfilePic = `http://localhost:7000/images/user-images/${user.dataValues.profilePic}`
+
+            let response = { 
                 info: {
                     status: 200,
                     url: 'api/users/detail/' + req.params.id
