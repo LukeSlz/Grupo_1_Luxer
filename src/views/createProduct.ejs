@@ -10,6 +10,11 @@
             <h2 class="title-create-product">DAR DE ALTA NUEVO PRODUCTO</h2>
 
             <form action="/products/create" method="POST" enctype="multipart/form-data" class="form-prod">
+                <section class="errors">
+                    <ul>
+                        
+                    </ul>
+                </section>
                 <div class="field">
                     <label for="nameCreate">Nombre del producto</label><br>
                     <input class="text-input" type="text" name="nameCreate" id="name" required>
@@ -89,5 +94,7 @@
     </main>
 
     <%- include('./partials/footer')  %> 
+
+    <script src="/js/createProduct.js"></script>
 </body>
 </html>

@@ -16,6 +16,7 @@ const productsDetailRouter = require('./routes/productsDetail');
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const shoppingCartRouter = require('./routes/shoppingCart');
+const usersApiRouter = require('./routes/APIs/apiUsers')
 
 /*****  Port    *****/
 const port = 7000;
@@ -49,6 +50,8 @@ app.use(productsAdminRouter);
     /*****  Products (General)   *****/
 app.use(productsDetailRouter);
 
+/*****  API *****/
+app.use('/api/users' ,usersApiRouter)
 
 
 /***** Port Run *****/
