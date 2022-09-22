@@ -3,31 +3,37 @@ const sequelize = db.sequelize;
 
 module.exports = {
     list: (req, res) => {
-        db.User.findAll({
-            include: ['user_category'],
-            attributes : [
-                "id" ,
-                "name" ,
-                "lastName",
-                "email",
-            ]
+        db.Product.findAll({
+            include: ['material', 'category']
         })
-        .then(users => {
+        .then(products => {
+            let info = {
+                status: 200,
+                total: products.length,
+                url: 'api/products'
+            };
+            info.countByMat1 = products.filter(x => x.material_id ==1).length;
+            info.countByMat2 = products.filter(x => x.material_id ==2).length;
+            info.countByMat3 = products.filter(x => x.material_id ==3).length;
+
+            info.countByCat1 = products.filter(x => x.category_id ==1).length;
+            info.countByCat2 = products.filter(x => x.category_id ==2).length;
+            info.countByCat3 = products.filter(x => x.category_id ==3).length;
+            info.countByCat4 = products.filter(x => x.category_id ==4).length;
+            info.countByCat5 = products.filter(x => x.category_id ==5).length;
+
             let response = {
-                info: {
-                    status: 200,
-                    total: users.length,
-                    url: 'api/users'
-                },
-                data: users
-            }   
+                info: info,
+                data: products
+            }
             res.json(response)
         })
         .catch(e => {
+            console.log(e);
             let response = {
                 info: {
                     status: 404,
-                    url: 'api/users',
+                    url: 'api/products',
                     error: e
                 }
             }
