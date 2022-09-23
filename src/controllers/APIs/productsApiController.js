@@ -22,6 +22,10 @@ module.exports = {
             info.countByCat4 = products.filter(x => x.category_id ==4).length;
             info.countByCat5 = products.filter(x => x.category_id ==5).length;
 
+            products.forEach((product, index) => {
+                products[index].dataValues.linkToDetail = `http://localhost:7000/products/${products[index].dataValues.id}`;
+            })
+
             let response = {
                 info: info,
                 data: products
@@ -41,21 +45,19 @@ module.exports = {
         })
     },
     detail: (req, res) => {
-        db.User.findByPk(req.params.id, {
-            include: ['user_category']
+        db.Product.findByPk(req.params.id, {
+            include: ['material', 'category']
         })
-        .then(user => {
-            delete user.dataValues.password;
-            delete user.dataValues.category_id;
-            delete user.dataValues.user_category;
-            user.dataValues.linkProfilePic = `http://localhost:7000/images/user-images/${user.dataValues.profilePic}`
+        .then(product => {
+
+            product.dataValues.linkToImage = `http://localhost:7000/images/new-products/${product.dataValues.images}`
 
             let response = { 
                 info: {
                     status: 200,
-                    url: 'api/users/detail/' + req.params.id
+                    url: 'api/products/detail/' + req.params.id
                 },
-                data: user
+                data: product
             }
             res.json(response)
         })
@@ -63,7 +65,7 @@ module.exports = {
             let response = {
                 info: {
                     status: 404,
-                    url: 'api/users/detail/' + req.params.id
+                    url: 'api/products/detail/' + req.params.id
                 }
             }
             res.json(response)
