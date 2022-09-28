@@ -64,6 +64,31 @@ Una vez más seguimos paso a paso la organización del tablero de trabajo lo cua
 
 Estamos muy contentos con nuestro avance, y con hambre de conocimientos para continuar mejorando cada vez más nuestro proyecto :)
 
+_____________________________________________________________________________________________________________________________________________________________________
+
+## Sprint 7
+
+Ansiosos por ver nuestro proyecto terminado, encaramos el ante último sprint: Validaciones. 
+
+Pese a haber luchado con el código y algunos errores que crashearon nuestro servidor (y nos dieron unos cuántos dolores de cabeza), pudimos entregarlo en tiempo y forma sin mucha dificultad. Esta parte del proyecto en particular no nos presentó la necesidad de reunirnos en grupo. Sin embargo, estamos convencidos de que podríamos haberlo llevado a cabo de una mejor manera de haberlo hecho. Cuatro cabezas piensan mejor que una :)
+
+Súper entusiasmados con la recta final!
+
+_____________________________________________________________________________________________________________________________________________________________________
+
+## Sprint 8
+
+Algo cansados pero más que contentos con el desempeño de nuestro sitio web en construcción, damos por finalizado el último Sprint: APIs y React.
+
+Habiendo aprendido de nuestra experiencia anterior, nos hicimos el tiempo para reunirnos y poder codear esta última parte del proyecto de manera conjunta como lo habíamos hecho en sprints anteriores. Primero lo primero: Crear nuestras propias APIs. Con ayuda de los proyectos que utilizamos en las clases en vivo con los profesores, nos inspiramos en su código para llevar a cabo nuestra API de Usuarios y posteriormente la de Productos. Pudimos testear que ambas se puedan visualizar en formato JSON a través de una muy útil extensión de Chrome (JSON Formatter); para posteriormente integrarlas con nuestro Dashboard, que también partió del tablero base utilizado en las clases en vivo. En esta última etapa nuestro proyecto explotaba y nuevamente aparecieron los dolores de cabeza. Pero como en oportunidades anteriores, a prueba y error, pudimos solucionarlo y dar por finalizado este último Sprint.
+
+Estamos más que felices con nuestro progreso y todo lo aprendido. Sabemos que queda mucho por reforzar, repasar, revisar unas cuántas veces más con las manos en el código para poder convertirnos en verdaderos programadores. Pero sin duda, los cuatro disfrutamos muchísimo el proceso de "recibirnos" de trainees :)
+
+¡Hasta el próximo proyecto!
+
+
+
+
 
 
 
