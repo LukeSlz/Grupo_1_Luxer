@@ -77,14 +77,15 @@ module.exports = {
             .catch(error => console.log(error));
     },
     delete: (req, res) => {
-        //This finds the item in the database and stores the information to delete the image file
+/*         //This finds the item in the database and stores the information to delete the image file
         db.Product.findByPk(req.params.id, {
             include: ['material', 'category']
         })
         .then(productFound => {
+            console.log(productFound);
             let image = `../../public/images/new-products/${productFound.dataValues.images}`
             fs.unlink(path.join(__dirname, image), (err)=>{console.log(err)});
-        })
+        }) */
         //Then the .destroy is excecuted
         db.Product.destroy({where: {id: req.params.id}})
             .then(() => {
