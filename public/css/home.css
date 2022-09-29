@@ -89,7 +89,7 @@ h3{
 /* Home2 */
 
 .italian-style {
-    margin-top: 6%;
+    margin-top: 8%;
     display: grid;
     grid-template-areas:
       "foto box1"
@@ -98,7 +98,9 @@ h3{
     padding: 10px;
     width: 100%;
   }
-  
+
+ 
+
   .contenedor-producto img {
     height: 400px;
     object-fit: cover;
@@ -201,4 +203,43 @@ width: auto;
 .imagen-alsolike{
     width: 85%;
     
+}
+
+@media only screen and (max-width: 1157px) {
+   
+  
+  .contenedor-producto img {
+    margin-top: 3%;
+    
+  }
+
+}
+
+@media only screen and (max-width: 1065px) {
+   
+  
+  .contenedor-producto img {
+    display: none;
+    
+  }
+
+}
+@media only screen and (max-width: 700px) {
+   
+  .descripcion-italian {
+ 
+    display: none;
+  
+  }
+  .contenedor-producto img {
+    display: none;
+    
+  }
+
+  .categorias-conteiner {
+    padding: 1px;
+    margin-top: 5%;
+    
+  }
+
 }
