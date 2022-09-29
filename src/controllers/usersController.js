@@ -118,7 +118,7 @@ module.exports = {
             db.User.findByPk(req.params.id, {include: ['user_category']})
             .then(user => {
                 req.session.user = user.dataValues;
-                return res.redirect('home')
+                return res.redirect('/')
             })
         })
     }

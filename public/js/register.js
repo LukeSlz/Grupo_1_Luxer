@@ -53,7 +53,7 @@ window.addEventListener('load', function(){
                 let ulErrors = document.querySelector('.errors ul');
                 ulErrors.innerHTML = [];
                 errors.forEach(error => {
-                    ulErrors.innerHTML += `<li>${error}</li>`
+                    ulErrors.innerHTML += `<li style="color:red">${error}</li>`
                 })
             }else{
                 form.submit();
