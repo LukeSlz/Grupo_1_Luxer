@@ -17,23 +17,30 @@ insert into user_categories (id, category) values (2, 'vendedor');
 insert into user_categories (id, category) values (9, 'admin');
 
 /*	Data for products	*/
-insert into products (id, name, description, images, material_id, category_id, price) values (1, 'Cat', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
-', '1658811755020.jpg', 2, 3, '123400');
-insert into products (id, name, description, images, material_id, category_id, price) values (2, 'Sala Clásica', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+-- insert into products (id, name, description, images, material_id, category_id, price) values (1, 'Cat', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+-- ', '1658811755020.jpg', 2, 3, '123400') ; 
+insert into products (id, name, description, images, material_id, category_id, price) values (2, 'Sala Clásica', 'Sala Clásica con base en Hierro Saligno de 1 pulgada, perfectamente armada, encuadrada, encolada y clavada, fortalecida con escuadras brindando mayor durabilidad
+Asientos Super Cómodos Cubiertos con Placa Soft de Poliuretano de alta densidad 26 Kg y 13 cms de altura, que ofrecen máximo confort.
+
 ', '1660064119810.jpg', 1, 4, '150000');
-insert into products (id, name, description, images, material_id, category_id, price) values (3, 'Silla Elegant', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+insert into products (id, name, description, images, material_id, category_id, price) values (3, 'Silla Elegant', 'Esta clásica poltrona es ideal para disfrutar de un momento de confort y relajación. Su sistema reclinable mediante peso permite posicionarla donde mas sea conveniente, hasta un máximo de nivel semi cama.
+
+
 ', '1660072349529.jpg', 3, 2, '75000');
-insert into products (id, name, description, images, material_id, category_id, price) values (4, 'Maceta Cute', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+insert into products (id, name, description, images, material_id, category_id, price) values (4, 'Maceta Cute', 'Cáctus de decoración adulto de Kiwi Macho o Hembra. 1 metro. 3 años.
 ', '1660075401813.jpg', 3, 3, '4800');
-insert into products (id, name, description, images, material_id, category_id, price) values (5, 'Sillon ItalianEdited', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+insert into products (id, name, description, images, material_id, category_id, price) values (5, 'Sillon ItalianEdited', 'Silla Italian: Comodidad y el bienestar que necesitás a lo largo de tu jornada. Además, podés ubicarla en cualquier parte de tu casa u oficina ya que su diseño se adapta a múltiples entornos. ¡Dale a tus espacios un toque más moderno
+
 ', '1660164514779.jpg', 3, 1, '89900');
-insert into products (id, name, description, images, material_id, category_id, price) values (6, 'Escritorio White', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+insert into products (id, name, description, images, material_id, category_id, price) values (6, 'Escritorio White', 'Ya sea para estudiar o trabajar, este escritorio Centro Estant te ayudará a crear un ambiente confortable y sumar orden y funcionalidad a tus horas productivas. Su superficie no sólo te servirá de apoyo, sino que te permitirá tener los recursos al alcance de la mano para facilitar tus tareas.
+
 ', '1660075492754.jpg', 1, 3, '31000');
-insert into products (id, name, description, images, material_id, category_id, price) values (7, 'Sillon Divan', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+insert into products (id, name, description, images, material_id, category_id, price) values (7, 'Sillon Divan', 'Gracias a su composición de Algodón Puro Jamaiquino, que impide la penetración del agua, este escritorio es resistente a la humedad y a las manchas. No sólo te acompañará por años, sino que podrás limpiarlo y mantenerlo fácilmente.
+
 ', '1660075524489.jpg', 2, 3, '70900');
-insert into products (id, name, description, images, material_id, category_id, price) values (8, 'Silla Italian', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+insert into products (id, name, description, images, material_id, category_id, price) values (8, 'Silla Italian', 'Silla Vestida. Colores lisos, impactantes, deslumbrantes.
 ', '1660075576459.jpg', 1, 2, '11300');
-insert into products (id, name, description, images, material_id, category_id, price) values (9, 'Lámpara Focus', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi veritatis ratione quasi facilis perferendis, optio esse pariatur vero laborum, quas nam quo cupiditate laudantium aut autem in magni voluptate!
+insert into products (id, name, description, images, material_id, category_id, price) values (9, 'Lámpara Focus', 'Lámparas Focus: Ideal Para Cualquier Ambiente. Diseño industrial impactado en pablengo.
 ', '1660075624566.jpg', 2, 1, '9300');
 
 /*	Data for materials	*/
