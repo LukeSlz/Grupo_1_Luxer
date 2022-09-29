@@ -69,9 +69,17 @@ module.exports = {
             include: ['user_category']
         })
         .then(user => {
-            res.render('userDetails', {user})
-        })
+            if (user != null){
+                res.render('userDetails', {user})
+            } else {
+                res.render("404")
+            }
+          
+        }) 
+
     },
+
+
 
     viewFormRegister: (req, res) => {
         res.render('register');
